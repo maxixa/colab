@@ -57,7 +57,7 @@
     "training_image_repeats_per_epoch": 1,
     "training_write_csv_every": 500,
     "training_xattention_optimizations": false,
-    "sd_model_checkpoint": "SDV21-512.ckpt [6bccbcc6]",
+    "sd_model_checkpoint": "SDV21-768.ckpt",
     "sd_checkpoint_cache": 0,
     "sd_vae_checkpoint_cache": 0,
     "sd_vae": "auto",
@@ -128,5 +128,13 @@
     "images_delete_message": true,
     "images_history_page_columns": 6.0,
     "images_history_page_rows": 6.0,
-    "images_history_pages_perload": 20.0
+    "images_history_pages_perload": 20.0,
+    "sd_checkpoint_hash": "43c90409bd4493ea9f4734a166fc6180913f97cef4f69a2b7883edf700779693",
+    "print_hypernet_extra": false,
+    "training_enable_tensorboard": false,
+    "training_tensorboard_save_images": false,
+    "training_tensorboard_flush_every": 120.0,
+    "use_old_hires_fix_width_height": false,
+    "live_previews_enable": false,
+    "live_preview_content": "Prompt"
 }
