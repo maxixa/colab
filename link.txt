@@ -1,0 +1,52 @@
+dewiratih wearing glasses and 
+{lolita|fairy|maid|princess|lingerie|mini|bikini|cute} dress studio lighting {upper body|close up|half body}
+ by {2$$greg rutkowski|makoto shinkai|wlop}
+, 8k, hd, uhd
+
+deformed, bad anatomy, disfigured, poorly drawn face, mutation, mutated, extra limb, ugly, disgusting, poorly drawn hands, missing limb, floating limbs, disconnected limbs, malformed hands, blurry, ((((mutated hands and fingers)))), watermark, watermarked, oversaturated, censored, distorted hands, amputation, missing hands, obese, doubled face, double hands, asian, b&w, black and white, sepia
+
+
+
+
+
+
+!mkdir -p /content/stable-diffusion-webui/models/Stable-diffusion
+!mkdir -p /content/stable-diffusion-webui/models/Stable-diffusion/mix
+%cd /content/stable-diffusion-webui/models/Stable-diffusion
+!aria2c -o dewiratih-insta-megan-512-10.ckpt --summary-interval=10 -x 16 -s 16 --allow-overwrite=true  --http-user=Maxixa --http-passwd=Maxixaxp1987 https://huggingface.co/Maxixa/dwrt-insta-megan/resolve/main/dewiratih-insta-megan-512-10.ckpt
+!aria2c -o dwrt-insta-megan-1300-768-10.ckpt --summary-interval=10 -x 16 -s 16 --allow-overwrite=true  --http-user=Maxixa --http-passwd=Maxixaxp1987 https://huggingface.co/Maxixa/dwrt-insta-megan/resolve/main/dwrt-insta-megan-1300-768-10.ckpt
+!aria2c -o aeros.ckpt --summary-interval=10 -x 16 -s 16 --allow-overwrite=true https://civitai.com/api/download/models/5180?type=Model&format=PickleTensor
+!aria2c -o SDV15.ckpt --summary-interval=10 -x 16 -s 16 --allow-overwrite=true --http-user=Maxixa --http-passwd=Maxixaxp1987 https://huggingface.co/Maxixa/mdl/resolve/main/SDV15.ckpt
+!aria2c -o dwrtmg-ft-512.ckpt --summary-interval=10 -x 16 -s 16 --allow-overwrite=true  --http-user=Maxixa --http-passwd=Maxixaxp1987 https://huggingface.co/Maxixa/dwrt-ft/resolve/main/dwrtmg-ft-512.ckpt
+!aria2c -o insta-megan-all-8.ckpt --summary-interval=10 -x 16 -s 16 --allow-overwrite=true  --http-user=Maxixa --http-passwd=Maxixaxp1987 https://huggingface.co/Maxixa/megan/resolve/main/insta-megan-all-8.ckpt
+!aria2c -o dwrt-opjey-20.ckpt --summary-interval=10 -x 16 -s 16 --allow-overwrite=true --http-user=Maxixa --http-passwd=Maxixaxp1987  https://huggingface.co/Maxixa/mgmix/resolve/main/dwrt-opjey-20.ckpt
+!aria2c -o delliberate-fp16.ckpt --summary-interval=10 -x 16 -s 16 --allow-overwrite=true  --http-user=Maxixa --http-passwd=Maxixaxp1987 https://huggingface.co/Maxixa/mdl-free/resolve/main/delliberate-fp16.ckpt
+!aria2c -o dwrtng-60-512.ckpt --summary-interval=10 -x 16 -s 16 --allow-overwrite=true  --http-user=Maxixa --http-passwd=Maxixaxp1987 https://huggingface.co/Maxixa/dwrt-ft/resolve/main/dwrtng-60-512.ckpt
+!aria2c -o dwrtng-mg-15.ckpt --summary-interval=10 -x 16 -s 16 --allow-overwrite=true  --http-user=Maxixa --http-passwd=Maxixaxp1987 https://huggingface.co/Maxixa/mgmix/resolve/main/dwrtng-mg-15.ckpt
+!aria2c -o dwrtng-mg-delibrate-25.ckpt --summary-interval=10 -x 16 -s 16 --allow-overwrite=true  --http-user=Maxixa --http-passwd=Maxixaxp1987 https://huggingface.co/Maxixa/mgmix/resolve/main/dwrtng-mg-delibrate-25.ckpt
+
+
+!mkdir -p /content/stable-diffusion-webui/models/VAE
+%cd /content/stable-diffusion-webui/models/VAE
+!aria2c -o vae.ckpt --summary-interval=10 -x 16 -s 16 --allow-overwrite=true https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.ckpt
+
+
+!mkdir -p /content/stable-diffusion-webui/models/Lora
+%cd /content/stable-diffusion-webui/models/Lora
+!aria2c -o openjourneyLora.safetensors  --summary-interval=10 -x 16 -s 16 --allow-overwrite=true  --http-user=Maxixa --http-passwd=Maxixaxp1987 https://huggingface.co/prompthero/openjourney-lora/resolve/main/openjourneyLora.safetensors
+!aria2c -o dwrtsg-65-768-3.ckpt --summary-interval=10 -x 16 -s 16 --allow-overwrite=true  --http-user=Maxixa --http-passwd=Maxixaxp1987 https://huggingface.co/Maxixa/lora/resolve/main/dwrtsg-65-768/dwrtsg-65-768-3.ckpt
+!aria2c -o dwrtsg-65-768-4.ckpt --summary-interval=10 -x 16 -s 16 --allow-overwrite=true  --http-user=Maxixa --http-passwd=Maxixaxp1987 https://huggingface.co/Maxixa/lora/resolve/main/dwrtsg-65-768/dwrtsg-65-768-4.ckpt
+!aria2c -o meganekko-3.ckpt --summary-interval=10 -x 16 -s 16 --allow-overwrite=true  --http-user=Maxixa --http-passwd=Maxixaxp1987 https://huggingface.co/Maxixa/lora/resolve/main/meganekko/meganekko-3.ckpt
+!aria2c -o dwrtsg-65-512-DB3.ckpt --summary-interval=10 -x 16 -s 16 --allow-overwrite=true  --http-user=Maxixa --http-passwd=Maxixaxp1987 https://huggingface.co/Maxixa/dwrt-db/resolve/main/dwrtsg65/dwrtsg-65-512-DB3.ckpt
+!aria2c -o dwrtsg-65-512-DB2.ckpt --summary-interval=10 -x 16 -s 16 --allow-overwrite=true  --http-user=Maxixa --http-passwd=Maxixaxp1987 https://huggingface.co/Maxixa/dwrt-db/resolve/main/dwrtsg65/dwrtsg-65-512-DB2.ckpt
+!aria2c -o dwrtsg-65-768-DB3.ckpt --summary-interval=10 -x 16 -s 16 --allow-overwrite=true  --http-user=Maxixa --http-passwd=Maxixaxp1987 https://huggingface.co/Maxixa/dwrt-db/resolve/main/dwrtsg65/dwrtsg-65-768-DB3.ckpt
+!aria2c -o dwrtsg-65-768-DB2.ckpt --summary-interval=10 -x 16 -s 16 --allow-overwrite=true  --http-user=Maxixa --http-passwd=Maxixaxp1987 https://huggingface.co/Maxixa/dwrt-db/resolve/main/dwrtsg65/dwrtsg-65-768-DB2.ckpt
+
+
+%cd /content/stable-diffusion-webui/extensions/sd-webui-controlnet/models
+!aria2c -o control_openpose-fp16.safetensors --summary-interval=10 -x 16 -s 16 --allow-overwrite=true https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_openpose-fp16.safetensors
+!aria2c -o control_canny-fp16.safetensors --summary-interval=10 -x 16 -s 16 --allow-overwrite=true https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_canny-fp16.safetensors
+!aria2c -o control_scribble-fp16.safetensors --summary-interval=10 -x 16 -s 16 --allow-overwrite=true https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_scribble-fp16.safetensors
+!aria2c -o t2iadapter_keypose-fp16.safetensors --summary-interval=10 -x 16 -s 16 --allow-overwrite=true https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_keypose-fp16.safetensors
+
+%cd /content
