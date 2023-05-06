@@ -1,6 +1,6 @@
 {
     "inp-hb": {
-        "Prompt": "woman  {pixie|wavy | Pigtails } hair, wearing   mini {light-blue| PX1 |pink|red| PX2 | PX3 | blue} { lolita|fairy|maid|princess|serafuku|mini|wedding|cute} dress, model photoshot, fashion photoshot, detailed, sharp focus, dynamic pose, { kitchen|studio | garden | cosmic dust} background  , hd, uhd, 8k \n",
+        "Prompt": "woman  {pixie|wavy | Pigtails } hair, wearing   mini {light-blue| PX1 |pink|red| PX2 | PX3 | blue} { lolita|fairy|maid|princess|serafuku|mini|wedding|cute} dress, glasses, model photoshot, fashion photoshot, detailed, sharp focus, dynamic pose, { kitchen|studio | garden | cosmic dust} background  , hd, uhd, 8k \n",
         "Negative prompt": "deformed, bad anatomy, disfigured, poorly drawn face, mutation, mutated, extra limb, ugly, disgusting, poorly drawn hands, missing limb, floating limbs, disconnected limbs, malformed hands, blurry, ((((mutated hands and fingers)))), watermark, watermarked, oversaturated, censored, distorted hands, amputation, missing hands, obese, doubled face, double hands, asian, b&w, black and white, sepia\n",
         "Sampling steps": 22,
         "Sampling method": "DPM++ 2M Karras",
@@ -26,7 +26,7 @@
         "Y values": ""
     },
     "inp-fb": {
-        "Prompt": "woman  {pixie|wavy | Pigtails } hair, wearing   mini {light-blue| PX1 |pink|red| PX2 | PX3 | blue} { lolita|fairy|maid|princess|serafuku|mini|wedding|cute} dress, high heels, model photoshot, fashion photoshot, detailed, sharp focus, dynamic pose, { kitchen|studio | garden | cosmic dust} background  , hd, uhd, 8k \n",
+        "Prompt": "full body woman  {pixie|wavy | Pigtails } hair, wearing   mini {light-blue| PX1 |pink|red| PX2 | PX3 | blue} { lolita|fairy|maid|princess|serafuku|mini|wedding|cute} dress, glasses, model photoshot, fashion photoshot, detailed, sharp focus, dynamic pose, { kitchen|studio | garden | cosmic dust} background  , hd, uhd, 8k \n",
         "Negative prompt": "deformed, bad anatomy, disfigured, poorly drawn face, mutation, mutated, extra limb, ugly, disgusting, poorly drawn hands, missing limb, floating limbs, disconnected limbs, malformed hands, blurry, ((((mutated hands and fingers)))), watermark, watermarked, oversaturated, censored, distorted hands, amputation, missing hands, obese, doubled face, double hands, asian, b&w, black and white, sepia\n",
         "Sampling steps": 22,
         "Sampling method": "DPM++ 2M Karras",
@@ -41,7 +41,7 @@
         "Variation strength": 0,
         "Resize seed from width": 0,
         "Resize seed from height": 0,
-        "Denoising strength": 0.98,
+        "Denoising strength": 0.81,
         "Batch count": 25,
         "Batch size": 4,
         "CFG Scale": 7,
