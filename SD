@@ -1,0 +1,142 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "7112d370",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2023-05-10T06:39:50.286787Z",
+     "iopub.status.busy": "2023-05-10T06:39:50.286227Z",
+     "iopub.status.idle": "2023-05-10T06:40:01.591218Z",
+     "shell.execute_reply": "2023-05-10T06:40:01.589585Z"
+    },
+    "papermill": {
+     "duration": 11.314055,
+     "end_time": "2023-05-10T06:40:01.595006",
+     "exception": false,
+     "start_time": "2023-05-10T06:39:50.280951",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "/bin/bash: /opt/conda/lib/libtinfo.so.6: no version information available (required by /bin/bash)\r\n",
+      "Cloning into 'stable-diffusion-webui'...\r\n",
+      "remote: Enumerating objects: 19487, done.\u001b[K\r\n",
+      "remote: Counting objects: 100% (277/277), done.\u001b[K\r\n",
+      "remote: Compressing objects: 100% (173/173), done.\u001b[K\r\n",
+      "remote: Total 19487 (delta 117), reused 181 (delta 93), pack-reused 19210\u001b[K\r\n",
+      "Receiving objects: 100% (19487/19487), 29.19 MiB | 3.46 MiB/s, done.\r\n",
+      "Resolving deltas: 100% (13574/13574), done.\r\n"
+     ]
+    }
+   ],
+   "source": [
+    "!git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "554dff68",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2023-05-10T06:40:01.612951Z",
+     "iopub.status.busy": "2023-05-10T06:40:01.612272Z",
+     "iopub.status.idle": "2023-05-10T06:40:19.162637Z",
+     "shell.execute_reply": "2023-05-10T06:40:19.160601Z"
+    },
+    "papermill": {
+     "duration": 17.563,
+     "end_time": "2023-05-10T06:40:19.166034",
+     "exception": false,
+     "start_time": "2023-05-10T06:40:01.603034",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "/bin/bash: /opt/conda/lib/libtinfo.so.6: no version information available (required by /bin/bash)\r\n",
+      "Collecting diffusers==0.16.1\r\n",
+      "  Downloading diffusers-0.16.1-py3-none-any.whl (934 kB)\r\n",
+      "\u001b[2K     \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m934.9/934.9 kB\u001b[0m \u001b[31m12.5 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\r\n",
+      "\u001b[?25hRequirement already satisfied: Pillow in /opt/conda/lib/python3.7/site-packages (from diffusers==0.16.1) (9.2.0)\r\n",
+      "Collecting huggingface-hub>=0.13.2\r\n",
+      "  Downloading huggingface_hub-0.14.1-py3-none-any.whl (224 kB)\r\n",
+      "\u001b[2K     \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m224.5/224.5 kB\u001b[0m \u001b[31m17.1 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\r\n",
+      "\u001b[?25hRequirement already satisfied: filelock in /opt/conda/lib/python3.7/site-packages (from diffusers==0.16.1) (3.7.1)\r\n",
+      "Requirement already satisfied: importlib-metadata in /opt/conda/lib/python3.7/site-packages (from diffusers==0.16.1) (6.0.0)\r\n",
+      "Requirement already satisfied: regex!=2019.12.17 in /opt/conda/lib/python3.7/site-packages (from diffusers==0.16.1) (2021.11.10)\r\n",
+      "Requirement already satisfied: numpy in /opt/conda/lib/python3.7/site-packages (from diffusers==0.16.1) (1.21.6)\r\n",
+      "Requirement already satisfied: requests in /opt/conda/lib/python3.7/site-packages (from diffusers==0.16.1) (2.28.1)\r\n",
+      "Requirement already satisfied: fsspec in /opt/conda/lib/python3.7/site-packages (from huggingface-hub>=0.13.2->diffusers==0.16.1) (2023.1.0)\r\n",
+      "Requirement already satisfied: typing-extensions>=3.7.4.3 in /opt/conda/lib/python3.7/site-packages (from huggingface-hub>=0.13.2->diffusers==0.16.1) (4.1.1)\r\n",
+      "Requirement already satisfied: pyyaml>=5.1 in /opt/conda/lib/python3.7/site-packages (from huggingface-hub>=0.13.2->diffusers==0.16.1) (6.0)\r\n",
+      "Requirement already satisfied: packaging>=20.9 in /opt/conda/lib/python3.7/site-packages (from huggingface-hub>=0.13.2->diffusers==0.16.1) (23.0)\r\n",
+      "Requirement already satisfied: tqdm>=4.42.1 in /opt/conda/lib/python3.7/site-packages (from huggingface-hub>=0.13.2->diffusers==0.16.1) (4.64.1)\r\n",
+      "Requirement already satisfied: zipp>=0.5 in /opt/conda/lib/python3.7/site-packages (from importlib-metadata->diffusers==0.16.1) (3.8.1)\r\n",
+      "Requirement already satisfied: urllib3<1.27,>=1.21.1 in /opt/conda/lib/python3.7/site-packages (from requests->diffusers==0.16.1) (1.26.11)\r\n",
+      "Requirement already satisfied: idna<4,>=2.5 in /opt/conda/lib/python3.7/site-packages (from requests->diffusers==0.16.1) (3.3)\r\n",
+      "Requirement already satisfied: charset-normalizer<3,>=2 in /opt/conda/lib/python3.7/site-packages (from requests->diffusers==0.16.1) (2.1.1)\r\n",
+      "Requirement already satisfied: certifi>=2017.4.17 in /opt/conda/lib/python3.7/site-packages (from requests->diffusers==0.16.1) (2022.12.7)\r\n",
+      "Installing collected packages: huggingface-hub, diffusers\r\n",
+      "  Attempting uninstall: huggingface-hub\r\n",
+      "    Found existing installation: huggingface-hub 0.10.1\r\n",
+      "    Uninstalling huggingface-hub-0.10.1:\r\n",
+      "      Successfully uninstalled huggingface-hub-0.10.1\r\n",
+      "\u001b[31mERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\r\n",
+      "cached-path 1.1.6 requires huggingface-hub<0.11.0,>=0.8.1, but you have huggingface-hub 0.14.1 which is incompatible.\u001b[0m\u001b[31m\r\n",
+      "\u001b[0mSuccessfully installed diffusers-0.16.1 huggingface-hub-0.14.1\r\n",
+      "\u001b[33mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv\u001b[0m\u001b[33m\r\n",
+      "\u001b[0m"
+     ]
+    }
+   ],
+   "source": [
+    "!pip install diffusers==0.16.1"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.12"
+  },
+  "papermill": {
+   "default_parameters": {},
+   "duration": 41.607933,
+   "end_time": "2023-05-10T06:40:20.004701",
+   "environment_variables": {},
+   "exception": null,
+   "input_path": "__notebook__.ipynb",
+   "output_path": "__notebook__.ipynb",
+   "parameters": {},
+   "start_time": "2023-05-10T06:39:38.396768",
+   "version": "2.3.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
