@@ -562,7 +562,7 @@
     "img2img/Prompt/visible": true,
     "img2img/Prompt/value": "masterpiece, best quality, woman  {pixie|wavy | Pigtails } hair, wearing   mini {light-blue| PX1 |pink|red| PX2 | PX3 | blue} { lolita|fairy|maid|princess|serafuku|mini|wedding|cute} dress, glasses, model photoshot, fashion photoshot, detailed, sharp focus, dynamic pose, { kitchen|studio | garden | cosmic dust} background  , hd, uhd, 8k",
     "img2img/Negative prompt/visible": true,
-    "img2img/Negative prompt/value": "(worst quality, low quality:1.4), deformed, bad anatomy, disfigured, poorly drawn face, mutation, mutated, extra limb, ugly, disgusting, poorly drawn hands, missing limb, floating limbs, disconnected limbs, malformed hands, blurry, ((((mutated hands and fingers)))), watermark, watermarked, oversaturated, censored, distorted hands, amputation, missing hands, obese, doubled face, double hands, asian, b&w, black and white, sepia",
+    "img2img/Negative prompt/value": "(semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime), text, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck,",
     "img2img/Tabs@img2img_extra_tabs/selected": null,
     "img2img/Tabs@mode_img2img/selected": null,
     "img2img/Input directory/visible": true,
