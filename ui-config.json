@@ -5,7 +5,7 @@
     "txt2img/Prompt/visible": true,
     "txt2img/Prompt/value": "masterpiece, best quality,",
     "txt2img/Negative prompt/visible": true,
-    "txt2img/Negative prompt/value": "(worst quality, low quality:1.4)",
+    "txt2img/Negative prompt/value": "(semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime), text, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck,",
     "txt2img/Tabs@txt2img_extra_tabs/selected": null,
     "txt2img/Sampling method/visible": true,
     "txt2img/Sampling method/value": "DPM++ 2M Karras",
