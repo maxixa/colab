@@ -1,0 +1,971 @@
+bostyles:
+  random-anything:
+  - __styles/art-styles__, {__styles/punk-styles__|}, __styles/atmosphere/*__, __styles/rendering-techniques/*__,
+    __styles/graphic-engines__, __styles/image-styles__, __styles/image-techniques/*__,
+    __styles/depiction-styles/*__
+  random-artstyle:
+  - __styles/art-styles__
+  random-atmosphere:
+  - __styles/atmosphere/*__
+  random-atmosphere-colorful:
+  - __styles/atmosphere/colorful__
+  random-atmosphere-cozy:
+  - __styles/atmosphere/cozy__
+  random-atmosphere-dark:
+  - __styles/atmosphere/dark__
+  random-atmosphere-dramatic:
+  - __styles/atmosphere/dramatic__
+  random-atmosphere-ethereal:
+  - __styles/atmosphere/ethereal__
+  random-atmosphere-festive:
+  - __styles/atmosphere/festive__
+  random-atmosphere-intense:
+  - __styles/atmosphere/intense__
+  random-atmosphere-light:
+  - __styles/atmosphere/light__
+  random-atmosphere-magical:
+  - __styles/atmosphere/magical__
+  random-atmosphere-majestic:
+  - __styles/atmosphere/majestic__
+  random-atmosphere-melancholic:
+  - __styles/atmosphere/melancholic__
+  random-atmosphere-minimalist:
+  - __styles/atmosphere/minimalist__
+  random-atmosphere-mysterious:
+  - __styles/atmosphere/mysterious__
+  random-atmosphere-nostalgic:
+  - __styles/atmosphere/nostalgic__
+  random-atmosphere-romantic:
+  - __styles/atmosphere/romantic__
+  random-atmosphere-rustic:
+  - __styles/atmosphere/rustic__
+  random-atmosphere-serene:
+  - __styles/atmosphere/serene__
+  random-atmosphere-surreal:
+  - __styles/atmosphere/surreal__
+  random-atmosphere-urban:
+  - __styles/atmosphere/urban__
+  random-depiction-styles:
+  - __styles/depiction-styles/*__
+  random-depiction-styles-2d-styles:
+  - __styles/depiction-styles/2d-styles__
+  random-depiction-styles-3d-styles:
+  - __styles/depiction-styles/3d-styles__
+  random-depiction-styles-digital-modern-styles:
+  - __styles/depiction-styles/digital-modern-styles__
+  random-depiction-styles-historical:
+  - __styles/depiction-styles/historical__
+  random-graphic-engines:
+  - __styles/graphic-engines__
+  random-image-styles:
+  - __styles/image-styles__
+  random-image-techniques:
+  - __styles/image-techniques/*__
+  random-image-techniques-digital:
+  - __styles/image-techniques/digital__
+  random-image-techniques-other:
+  - __styles/image-techniques/other__
+  random-image-techniques-photographic:
+  - __styles/image-techniques/photographic__
+  random-image-techniques-traditional:
+  - __styles/image-techniques/traditional__
+  random-punk-styles:
+  - __styles/punk-styles__
+  random-rendering:
+  - __styles/rendering-techniques/*__
+  random-rendering-ambient-effects:
+  - __styles/rendering-techniques/ambient effects__
+  random-rendering-artistic-rendering:
+  - __styles/rendering-techniques/artistic rendering__
+  random-rendering-lighting-techniques:
+  - __styles/rendering-techniques/lighting techniques__
+  random-rendering-mapping-techniques:
+  - __styles/rendering-techniques/mapping techniques__
+  random-rendering-optimization-techniques:
+  - __styles/rendering-techniques/optimization techniques__
+  random-rendering-particles-and-effects:
+  - __styles/rendering-techniques/particles and effects__
+  random-rendering-post-processing-techniques:
+  - __styles/rendering-techniques/post-processing techniques__
+  random-rendering-ray-tracing:
+  - __styles/rendering-techniques/ray-tracing__
+  random-rendering-shading-techniques:
+  - __styles/rendering-techniques/shading techniques__
+constructors:
+- in style of
+- composed of
+- constructed from
+- formed of
+- fashioned out of
+- created from
+- built with
+- crafted from
+- constituted by
+- shaped with
+- produced from
+- manufactured from
+- fabricated with
+- comprised of
+- assembled from
+- originating from
+- derived from
+- put together with
+- produced using
+- constructed out of
+shape-tracing:
+- trace the shape and edges with
+- outline with
+- sketch the form and edges using
+- follow the contour with
+- draw the shape and edges using
+- mark the outline with
+- define the form and edges with
+- delineate using
+- follow the lines with
+- draw along the contours using
+- trace the silhouette with
+- map out the shape and edges with
+- chart the outline using
+- trace along the contours with
+- delimit the form and edges with
+- depict the shape and edges using
+styles:
+  art-styles:
+  - prehistoric art
+  - ancient egyptian art
+  - ancient greek art
+  - roman art
+  - byzantine art
+  - medieval art
+  - renaissance art
+  - baroque art
+  - rococo art
+  - neoclassical art
+  - romanticism
+  - realism
+  - impressionism
+  - post - impressionism
+  - expressionism
+  - cubism
+  - surrealism
+  - abstract expressionism
+  - pop art
+  - minimalism
+  - conceptual art
+  - postmodernism
+  - contemporary art
+  - sci - fi
+  - art nouveau
+  - gothic
+  - fauvism
+  - dadaism
+  - pointillism
+  - symbolism
+  - photorealism
+  - constructivism
+  - abstract art
+  - op art
+  - futurism
+  - art deco
+  - neoclassicism
+  - indigenous art
+  - afrofuturism
+  - street art
+  - land art
+  - installation art
+  - environmental art
+  - performance art
+  - video art
+  - outsider art
+  - "na\xefve art"
+  - folk art
+  - graffiti art
+  - art brut
+  - tonalism
+  - suprematism
+  - fluxus
+  - ashcan school
+  - precisionism
+  - neue sachlichkeit (new objectivity)
+  - magic realism
+  - video installation
+  - landscapes
+  - portraiture
+  - still life
+  - trompe - l'oeil
+  - hyperrealism
+  - kinetic art
+  - body art
+  - bio art
+  - chinese ink painting
+  - japanese ukiyo - e
+  - persian miniature
+  - mosaic art
+  - mexican muralism
+  - social realism
+  - romantic landscape
+  - abstract landscape
+  - optical art
+  - kinetic sculpture
+  - photomontage
+  - constructive realism
+  - neo - expressionism
+  - neue wilde
+  - street photography
+  - hyperpop art
+  - graffiti writing
+  - art povera
+  - happening
+  - video game art
+  - digital painting
+  - photographic realism
+  - postcolonial art
+  - installation sculpture
+  - geometric abstraction
+  - hard - edge painting
+  - social sculpture
+  - new media art
+  - indigenous australian art
+  - aboriginal dot painting
+  - photocollage
+  - art informel
+  - color field painting
+  - assemblage art
+  - stuckism
+  atmosphere:
+    colorful:
+    - colorful
+    - vivid
+    - chromatic
+    - multicolored
+    - polychromatic
+    - prismatic
+    - kaleidoscopic
+    - variegated
+    - rainbow-colored
+    - technicolor
+    - iridescent
+    - vibrant
+    - flamboyant
+    - mottled
+    - psychedelic
+    - dappled
+    - splashed
+    - lustrous
+    - opalescent
+    - glittering
+    - jazzy
+    cozy:
+    - cozy
+    - warm
+    - soft
+    - inviting
+    - homely
+    - comforting
+    - intimate
+    - snug
+    - fuzzy
+    - nestled
+    - hygge
+    - comfy
+    - relaxed
+    - pleasant
+    - quaint
+    - nurturing
+    - safe
+    - cuddly
+    - content
+    - pleasant
+    - homey
+    dark:
+    - dark
+    - gloomy
+    - dusky
+    - eerie
+    - shadowy
+    - murky
+    - dim
+    - shady
+    - obscure
+    - tenebrous
+    - somber
+    - dreary
+    - cimmerian
+    - twilight
+    - funereal
+    - stygian
+    - umbral
+    - crepuscular
+    - sombre
+    - penumbra
+    - opaque
+    dramatic:
+    - dramatic
+    - theatrical
+    - striking
+    - bold
+    - grandiose
+    - overwhelming
+    - impressive
+    - majestic
+    - spectacular
+    - monumental
+    - dynamic
+    - intense
+    - showy
+    - flamboyant
+    - thrilling
+    - forceful
+    - gripping
+    - compelling
+    - arresting
+    ethereal:
+    - ethereal
+    - heavenly
+    - transcendent
+    - divine
+    - angelic
+    - otherworldly
+    - celestial
+    - spiritual
+    - enchanted
+    - sacred
+    - supernatural
+    - cosmic
+    - esoteric
+    - mystical
+    - ephemeral
+    - enigmatic
+    - nebulous
+    - mystifying
+    - astral
+    festive:
+    - festive
+    - joyful
+    - merry
+    - lively
+    - celebratory
+    - jolly
+    - sparkling
+    - joyous
+    - vibrant
+    - exuberant
+    - gleeful
+    - animated
+    - festal
+    - spirited
+    - luminous
+    - whimsical
+    - colorful
+    - playful
+    - bubbly
+    - energetic
+    - joyful
+    intense:
+    - intense
+    - harsh
+    - blinding
+    - glaring
+    - dazzling
+    - brilliant
+    - searing
+    - fierce
+    - flashing
+    - blazing
+    - piercing
+    - radiating
+    - glinting
+    - flaming
+    - scorching
+    - white-hot
+    - flare
+    - burnished
+    - flaring
+    - fiery
+    light:
+    - light
+    - radiant
+    - luminous
+    - cheerful
+    - glowing
+    - sparkling
+    - shimmering
+    - sunny
+    - brilliant
+    - beaming
+    - glimmering
+    - effulgent
+    - gleaming
+    - dazzling
+    - resplendent
+    - ethereal
+    - glistering
+    - incandescent
+    - scintillating
+    - twinkling
+    - glistening
+    magical:
+    - magical
+    - enchanted
+    - mystical
+    - spellbinding
+    - whimsical
+    - mesmerizing
+    - otherworldly
+    - ethereal
+    - fairy-tale
+    - bewitching
+    - fantastical
+    - supernatural
+    - wonderous
+    - enigmatic
+    - illusory
+    - charmed
+    - miraculous
+    - wizardly
+    - sorcerous
+    - enigmatic
+    - enthralling
+    majestic:
+    - majestic
+    - regal
+    - imperial
+    - noble
+    - stately
+    - magnificent
+    - dignified
+    - proud
+    - grand
+    - royal
+    - exalted
+    - heroic
+    - sovereign
+    - glorious
+    - empowering
+    - monumental
+    - resplendent
+    - august
+    - commanding
+    - empress/empress
+    melancholic:
+    - melancholic
+    - somber
+    - sorrowful
+    - melancholy
+    - wistful
+    - nostalgic
+    - pensive
+    - soulful
+    - longing
+    - tragic
+    - reflective
+    - poignant
+    - lamenting
+    - desolate
+    - forlorn
+    - weeping
+    - mournful
+    - doleful
+    - sullen
+    - depressing
+    - dismal
+    minimalist:
+    - minimalist
+    - clean
+    - simple
+    - subtle
+    - understated
+    - spare
+    - streamlined
+    - minimal
+    - modest
+    - uncluttered
+    - sleek
+    - refined
+    - neat
+    - frugal
+    - bare
+    - unadorned
+    - effortless
+    - elegant
+    - tasteful
+    - essential
+    mysterious:
+    - mysterious
+    - cryptic
+    - uncanny
+    - puzzling
+    - secretive
+    - veiled
+    - esoteric
+    - unknown
+    - concealed
+    - shadowy
+    - enigmatic
+    - hidden
+    - recondite
+    - arcane
+    - abstruse
+    - unfathomable
+    - inscrutable
+    - evasive
+    - occult
+    - nebulous
+    - clandestine
+    mystical:
+    - mystical
+    - enchanted
+    - occult
+    - esoteric
+    - magical
+    - transcendent
+    - secretive
+    - mystifying
+    - mysterious
+    - ethereal
+    - supernatural
+    - enigmatic
+    - sorcerous
+    - symbolic
+    - witching
+    - enchanted
+    - arcane
+    - uncanny
+    - spiritual
+    - mystic
+    - haunting
+    nostalgic:
+    - nostalgic
+    - retro
+    - sentimental
+    - fond
+    - sentimental
+    - yearning
+    - longing
+    - bittersweet
+    - reminiscent
+    - evocative
+    - vintage
+    - melancholic
+    - quaint
+    - poignant
+    - classic
+    - romantic
+    - historical
+    - old-school
+    - sigh-inducing
+    - heartwarming
+    romantic:
+    - romantic
+    - amorous
+    - passionate
+    - intimate
+    - tender
+    - affectionate
+    - candlelit
+    - dreamy
+    - sentimental
+    - charming
+    - idyllic
+    - love-struck
+    - heartwarming
+    - enchanting
+    - flirtatious
+    - amatory
+    - sweet
+    - lovable
+    - alluring
+    - euphoric
+    - serenading
+    rustic:
+    - rustic
+    - vintage
+    - old-fashioned
+    - antique
+    - weathered
+    - aged
+    - time-worn
+    - faded
+    - worn
+    - classic
+    - nostalgic
+    - distressed
+    - aged
+    - coarse
+    - weathered
+    - tarnished
+    - patina
+    serene:
+    - serene
+    - tranquil
+    - calm
+    - peaceful
+    - soothing
+    - gentle
+    - soft
+    - mellow
+    - subdued
+    - hushed
+    - tender
+    - placid
+    - quiet
+    - still
+    - balmy
+    - serene
+    - mild
+    - ethereal
+    - dreamy
+    - pleasant
+    - halcyo
+    surreal:
+    - surreal
+    - unreal
+    - dreamlike
+    - visionary
+    - hallucinatory
+    - unearthly
+    - fanciful
+    - unconventional
+    - fantasy-like
+    - illusory
+    - outlandish
+    - bizarre
+    - extraordinary
+    - unrealistic
+    - phantasmagorical
+    - grotesque
+    - abstract
+    - enigmatic
+    - fanciful
+    - whimsical
+    urban:
+    - urban
+    - cityscape
+    - metropolitan
+    - streetlights
+    - skyscraper
+    - contemporary
+    - industrial
+    - modern
+    - urban
+    - neon-lit
+    - graffiti
+    - futuristic
+    - edgy
+    - vibrant
+    - dynamic
+    - trendy
+    - hip
+    - cosmopolitan
+    - streetwise
+    - hipster
+    - chic
+  depiction-styles:
+    2d-styles:
+    - 2d
+    - realistic
+    - surreal
+    - abstract
+    - minimalist
+    - cartoony
+    - manga/anime
+    - comic book style
+    - impressionistic
+    - expressionistic
+    - cubist
+    - pointillist
+    - fauvist
+    - pop art
+    - art nouveau
+    - art deco
+    3d-styles:
+    - 3d
+    - photorealistic
+    - isometric
+    - orthographic
+    - perspective
+    - top-down
+    - front view
+    - side view
+    - back view
+    - oblique
+    - bird's eye view
+    - worm's eye view
+    - aerial view
+    - cutaway view
+    - exploded view
+    - x-ray view
+    - cross-section view
+    - augmented reality
+    - virtual reality
+    digital-modern-styles:
+    - digital art
+    - pixel art
+    - vector art
+    - line art
+    - collage art
+    - hybrid styles
+    historical:
+    - renaissance
+    - baroque
+    - rococo
+    - gothic
+    - prehistoric art
+    - medieval art
+    - romantic art
+    - realism art
+    - impressionism art
+    - expressionism art
+    - cubism art
+    - surrealism art
+    - abstract expressionism
+    - pop art
+  graphic-engines:
+  - unity engine
+  - cryengine
+  - godot engine
+  - source engine
+  - frostbite engine
+  - anvil engine
+  - redengine engine
+  - id tech engine
+  - creation engine
+  - renderware engine
+  - dunia engine
+  - re engine
+  - snowdrop engine
+  - stingray engine
+  - heroengine engine
+  - cob engine
+  - decima engine
+  - fox engine
+  - anvilnext engine
+  image-styles:
+  - abstract
+  - abstract expressionist
+  - art deco
+  - art nouveau
+  - atmospheric
+  - baroque
+  - chaotic
+  - constructivist
+  - cubist
+  - cyberpunk
+  - dada
+  - digital art
+  - dystopian
+  - dynamic
+  - eerie
+  - eclectic
+  - ethereal
+  - fantasy
+  - fauvist
+  - futurist
+  - geometric
+  - graffiti
+  - grungy
+  - harmonious
+  - impressionistic
+  - kinetic
+  - land art
+  - luminous
+  - melancholic
+  - minimalist
+  - moody
+  - monochromatic
+  - mysterious
+  - neo-impressionist
+  - noir
+  - op art
+  - pastel
+  - photorealistic
+  - pointillist
+  - pop art
+  - post-impressionist
+  - psychedelic
+  - realist
+  - renaissance
+  - rococo
+  - romanticist
+  - serene
+  - steampunk
+  - stark
+  - street art
+  - sublime
+  - surreal
+  - surrealist
+  - symbolist
+  - tranquil
+  - urban
+  - vibrant
+  - vintage
+  - whimsical
+  image-techniques:
+    digital:
+    - digital illustration
+    - digital painting
+    - photo manipulation
+    - photo retouching
+    other:
+    - color grading
+    - decalcomania
+    - silkscreen printing
+    photographic:
+    - airbrushing
+    - chromogenic prints
+    - collodion process
+    - cyanotype printing
+    - dodging and burning
+    - double exposure
+    - double exposure photography
+    - high dynamic range
+    - high-speed photography
+    - infrared photography
+    - long exposure photography
+    - macro photography
+    - multiple exposure photography
+    - pinhole photography
+    - polaroid transfers
+    - selective color
+    traditional:
+    - acrylic painting
+    - charcoal drawing
+    - collage
+    - "clich\xe9 verre"
+    - dry brush
+    - encaustic painting
+    - glazing
+    - grisaille
+    - gum bichromate printing
+    - impasto
+    - ink drawing
+    - oil painting
+    - pastel drawing
+    - pencil drawing
+    - photogravure
+    - photograms
+    - printmaking
+    - scumbling
+    - sgraffito
+  punk-styles:
+  - biopunk
+  - dieselpunk
+  - atompunk
+  - clockpunk
+  - solarpunk
+  - post-apocalyptic
+  - retrofuturism
+  - tech noir
+  - cyber-occultism
+  - neo-noir
+  - sci-fi
+  - cyberpunk
+  - steampunk
+  - post-cyberpunk
+  - stonepunk
+  - teslapunk
+  - raypunk
+  - decopunk
+  - mythpunk
+  - spacepunk
+  - nanopunk
+  - retro cyberpunk
+  - robotpunk
+  - vaporwave
+  - glitch art
+  - solarwave
+  rendering-techniques:
+    advanced-rendering:
+    - bidirectional path tracing
+    - metropolis light transport
+    - radiosity
+    - tessellation
+    - voxel-based rendering
+    - octane rendering
+    ambient-effects:
+    - god rays / crepuscular rays
+    - screen-space reflections
+    - ambient occlusion
+    - depth of field
+    - motion blur
+    - anti-aliasing
+    - anisotropic filtering
+    - screen space ambient occlusion
+    - soft particles
+    - depth peeling
+    - real-time reflections
+    - environment occlusion
+    - subsurface reflections
+    - transmittance
+    - caustics rendering
+    - dispersion
+    artistic-rendering:
+    - matte painting
+    - compositing
+    - anamorphic lens flare
+    - line rendering
+    lighting-techniques:
+    - global illumination
+    - photon mapping
+    - dynamic lighting
+    - light attenuation
+    - real-time global illumination
+    - real-time shadows
+    - procedural sky
+    - environment lighting
+    - dynamic weather systems
+    - real-time gi caching
+    mapping-techniques:
+    - normal mapping
+    - parallax mapping
+    - displacement mapping
+    - environment mapping
+    - procedural texturing
+    - procedural generation
+    - bump mapping
+    - 3d texture mapping
+    optimization-techniques:
+    - frustum culling
+    - level of detail
+    - virtual texturing
+    particles-and-effects:
+    - particle systems
+    - stochastic sampling
+    - gpu particle systems
+    post-processing-techniques:
+    - tone mapping
+    - post-processing effects
+    - reprojection techniques
+    ray-tracing:
+    - ray tracing
+    - raymarching
+    - global illumination
+    - real-time ray tracing
+    shading-techniques:
+    - deferred rendering
+    - physically-based rendering
+    - anisotropic specular
+    - procedural shading
+    - vector displacement mapping
+    - npr (non-photorealistic rendering)
+    - toon shading
+    - cel shading
+    - wireframe rendering
+    - npr hatching
+surface-swap:
+- swap the surfaces for
+- replace the surfaces with
+- substitute the surfaces with
+- exchange the surfaces with
+- switch the surfaces for
+- replace the surfaces using
+- supplant the surfaces with
+- put in place of the surfaces
+- use alternate surfaces instead of
+- change out the surfaces with
+- install different surfaces in lieu of
+- put new surfaces in the place of
+- use replacement surfaces for
+- sub in the surfaces with
+- bring in new surfaces to replace
+- implement alternative surfaces for
