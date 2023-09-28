@@ -1,0 +1,431 @@
+anacc:
+- (has_wings:1.1) <lora:haswings:0.5>
+- (cat_ears:1.1) <lora:catearsclothing:0.5>
+ancombo:
+- (has_wings:1.1) <lora:haswings:0.5>,(wearing puff_dress:1.5) <lora:puffdress:0.5>
+- (1shoulder_dress:1.1) <lora:oneshoulderdress:0.5>,(has_wings:1.1) <lora:haswings:0.5>
+- (wedding princess dress:1.1) <lora:weddingprincessdress:0.5>,(has_wings:1.1) <lora:haswings:0.5>
+- (tutu:1.1) <lora:balletdance:0.5>,(has_wings:1.1) <lora:haswings:0.5>
+- (swsd:1.1) <lora:sexyweddingdress:0.5>,(has_wings:1.1) <lora:haswings:0.5>
+- (bunny outfit:1.1) <lora:bunnyoutfit:0.5>
+- (baby_doll_dress:1.1) <lora:babydoll:0.5>,(has_wings:1.1) <lora:haswings:0.5>
+- (see through dress:1.1) <lora:seethroughdress:0.5>,(has_wings:1.1) <lora:haswings:0.5>
+- (asian sexy lingerie:1.1) <lora:asiansexylingerie:0.5>
+- (wearing mini_dress:1.1) <lora:minidress:0.5>, (has_wings:1.1) <lora:haswings:0.5>
+- (wearing sheath_dress:1.1) <lora:sheathdress:0.5>,(has_wings:1.1) <lora:haswings:0.5>
+andress:
+- (wearing mini_dress:1.1) <lora:minidress:0.5>
+- (wedding princess dress:1.1) <lora:weddingprincessdress:0.5>
+- (wearing ballet dress:1.1) <lora:balletdance:0.5>
+- (wearing tutu:1.1) <lora:balletdance:0.5>
+- (swsd:1.1) <lora:sexyweddingdress:0.5>
+- (wearing bunny outfit:1.1) <lora:bunnyoutfit:0.5>
+- (dress,wearing  sexy sailor outfit:1.1) <lora:sexysailoroutfit:0.5>
+- (wearing see through dress:1.1) <lora:seethroughdress:0.5>
+- (wearing sexy maid dress:1.1) <lora:sexymaiddress:0.5>
+- (wearing sexy hostess uniform:1.1) <lora:sexyhostessuniform:0.5>
+- (wearing flowers dress:1.1) <lora:betterflowersdress:0.5>
+- (wearing luxury_dress:1.1) <lora:luxurydress:0.5>
+- (wearing cheerleader_outfit:1.1) <lora:cheerleaderoutfit:0.5>
+- (nurse_lingerie:1.1) <lora:asiansexylingerie:0.5>
+- (wearing floral_prom_dress:1.1) <lora:floralpromdress:0.5>
+- (wearing kimono_clothes:1.1) <lora:kimonoclothes:0.5>
+- (wearing off_shoulder_bandage_dress:1.1) <lora:offshoulderbandagedress:0.5>
+- (wearing deep_v-neck_dress:1.1) <lora:deepv-neckdress:0.5>
+- (wearing leg_split_dress:1.1) <lora:legsplitdress:0.5>
+- (cut_out_dress:1.1) <lora:cutoutdress:0.5>
+- (wearing crop_top_clothing:1.1) <lora:croptopclothing:0.5>
+- (wearing halter_dress:1.1) <lora:halterdress:0.5>
+- (kitchen apron:1.1) <lora:kitchenapron:0.5>
+- (wearing 1shoulder_dress:1.1) <lora:oneshoulderdress:0.7>
+- (wearing puff_dress:1.1) <lora:puffdress:0.5>
+color:
+- pink
+- red
+- blue
+- green
+- white
+- yellow
+cute:
+- a-line
+- skater
+- wrap
+- shift
+- fit and flare
+- sundress
+- pinafore
+- smock
+- tiered
+- babydoll
+- off-shoulder
+- ruffle
+- floral print
+- polka dot
+- gingham
+- embroidered
+- pleated
+- high-low hem
+- button-up
+cuteoutfit1:
+- a-line floral dress with ballet flats
+- wrap dress with a wide brim hat and ankle boots
+- tiered ruffle dress with strappy sandals
+- polka dot fit and flare dress with mary jane shoes
+- off-the-shoulder sundress with espadrilles
+- babydoll dress with white sneakers
+- lace-trimmed skater dress with a denim jacket
+- button-up shirt dress with loafers
+- pleated midi dress with a statement belt and pumps
+- gingham print dress with block heel sandals
+- high-neck swing dress with ankle booties
+- striped t-shirt dress with a crossbody bag and sneakers
+- embroidered dress with lace-up sandals
+- floral wrap midi dress with a straw hat
+- pastel-colored fit and flare dress with kitten heels
+- smocked bodice dress with platform espadrilles
+- boho maxi dress with layered necklaces and gladiator sandals
+- eyelet lace dress with ballet flats
+- chambray shirt dress with white sneakers
+- tulle skirt dress with a cropped cardigan
+- off-the-shoulder ruffle dress with wedge sandals
+cuteoutfit2:
+- floral print wrap dress with strappy sandals
+- flutter sleeve midi dress with block heel pumps
+- pastel-colored skater dress with white sneakers
+- embroidered fit and flare dress with espadrilles
+- off-the-shoulder maxi dress with statement earrings
+- smocked waist dress with platform sneakers
+- striped shirt dress with ankle boots
+- button-front sundress with a floppy hat
+- pleated shirt dress with slingback flats
+- a-line pinafore dress with a long-sleeve tee underneath
+- lace-trimmed slip dress with strappy heels
+- ruffled hem dress with mary jane shoes
+- denim overall dress with a tucked-in blouse
+- tie-dye swing dress with sneakers
+- floral print midi dress with a crossbody bag
+- gingham fit and flare dress with ballet flats
+- printed shirtdress with chunky sandals
+- linen button-up dress with woven mules
+- pastel lace dress with kitten heel mules
+- crochet-trimmed sundress with gladiator sandals
+- striped t-shirt dress with a denim jacket and slip-on sneakers
+cuteoutfit3:
+- floral wrap dress with strappy block heels
+- ruffle sleeve midi dress with a wide brim hat
+- polka dot swing dress with white sneakers
+- off-the-shoulder boho dress with fringe sandals
+- button-front a-line dress with espadrilles
+- tiered maxi dress with statement sunglasses
+- smocked waist sundress with woven slides
+- printed fit and flare dress with ankle strap flats
+- chambray shirt dress with slip-on sneakers
+- embroidered tunic dress with lace-up sandals
+- babydoll dress with high-top sneakers
+- striped midi dress with a denim jacket
+- floral high-low dress with wedge sandals
+- linen shirtdress with basket bag and mules
+- crochet-trimmed dress with layered necklaces
+- gingham pinafore dress with ballet flats
+- pleated babydoll dress with crossbody bag
+- eyelet lace midi dress with platform espadrilles
+- printed off-the-shoulder dress with hoop earrings
+- wrap mini dress with kitten heel mules
+- tiered ruffle dress with statement headband
+dress:
+- lolita
+- puffy
+- wedding
+- tutu
+- fairy
+- prencess
+- serafuku
+dresscode:
+- sexy
+- cute
+- mini
+elegant:
+- maxi
+- ball gown
+- sheath
+- column
+- mermaid
+- trumpet
+- empire waist
+- a-line
+- wrap
+- off-shoulder
+- v-neck
+- halter neck
+- high neck
+- one-shoulder
+- lace overlay
+- velvet
+- satin
+- embroidered
+- sequined
+- chiffon
+hair:
+- long
+- pigtails
+- twin tails
+hairacc:
+- bow hair clip
+- cat ears
+- bunny ear
+- glittery hair barrettes
+- pearl hairpins
+- pastel hair bows
+- heart-shaped hair clip
+- teddy bear hair tie
+- ribbon hair tie
+- lace headband
+light:
+- natural light
+- studio light
+- flash
+- backlight
+- fill light
+- rim light
+- key light
+- ambient light
+- softbox
+- reflectors
+mini1:
+- graphic tee, mini skirt, and sneakers
+- off-the-shoulder blouse, a-line mini skirt, and ankle boots
+- crop top, button-front mini skirt, and platform sandals
+- sweater, plaid mini skirt, and knee-high socks
+- tank top, denim mini skirt, and white sneakers
+- striped t-shirt, skater mini skirt, and ballet flats
+- chambray shirt, floral print mini skirt, and slide sandals
+- oversized hoodie, pleated mini skirt, and combat boots
+- ruffled blouse, suede mini skirt, and ankle strap heels
+- sweater vest, corduroy mini skirt, and loafers
+- halter neck top, sequined mini skirt, and strappy heels
+- cropped cardigan, pleated plaid mini skirt, and mary janes
+- knit crop top, high-waisted leather mini skirt, and booties
+- long-sleeve blouse, button-up denim mini skirt, and mules
+- tube top, ruffled mini skirt, and block heel sandals
+- oversized button-down shirt, knit mini skirt, and sneakers
+- turtleneck sweater, patterned mini skirt, and over-the-knee boots
+- lace camisole, satin mini skirt, and slingback flats
+- floral blouse, flared mini skirt, and lace-up espadrilles
+- bodysuit, metallic mini skirt, and strappy stilettos
+mini2:
+- off-the-shoulder crop top, button-front denim mini skirt, and platform sneakers
+- oversized sweater, pleated mini skirt, and knee-high boots
+- striped tank top, a-line corduroy mini skirt, and ankle boots
+- knit turtleneck, plaid mini skirt, and opaque tights
+- graphic tee, faux leather mini skirt, and combat boots
+- floral blouse, wrap-style mini skirt, and block heel sandals
+- sleeveless turtleneck, sequin mini skirt, and pointed-toe flats
+- polka dot top, skater mini skirt, and white sneakers
+- crop cardigan, flared mini skirt, and mary jane shoes
+- velvet camisole, suede mini skirt, and ankle strap heels
+- striped long-sleeve tee, high-waisted denim mini skirt, and loafers
+- cropped hoodie, pleated plaid mini skirt, and lace-up boots
+- lace-trimmed cami, satin mini skirt, and strappy sandals
+- denim jacket, ruffled mini skirt, and low-top sneakers
+- boho blouse, button-up floral mini skirt, and woven mules
+- oversized button-down shirt (tied at waist), pleated mini skirt, and ballet flats
+- halter crop top, metallic mini skirt, and stiletto heels
+- cropped knit sweater, high-waisted knit mini skirt, and sock boots
+- off-the-shoulder blouse, tiered ruffle mini skirt, and espadrilles
+- sweater vest, plaid mini skirt, and lace-up oxfords
+mini3:
+- cropped tank top, button-front suede mini skirt, and platform sandals
+- oversized t-shirt, high-waisted pleated mini skirt, and sneakers
+- off-the-shoulder sweater, corduroy mini skirt, and ankle boots
+- floral crop top, flared mini skirt, and block heel pumps
+- striped turtleneck, a-line denim mini skirt, and loafers
+- graphic sweatshirt, metallic mini skirt, and high-top sneakers
+- lace-trimmed camisole, skater mini skirt, and ballet flats
+- knit turtleneck, plaid mini skirt, and knee-high socks
+- off-the-shoulder blouse, button-front plaid mini skirt, and lace-up boots
+- cropped cardigan, patterned mini skirt, and mary jane shoes
+- bodysuit, faux leather mini skirt, and strappy sandals
+- sweater vest, button-up denim mini skirt, and low-top sneakers
+- ruffled blouse, suede mini skirt, and ankle strap heels
+- tube top, sequin mini skirt, and pointed-toe flats
+- graphic tee, pleated mini skirt, and white sneakers
+- off-the-shoulder crop top, wrap-style mini skirt, and wedge sandals
+- oversized button-down shirt (tied at waist), high-waisted mini skirt, and mules
+- lace-trimmed cami, satin mini skirt, and slingback flats
+- halter neck top, flared mini skirt, and platform espadrilles
+- velvet camisole, metallic mini skirt, and strappy stilettos
+mini4:
+- cropped sweater, button-front denim mini skirt, and ankle boots
+- graphic tank top, plaid mini skirt, and white sneakers
+- off-the-shoulder blouse, high-waisted corduroy mini skirt, and loafers
+- knit turtleneck, a-line mini skirt, and knee-high socks
+- striped long-sleeve tee, faux leather mini skirt, and lace-up boots
+- floral print camisole, skater mini skirt, and ballet flats
+- oversized cardigan, pleated mini skirt, and platform sneakers
+- ruffled off-the-shoulder top, button-front suede mini skirt, and mules
+- tube top, sequin mini skirt, and strappy heels
+- cropped hoodie, denim mini skirt, and low-top sneakers
+- lace-trimmed blouse, tiered mini skirt, and block heel sandals
+- sleeveless turtleneck, metallic mini skirt, and pointed-toe flats
+- graphic t-shirt, flared mini skirt, and platform sandals
+- off-the-shoulder crop top, floral print mini skirt, and wedges
+- oversized button-down shirt (tied at waist), high-waisted plaid mini skirt, and
+  espadrilles
+- knit cardigan, button-up denim mini skirt, and ankle strap flats
+- halter crop top, suede mini skirt, and ankle boots
+- striped t-shirt, ruffled mini skirt, and slingback flats
+- velvet camisole, patterned mini skirt, and lace-up heels
+- boho blouse, wrap-style mini skirt, and lace-up sandals
+- cropped knit sweater, metallic mini skirt, and kitten heels
+mini5:
+- button-up cardigan, a-line denim mini skirt, and loafers
+- knit turtleneck, plaid mini skirt, and knee-high boots
+- off-the-shoulder top, corduroy mini skirt, and ankle booties
+- graphic tee, high-waisted faux leather mini skirt, and combat boots
+- striped sweater, skater mini skirt, and ballet flats
+- lace-trimmed camisole, button-front mini skirt, and platform sandals
+- oversized denim jacket, ruffled mini skirt, and sneakers
+- cropped hoodie, metallic mini skirt, and strappy heels
+- off-the-shoulder blouse, printed mini skirt, and block heel sandals
+- sweater vest, pleated mini skirt, and mary jane shoes
+- knit crop top, flared mini skirt, and ankle boots
+- graphic t-shirt, suede mini skirt, and low-top sneakers
+- velvet camisole, sequin mini skirt, and pointed-toe flats
+- ribbed turtleneck, plaid mini skirt, and white sneakers
+- ruffled blouse, button-up denim mini skirt, and mules
+- striped long-sleeve tee, satin mini skirt, and slingback flats
+- off-the-shoulder sweater, wrap-style mini skirt, and espadrilles
+- cropped cardigan, patterned mini skirt, and lace-up sandals
+- halter crop top, tiered mini skirt, and platform espadrilles
+- sleeveless blouse, metallic mini skirt, and kitten heels
+mini6:
+- oversized button-down shirt (tied at waist), button-front mini skirt, and sneakers
+- striped tank top, suede mini skirt, and ankle boots
+- knit turtleneck, plaid mini skirt, and knee-high socks
+- off-the-shoulder crop top, corduroy mini skirt, and block heel sandals
+- graphic tee, a-line denim mini skirt, and white sneakers
+- cropped sweater, flared mini skirt, and lace-up booties
+- lace-trimmed camisole, metallic mini skirt, and strappy heels
+- striped t-shirt, pleated mini skirt, and ballet flats
+- halter neck top, button-up mini skirt, and espadrilles
+- sweater vest, printed mini skirt, and lace-up oxfords
+- off-the-shoulder blouse, suede mini skirt, and low-top sneakers
+- knit cardigan, sequin mini skirt, and pointed-toe flats
+- boho blouse, wrap-style mini skirt, and gladiator sandals
+- denim jacket, ruffled mini skirt, and platform sneakers
+- sleeveless turtleneck, button-front mini skirt, and loafers
+- crop top, metallic mini skirt, and strappy sandals
+- graphic sweatshirt, skater mini skirt, and slingback flats
+- oversized sweater, faux leather mini skirt, and ankle booties
+- lace-trimmed blouse, high-waisted mini skirt, and mules
+- off-the-shoulder top, patterned mini skirt, and wedges
+mini7:
+- button-up shirt, a-line corduroy mini skirt, and ankle boots
+- ribbed turtleneck, button-front denim mini skirt, and sneakers
+- floral crop top, high-waisted pleated mini skirt, and block heel pumps
+- off-the-shoulder sweater, metallic mini skirt, and strappy heels
+- graphic tee, flared mini skirt, and lace-up boots
+- striped long-sleeve tee, suede mini skirt, and ballet flats
+- knit cardigan, plaid mini skirt, and knee-high socks
+- velvet camisole, button-up mini skirt, and low-top sneakers
+- halter neck top, sequin mini skirt, and pointed-toe flats
+- cropped hoodie, skater mini skirt, and espadrilles
+- lace-trimmed cami, denim mini skirt, and slingback flats
+- oversized button-down shirt (tied at waist), ruffled mini skirt, and loafers
+- boho blouse, wrap-style mini skirt, and platform sandals
+- sweater vest, satin mini skirt, and kitten heels
+- striped tank top, tiered mini skirt, and gladiator sandals
+- off-the-shoulder blouse, faux leather mini skirt, and ankle booties
+- cropped sweater, pleated mini skirt, and lace-up sandals
+- knit turtleneck, metallic mini skirt, and lace-up heels
+- graphic sweatshirt, button-front mini skirt, and mules
+- lace-trimmed blouse, plaid mini skirt, and mary jane shoes
+placebg:
+- garden
+- beach
+- city
+- woods
+- park
+- studio
+- kitchen
+- garage
+- night club
+- mountain
+- bed room
+- living room
+- hall
+sexyoutfit:
+- lingerie set (bra and panties)
+- corset or bustier with matching bottoms
+- bodycon dress
+- plunging neckline dress
+- sheer or lace bodysuit
+- cut-out dress or top
+- high-slit skirt or dress
+- leather or vinyl clothing
+- crop top and mini skirt set
+- deep v-neck jumpsuit
+- lace-up clothing (e.g., lace-up bodysuit)
+- thigh-high boots with a short dress
+- off-the-shoulder or cold-shoulder top
+- backless dress or top
+- strappy lingerie or clothing
+- mesh or fishnet clothing
+- garter belt and stockings set
+- metallic or sequined outfit
+- silk or satin slip dress
+- lace lingerie chemise
+sexyoutfit2:
+- leather mini skirt and lace-up crop top
+- corset-style lace bodysuit with a garter belt
+- satin robe and lace teddy
+- high-waisted lingerie panties with a strappy bralette
+- silk slip dress with a thigh-high slit
+- off-the-shoulder bodycon dress
+- vinyl leggings with a plunging neckline top
+- lace halter bralette with a sheer skirt
+- cut-out bodysuit with a choker necklace
+- sequined mini dress with open back
+- mesh cover-up over a bikini or lingerie
+- lace bra and matching shorts set
+- strappy harness-style lingerie
+- velvet bodysuit with lace accents
+- garter dress with stockings and heels
+- sheer lace kimono with a matching bra and panties
+- lace-up corset dress with thigh-high boots
+- satin choker and matching lingerie set
+- fringe lingerie set with a high-waisted bottom
+- sequined jumpsuit with a deep neckline
+sexyoutfit3:
+- lace-up leather pants with a plunging bodysuit
+- satin bustier with lace trim and high-waisted panties
+- mesh bodysuit with strappy details and thigh-high stockings
+- open-front babydoll with matching thong
+- ruffled lace camisole and tap shorts set
+- sequin bralette and high-waisted shorts
+- vinyl mini dress with cut-out details
+- sheer lace romper with an off-the-shoulder neckline
+- satin corset with a lace pencil skirt
+- halter-neck lace teddy with matching thigh garters
+- garter belt and lace bra set with a sheer robe
+- lace-up vinyl skirt with a lace bra top
+- cut-out fishnet dress with a deep v-neckline
+- silk kimono robe over a lace bralette and shorts
+- strappy harness bra with high-waisted panties and suspenders
+- mesh bodystocking with strategic cut-outs
+- plunging velvet jumpsuit with open back
+- lace-up faux leather leggings with a lace cami
+- sheer lace top with a mini skirt and thigh-high boots
+- fringe-trimmed lingerie set with matching accessories
+simbg:
+- white
+- bokeh
+time:
+- dawn
+- morning
+- noon
+- afternoon
+- evening
+- sunset
+- dusk
+- night
