@@ -1,0 +1,2225 @@
+m:
+  color:
+    - red
+    - blue
+    - yellow
+    - green
+    - black
+    - white
+    - gray
+    - brown
+    - pink
+  color2:
+    - pink
+    - teal
+    - turquoise
+    - lavender
+    - peach
+    - maroon
+    - indigo
+    - coral
+    - gold
+    - silver
+  color3:
+    - aqua
+    - beige
+    - charcoal
+    - cyan
+    - fuchsia
+    - lime
+    - magenta
+    - navy
+    - olive
+    - plum
+    - salmon
+    - tan
+    - violet
+    - apricot
+    - burgundy
+    - chartreuse
+    - cobalt
+    - emerald
+    - ivory
+    - mauve
+    - periwinkle
+    - ruby
+    - sapphire
+    - topaz
+    - coral
+    - jade
+    - amber
+    - onyx
+    - rose
+    - slate
+  colortheme:
+    - pastel
+    - neutral
+    - minimalist
+    - soothing
+    - soft
+    - airy
+    - ethereal
+    - serene
+    - subtle
+    - dreamy
+    - whimsical
+    - bright
+    - vibrant
+    - cheerful
+    - luminous
+    - glowing
+    - radiant
+    - sun-kissed
+    - golden
+    - iridescent
+  darktheme:
+    - dark theme
+    - light theme
+    - noir
+    - bright
+    - shadow
+    - gloomy
+    - illuminated
+    - dim
+    - radiant
+    - dusk
+  dayteme:
+    - dawn
+    - morning
+    - mid-morning
+    - noon
+    - afternoon
+    - evening
+    - sunset
+    - dusk
+    - night
+    - midnight
+  explode:
+    - bursting
+    - igniting
+    - exploding
+    - detonating
+    - blowing up
+    - erupting
+    - blasting
+    - popping
+    - igniting
+    - combusting
+  lighting:
+    - ambient
+    - natural
+    - soft
+    - dramatic
+    - backlit
+    - spotlight
+    - glamorous
+    - moody
+    - cinematic
+    - glowing
+  liquidity:
+    - liquid splash
+    - melting cream
+  particle1:
+    - dust
+    - cloud
+    - haze
+    - smog
+    - fog
+    - mist
+    - vapor
+    - pollen
+    - ash
+    - particles
+  particle2:
+    - dust
+    - dirt
+    - particles
+    - debris
+    - grime
+    - filth
+    - pollen
+    - ash
+    - sand
+    - powder
+    - residue
+    - grit
+    - soot
+    - lint
+    - chaff
+    - sediment
+    - crumbs
+    - smudge
+    - speck
+    - fragment
+    - scum
+    - dander
+    - motes
+    - dust
+    - dirt
+    - particles
+    - debris
+    - grime
+    - filth
+    - pollen
+    - ash
+    - sand
+    - powder
+    - residue
+    - grit
+    - soot
+    - lint
+    - chaff
+    - sediment
+    - crumbs
+    - smudge
+    - speck
+    - fragment
+    - scum
+    - dander
+    - motes
+  phase:
+    - freezing
+    - melting
+    - solidifying
+    - thawing
+    - liquefying
+    - frosting
+    - chilling
+    - defrosting
+    - crystallizing
+    - congealing
+  photolight:
+    - natural light
+    - studio light
+    - flash
+    - backlight
+    - fill light
+    - rim light
+    - key light
+    - ambient light
+    - softbox
+    - reflectors
+  glitter:
+    - glitter
+    - Sparkle
+    - Twinkle
+    - Glimmer
+    - Gleam
+    - Shine
+    - Shimmer
+    - Radiance
+    - Luster
+    - Scintillation
+    - Spark
+    - Flash
+    - Dazzle
+    - Glint
+    - Sheen
+    - Brilliance
+    - Glow
+    - Incandescence
+    - Resplendence
+    - Coruscation
+    - Splendor
+    - Bedazzlement
+    - Effulgence
+    - Luminescence
+    - Glisten
+    - Twinkling
+    - Shining
+    - Scintillating
+    - Gleaming
+    - Glittering
+  slice-of:
+    - slice-of
+    - Piece of
+    - Portion of
+    - Part of
+    - Section of
+    - Segment of
+    - Bit of
+    - Fraction of
+    - Component of
+    - Shard of
+    - Sliver of
+    - Fragment of
+    - Share of
+    - Element of
+    - Division of
+    - Parcel of
+    - Particle of
+    - Unit of
+    - Chunk of
+    - Hunk of
+    - Length of
+    - Stretch of
+    - Patch of
+    - Sample of
+    - Bit of
+    - Proportion of
+    - Module of
+    - Ingredient of
+    - Morsel of
+    - Component of
+o:
+  machinery1:
+    - lathe
+    - milling machine
+    - drill press
+    - bandsaw
+    - cnc machine
+    - welding machine
+    - grinding machine
+    - hydraulic press
+    - power saw
+    - shearing machine
+    - press brake
+    - injection molding machine
+    - 3d printer
+    - laser cutter
+    - plasma cutter
+    - woodworking router
+    - planer
+    - shaper
+    - sanding machine
+    - riveting machine
+    - bending machine
+    - punch press
+    - compressor
+    - generator
+    - industrial oven
+    - conveyor belt
+    - packaging machine
+    - printing press
+    - laminating machine
+    - textile machine
+    - embroidery machine
+    - agricultural harvester
+    - excavator
+    - bulldozer
+    - forklift
+    - crane
+    - backhoe loader
+    - pile driver
+    - trencher
+    - drilling rig
+    - road roller
+    - paver
+    - concrete mixer
+    - tractor
+    - lawn mower
+    - chainsaw
+    - leaf blower
+    - pressure washer
+    - snow blower
+    - electric drill
+    - angle grinder
+    - circular saw
+    - jackhammer
+  machinery2:
+    - forklift
+    - bulldozer
+    - excavator
+    - crane
+    - tractor
+    - conveyor belt
+    - drill press
+    - lathe
+    - milling machine
+    - steam turbine
+    - generator
+    - printing press
+    - press brake
+    - cnc machine
+    - packaging machine
+    - welding machine
+    - hydraulic press
+    - cutting machine
+    - grinding machine
+    - assembly line
+  airtrans:
+    - airplane
+    - helicopter
+    - glider
+    - hot air balloon
+    - blimp or airship
+    - paraglider
+    - hang glider
+    - drone
+    - seaplane
+    - jetpack (personal flying device)
+    - gyrocopter
+    - ultralight aircraft
+    - microlight aircraft
+    - bush plane (used in remote areas)
+    - cargo plane
+    - passenger jet
+    - private jet
+    - military aircraft
+    - air ambulance
+    - crop duster
+  bathroom1:
+    - sink
+    - toilet
+    - bathtub
+    - shower
+    - mirror
+    - towel rack
+    - soap dispenser
+    - toothbrush holder
+    - toilet paper holder
+    - shower curtain
+    - bathroom scale
+    - vanity cabinet
+    - faucet
+    - bath mat
+    - toilet brush
+    - showerhead
+    - medicine cabinet
+    - vanity mirror
+    - toilet seat
+    - bathroom rug
+  bathroom2:
+    - toothbrush
+    - toothpaste
+    - dental floss
+    - mouthwash
+    - hairbrush
+    - comb
+    - shampoo
+    - conditioner
+    - body wash
+    - soap
+    - razor
+    - shaving cream
+    - electric shaver
+    - tweezers
+    - nail clippers
+    - nail file
+    - scissors
+    - cotton swabs
+    - cotton balls
+    - towel
+    - bath mat
+    - shower curtain
+    - toilet brush
+    - toilet plunger
+    - toilet paper holder
+    - soap dispenser
+    - toothbrush holder
+    - bathroom scale
+    - hair dryer
+    - hair straightener
+    - curling iron
+    - makeup mirror
+    - tissue box cover
+    - bathrobe
+    - slippers
+    - bath sponge
+    - loofah
+    - exfoliating scrub
+    - cleansing brush
+    - toilet seat cover
+    - shower caddy
+    - bathroom organizer
+    - squeegee
+    - bathroom cleaner
+    - air freshener
+    - bidet
+    - electric toothbrush
+  bedroom:
+    - mattress
+    - bed frame
+    - box spring
+    - bed sheets
+    - pillow
+    - pillowcase
+    - comforter
+    - duvet
+    - blanket
+    - quilt
+    - bed skirt
+    - fitted sheet
+    - flat sheet
+    - mattress protector
+    - bedspread
+    - throw pillow
+    - bolster pillow
+    - body pillow
+    - electric blanket
+    - bed wedge
+    - bed riser
+    - bedside table
+    - nightstand
+    - alarm clock
+    - reading light
+    - bedside lamp
+    - bed tray
+    - bed caddy
+    - bed rails
+    - mosquito net
+    - canopy
+    - bed tent
+    - pillow speaker
+    - sleep mask
+    - white noise machine
+    - humidifier
+    - essential oil diffuser
+    - sleep tracker
+    - snoring device
+    - foot warmer
+    - weighted blanket
+    - bedside organizer
+  bold2:
+    - hex bolt
+    - allen bolt
+    - carriage bolt
+    - flange bolt
+    - lag bolt
+    - eye bolt
+    - u-bolt
+    - j-bolt
+    - shoulder bolt
+    - anchor bolt
+    - machine bolt
+    - stud bolt
+    - tension control bolt
+    - t-head bolt
+    - square head bolt
+    - round head bolt
+    - countersunk bolt
+    - button head bolt
+    - cap screw
+    - socket head cap screw
+    - set screw
+    - hanger bolt
+    - plow bolt
+    - tap bolt
+    - toggle bolt
+    - expansion bolt
+    - wedge anchor bolt
+    - sleeve anchor bolt
+    - hexagonal flange bolt
+    - double end stud bolt
+    - elevator bolt
+    - hurricane bolt
+    - stove bolt
+    - j-bolt hinge
+    - hook bolt
+    - turned eye bolt
+    - clevis bolt
+    - lifting eye bolt
+    - step bolt
+    - shoulder eye bolt
+  bolt1:
+    - hex bolt
+    - nut
+    - washer
+    - thread
+    - thread pitch
+    - bolt head
+    - bolt shank
+    - bolt length
+    - bolt grade
+    - torque wrench
+    - tightening sequence
+    - bolted joint
+    - preload
+    - tension
+    - shear strength
+    - tensile strength
+    - anchor bolt
+    - flange bolt
+    - stud bolt
+    - u-bolt
+  bolt2:
+    - bolt extractor
+    - nut driver set
+    - threaded rod
+    - locking nut
+    - hex bolt
+    - wing nut
+    - flange nut
+    - cap nut
+    - t-nut
+    - square nut
+    - acorn nut
+    - castle nut
+    - coupling nut
+    - jam nut
+    - nylon insert lock nut
+    - eye bolt
+    - u-bolt
+    - carriage bolt
+    - anchor bolt
+    - stud bolt
+    - lag bolt
+    - self-tapping screw
+    - threadlocker
+    - expansion anchor
+    - rivet nut
+    - hex key (allen wrench)
+    - torque wrench
+    - nut splitter
+    - thread chaser
+    - tap and die set
+  candy:
+    - chocolate
+    - gummy bears
+    - caramel
+    - jelly beans
+    - lollipop
+    - marshmallow
+    - toffee
+    - cotton candy
+    - rock candy
+    - sour patch
+    - jawbreaker
+    - licorice
+    - taffy
+    - peppermint
+    - jelly rings
+    - gumball
+    - nougat
+    - peanut brittle
+    - hard candy
+    - candy cane
+    - fudge
+    - chewing gum
+    - candy bar
+    - caramel apple
+    - sugar cubes
+    - suckers
+    - bonbons
+    - candy necklace
+    - bubblegum
+    - truffles
+    - candy corn
+    - nerds
+    - pixy stix
+    - jujubes
+    - pop rocks
+    - turkish delight
+    - candied fruit
+    - chocolate coins
+    - swedish fish
+    - sugar-free candy
+    - candy sprinkles
+    - candy hearts
+  carpart:
+    - wheel
+    - tire
+    - brake pad
+    - shock absorber
+    - suspension strut
+    - steering wheel
+    - gearshift lever
+    - clutch pedal
+    - accelerator pedal
+    - brake pedal
+    - engine hood (bonnet)
+    - trunk (boot)
+    - bumper
+    - headlight
+    - tail light
+    - side mirror
+    - windshield
+    - radiator grille
+    - exhaust pipe
+    - fuel cap
+  carpenter1:
+    - hammer
+    - tape measure
+    - screwdriver (various types)
+    - chisel
+    - handsaw
+    - miter saw
+    - circular saw
+    - jigsaw
+    - router
+    - planer
+    - clamps (various types)
+    - level
+    - square
+    - carpenter's pencil
+    - nail gun
+    - wood glue
+    - pry bar
+    - utility knife
+    - carpenter's apron
+    - workbench
+  carpenter2:
+    - hammer
+    - screwdriver
+    - chisel
+    - mallet
+    - handsaw
+    - circular saw
+    - jigsaw
+    - coping saw
+    - backsaw
+    - crosscut saw
+    - coping saw
+    - block plane
+    - jack plane
+    - smoothing plane
+    - router
+    - spokeshave
+    - clamps
+    - tape measure
+    - ruler
+    - carpenter's square
+    - combination square
+    - sliding t-bevel
+    - level
+    - plumb bob
+    - marking gauge
+    - try square
+    - bevel gauge
+    - bradawl
+    - awl
+    - nail set
+    - putty knife
+    - utility knife
+    - spatula
+    - pry bar
+    - crowbar
+    - miter box
+    - nail gun
+    - staple gun
+    - wood file
+    - wood rasps
+    - sandpaper
+    - carpenter's pencil
+    - coping foot
+    - corner chisel
+    - doweling jig
+    - mortise chisel
+    - tenon saw
+    - sash clamp
+    - f-clamp
+    - g-clamp
+    - quick release clamp
+    - handscrew clamp
+    - bench vise
+    - dovetail jig
+  chemistry:
+    - test tubes
+    - beakers
+    - bunsen burner
+    - pipettes
+    - graduated cylinders
+    - erlenmeyer flasks
+    - safety goggles
+    - chemical reagents
+    - lab coat
+    - lab gloves
+    - ph indicator paper
+    - microscope
+    - petri dishes
+    - thermometer
+    - crucible
+    - spectrophotometer
+    - magnetic stirrer
+    - balance scale
+    - centrifuge
+    - gas mask
+  comp1:
+    - monitor
+    - keyboard
+    - mouse
+    - processor
+    - memory
+    - hard drive
+    - ssd
+    - graphics card
+    - motherboard
+    - power supply
+    - operating system
+    - software
+    - hardware
+    - peripherals
+    - ethernet cable
+    - usb drive
+    - headset
+    - webcam
+    - microphone
+    - speakers
+    - scanner
+    - printer
+    - router
+    - firewall
+    - server
+    - laptop
+    - desktop
+    - tablet
+    - smartphone
+    - wireless mouse
+    - bluetooth keyboard
+    - touchscreen
+    - gaming console
+    - vr headset
+    - joystick
+    - trackpad
+    - joypad
+    - cpu cooler
+    - wi-fi adapter
+    - external hard drive
+    - sound card
+  comp2:
+    - keyboard
+    - mouse
+    - monitor
+    - printer
+    - scanner
+    - external hard drive
+    - usb flash drive
+    - webcam
+    - headset
+    - microphone
+    - speakers
+    - graphics tablet
+    - joystick
+    - gamepad
+    - touchpad
+    - card reader
+    - external optical drive
+    - digital pen
+    - barcode scanner
+    - projector
+  comp3:
+    - laptop
+    - desktop computer
+    - tablet
+    - smartphone
+    - server
+    - router
+    - modem
+    - switch
+    - firewall
+    - network cable
+    - usb cable
+    - hdmi cable
+    - power cable
+    - ethernet cable
+    - monitor
+    - keyboard
+    - mouse
+    - printer
+    - scanner
+    - external hard drive
+    - usb flash drive
+    - webcam
+    - headset
+    - microphone
+    - speakers
+    - graphics card
+    - motherboard
+    - central processing unit (cpu)
+    - random access memory (ram)
+    - solid state drive (ssd)
+    - hard disk drive (hdd)
+    - optical drive
+    - power supply unit (psu)
+    - cooling fan
+    - heat sink
+    - laptop bag
+    - surge protector
+    - docking station
+    - wireless adapter
+    - bluetooth dongle
+    - external monitor
+    - external keyboard
+    - external mouse
+    - monitor stand
+    - cable organizer
+    - laptop stand
+    - usb hub
+    - multi-card reader
+    - laptop sleeve
+    - laptop skin
+    - anti-glare screen protector
+  cookwere:
+    - blender
+    - food processor
+    - stand mixer
+    - immersion blender
+    - hand mixer
+    - slow cooker
+    - rice cooker
+    - pressure cooker
+    - toaster oven
+    - microwave oven
+    - electric kettle
+    - coffee maker
+    - espresso machine
+    - air fryer
+    - sous vide precision cooker
+    - food scale
+    - meat thermometer
+    - kitchen timer
+    - cutting board
+    - kitchen scale
+  cpu:
+    - microprocessor
+    - heat sink
+    - cooling fan
+    - thermal paste
+    - cpu socket
+    - cpu cooler
+    - cpu casing or housing
+    - die (integrated circuit die)
+    - processor chip
+    - instruction set
+    - clock speed
+    - cache memory
+    - core (cpu core)
+    - hyperthreading
+    - overclocking
+    - underclocking
+    - cpu architecture
+    - instruction pipeline
+    - floating-point unit
+    - cpu benchmark
+  detective:
+    - magnifying glass
+    - fingerprint kit
+    - evidence collection kit
+    - forensic light source
+    - crime scene tape
+    - camera
+    - evidence bags and containers
+    - evidence markers and cones
+    - latent fingerprint powder
+    - evidence tags
+    - uv light
+    - chemical testing kits
+    - metal detector
+    - evidence swabs
+    - voice recorder
+    - surveillance equipment
+    - binoculars
+    - sketch kit
+    - polygraph
+    - luminol spray
+  doctor:
+    - stethoscope
+    - thermometer
+    - blood pressure cuff
+    - reflex hammer
+    - otoscope
+    - ophthalmoscope
+    - syringe
+    - scalpel
+    - surgical scissors
+    - forceps
+    - speculum
+    - tongue depressor
+    - medical gloves
+    - sphygmomanometer
+    - ultrasound machine
+    - x-ray machine
+    - electrocardiogram
+    - medical penlight
+    - reflex testing tools
+    - microscope
+  eat:
+    - fork
+    - knife
+    - spoon
+    - chopsticks
+    - spork (combination of spoon and fork)
+    - salad fork
+    - steak knife
+    - soup spoon
+    - dessert spoon
+    - butter knife
+    - teaspoon
+    - tablespoon
+    - pastry fork
+    - fruit knife
+    - fish fork
+    - oyster fork
+    - grapefruit spoon
+    - cocktail fork
+    - cake server
+    - cheese knife
+  electicity1:
+    - power outlet
+    - power cord
+    - light bulb
+    - power switch
+    - circuit breaker
+    - fuse
+    - extension cord
+    - power strip
+    - electrical socket
+    - electrical wire
+    - battery
+    - capacitor
+    - resistor
+    - transformer
+    - generator
+    - electric motor
+    - solar panel
+    - wind turbine
+    - voltage regulator
+    - inverter
+  electicity2:
+    - power outlet
+    - light bulb
+    - led lamp
+    - incandescent bulb
+    - fluorescent lamp
+    - circuit breaker
+    - fuse
+    - power strip
+    - extension cord
+    - surge protector
+    - power cord
+    - battery
+    - rechargeable battery
+    - capacitor
+    - resistor
+    - inductor
+    - transformer
+    - diode
+    - transistor
+    - electric motor
+    - generator
+    - alternator
+    - power plant
+    - solar panel
+    - wind turbine
+    - power lines
+    - electrical substation
+    - voltage regulator
+    - electrical socket
+    - electrical switch
+    - thermostat
+    - electrical box
+    - electrical meter
+    - grounding rod
+    - junction box
+    - conduit
+    - insulator
+    - conductor
+    - circuit board
+    - terminal block
+    - potentiometer
+    - relay
+    - solenoid
+    - electrical plug
+    - lightning rod
+    - voltage tester
+    - current meter
+    - wattmeter
+    - multimeter
+    - oscilloscope
+    - power inverter
+    - infrared thermometer
+  electrict1:
+    - resistor
+    - capacitor
+    - diode
+    - transistor
+    - integrated circuit (ic)
+    - printed circuit board (pcb)
+    - fuse
+    - circuit breaker
+    - switch
+    - relay
+    - transformer
+    - voltage regulator
+    - inductor
+    - potentiometer
+    - connector
+    - terminal block
+    - soldering iron
+    - multimeter
+    - breadboard
+    - oscilloscope
+  engine:
+    - cylinder
+    - piston
+    - crankshaft
+    - camshaft
+    - valve
+    - spark plug
+    - fuel injector
+    - intake manifold
+    - exhaust manifold
+    - timing belt
+    - timing chain
+    - connecting rod
+    - cylinder head
+    - engine block
+    - oil filter
+    - air filter
+    - serpentine belt
+    - water pump
+    - turbocharger
+    - radiator
+  eye:
+    - eyeglasses
+    - contact lenses
+    - prescription lenses
+    - refraction test
+    - diopters
+    - concave lenses
+    - eyeglass frames
+    - progressive lenses
+  factory:
+    - conveyor belt
+    - assembly line
+    - manufacturing equipment
+    - industrial robots
+    - production floor
+    - warehouse
+    - packaging station
+    - quality control station
+    - forklift
+    - pallet jack
+    - material handling system
+    - workbench
+    - industrial oven
+    - cnc machine
+    - welding station
+    - inspection station
+    - raw material storage
+    - finished goods storage
+    - loading dock
+    - dust collection system
+    - industrial vacuum cleaner
+    - safety barriers
+    - hazard signs
+    - industrial lighting
+    - air compressor
+    - cooling system
+    - power generator
+    - maintenance tools
+    - emergency shutdown system
+    - control room
+  farming1:
+    - shovel
+    - rake
+    - hoe
+    - pitchfork
+    - wheelbarrow
+    - trowel
+    - pruning shears
+    - garden fork
+    - spade
+    - cultivator
+    - seed drill
+    - sprinkler
+    - scythe
+    - machete
+    - sickle
+    - harrow
+    - plow
+    - irrigation system
+    - grain combine harvester
+    - tractor
+  farming2:
+    - tractor
+    - plow
+    - harrow
+    - seeder
+    - cultivator
+    - combine harvester
+    - thresher
+    - irrigation system
+    - sprinkler
+    - tiller
+    - hoe
+    - shovel
+    - rake
+    - pitchfork
+    - wheelbarrow
+    - scythe
+    - sickle
+    - pruning shears
+    - secateurs
+    - hedge trimmer
+    - chainsaw
+    - garden fork
+    - hand trowel
+    - soil test kit
+    - seed spreader
+    - fertilizer spreader
+    - garden sprayer
+    - watering can
+    - compost bin
+    - planting dibber
+    - bulb planter
+    - grafting knife
+    - weed puller
+    - mulching mower
+    - fruit picker
+    - ratchet pruner
+    - row marker
+    - seedling heat mat
+    - broadfork
+    - garden kneeler
+    - garden cart
+    - trellis
+    - windrow turner
+    - milking machine
+    - hoof trimmer
+    - egg incubator
+    - livestock scale
+    - milk can
+    - feed scoop
+    - trough
+    - fencing pliers
+    - post hole digger
+  foodbox:
+    - water bottle
+    - lunchbox
+    - snack container
+    - thermos
+    - salad container
+    - cutlery set
+    - fruit cup
+    - reusable straw
+    - sandwich bag
+    - bento box
+    - insulated lunch bag
+    - food storage containers
+    - utensil holder
+    - drink cooler
+    - ice pack
+    - divided plate
+    - condiment containers
+    - napkins
+    - spork
+    - salad dressing dispenser
+    - vegetable peeler
+    - mini cutting board
+    - food wraps
+    - food pouches
+    - lunch tote
+    - reusable water bottle sleeve
+    - meal prep containers
+    - soup thermos
+    - hummus container
+    - yogurt cup
+  fruits:
+    - apple
+    - banana
+    - orange
+    - grapes
+    - strawberry
+    - watermelon
+    - mango
+    - pineapple
+    - kiwi
+    - peach
+    - pear
+    - cherry
+    - blueberry
+    - raspberry
+    - plum
+    - lemon
+    - lime
+    - coconut
+    - avocado
+    - pomegranate
+  key:
+    - key
+    - padlock
+    - deadbolt
+    - door knob
+    - lock cylinder
+    - lockset
+    - lock pick set (used for lock picking practice)
+    - combination lock
+    - locking mechanism
+    - locking bolt
+    - locking plate
+    - locking pin
+    - locking bar
+    - locking latch
+    - locking nut
+    - locking washer
+    - locking pliers
+    - locking fuel cap
+    - bike lock
+    - locking file cabinet
+  landscape:
+    - mountains
+    - valley
+    - lake
+    - waterfall
+    - canyon
+    - forest
+    - meadow
+    - beach
+    - desert
+    - cliff
+    - river
+    - island
+    - hill
+    - garden
+    - pond
+    - field
+    - coastline
+    - rock formation
+    - volcano
+    - glacier
+  landtrans:
+    - car
+    - bus
+    - bicycle
+    - motorcycle
+    - truck
+    - train
+    - tram or
+    - streetcar
+    - subway
+    - trolleybus
+    - electric scooter
+    - skateboard
+    - roller skates
+    - taxi
+    - rideshare
+    - pedicab
+    - rickshaw
+    - horse-drawn carriage
+    - scooter
+    - segway
+    - wheelchair
+  machinepart1:
+    - gear
+    - bearing
+    - shaft
+    - pulley
+    - belt
+    - coupling
+    - sprocket
+    - chain
+    - bushing
+    - roller
+    - cam
+    - crankshaft
+    - piston
+    - valve
+    - cylinder
+    - flywheel
+    - gasket
+    - o-ring
+    - washer
+    - bolt
+    - nut
+    - screw
+    - rivet
+    - pin
+    - key
+    - spring
+    - retaining ring
+    - ball joint
+    - linkage
+    - collar
+    - flange
+    - diaphragm
+    - nozzle
+    - impeller
+    - housing
+    - sleeve
+    - spacer
+    - clutch
+    - brake pad
+    - actuator
+    - solenoid
+    - motor
+    - motor driver
+    - encoder
+    - resolver
+    - hall effect sensor
+    - limit switch
+    - proximity sensor
+    - pressure sensor
+    - temperature sensor
+    - flow sensor
+    - relay
+    - transistor
+    - capacitor
+    - resistor
+    - inductor
+    - diode
+    - circuit board
+  machinepart2:
+    - gear
+    - bearing
+    - pulley
+    - shaft
+    - coupling
+    - belt
+    - bushing
+    - spring
+    - cam
+    - sprocket
+    - clutch
+    - flywheel
+    - valve
+    - piston
+    - rod
+    - crankshaft
+    - camshaft
+    - gasket
+    - seal
+    - flange
+  makeup:
+    - foundation
+    - concealer
+    - powder
+    - blush
+    - bronzer
+    - highlighter
+    - eyeshadow
+    - eyeliner
+    - mascara
+    - brow pencil
+    - lipstick
+    - lip gloss
+    - lip liner
+    - setting spray
+    - makeup primer
+    - makeup remover
+    - false eyelashes
+    - eyelash curler
+    - makeup brushes
+    - beauty blender
+    - contour kit
+    - setting powder
+    - makeup setting spray
+    - bb cream
+    - cc cream
+    - tinted moisturizer
+    - setting powder
+    - loose powder
+    - compact mirror
+    - makeup bag
+    - makeup palette
+    - makeup sponge
+    - makeup wipes
+    - blotting papers
+    - lip balm
+    - lip stain
+    - lip treatment
+    - eye primer
+    - glitter
+    - pressed pigment
+    - face glue
+    - body glitter
+    - makeup fixing spray
+  music:
+    - electric guitar
+    - acoustic guitar
+    - bass guitar
+    - drum set
+    - keyboard
+    - piano
+    - synthesizer
+    - microphone
+    - amplifier
+    - mixer
+    - headphones
+    - music stand
+    - sheet music
+    - guitar pick
+    - drumsticks
+    - cymbals
+    - pedalboard
+    - midi controller
+    - audio interface
+    - studio monitors
+    - stage lights
+    - vocal processor
+    - tuner
+    - metronome
+    - effects pedals
+    - speaker cabinet
+    - wind instrument
+    - flute
+    - saxophone
+    - brass instrument
+    - trumpet
+    - trombone
+    - violin
+    - viola
+    - cello
+    - double bass
+    - djembe drum
+    - electronic drum pad
+    - harmonica
+    - accordion
+  phone2:
+    - smartphone
+    - phone charger
+    - phone case
+    - earphones or headphones
+    - phone stand or holder
+    - screen protector
+    - bluetooth headset
+    - power bank
+    - sim card
+    - phone wallet (a case that holds cards)
+    - phone mount for cars
+    - selfie stick
+    - popsocket or phone grip
+    - phone dock or charging station
+    - phone stylus
+    - phone tripod
+    - phone signal booster
+    - wireless charger
+    - phone cleaning kit
+    - phone armband (for exercise)
+  pipeline:
+    - pipeline inspection robot
+    - welding machine
+    - pipe coating equipment
+    - corrosion inhibitor injection system
+    - pigging equipment
+    - valve station
+    - pressure gauge
+    - leak detection system
+    - flow meter
+    - pump station
+    - compressor station
+    - cathodic protection system
+    - pipe bending machine
+    - flange spreader
+    - pipe cutting tool
+    - pipe threading machine
+    - pipe wrapping tape
+    - expansion joint
+    - pipe support bracket
+    - insulation material
+    - pressure relief valve
+    - strainer
+    - pipeline marker
+    - control room
+    - remote monitoring system
+    - emergency shutdown system
+    - grounding system
+    - pipe cleaning equipment
+    - pipe bending mandrel
+    - in-line inspection tool
+  rocket:
+    - rocket engine
+    - payload fairing
+    - thrusters
+    - stage separation system
+    - propellant tanks
+    - guidance system
+    - navigation system
+    - parachutes
+    - heat shield
+    - nose cone
+    - rocket fins
+    - launch pad
+    - fueling system
+    - launch control center
+    - payload integration facility
+    - rocket testing facility
+    - launch vehicle
+    - payload adapter
+    - roll control system
+    - attitude control system
+    - onboard computer
+    - thrust vector control
+    - ignition system
+    - cryogenic storage tanks
+    - rocket nozzles
+    - launch escape system
+    - ground support equipment
+    - telemetry system
+    - avionics bay
+    - reaction control system
+  sport:
+    - basketball
+    - football
+    - soccer ball
+    - tennis racket
+    - golf club
+    - cricket bat
+    - baseball glove
+    - hockey stick
+    - volleyball
+    - badminton racket
+    - ping pong paddle
+    - swimming goggles
+    - boxing gloves
+    - skateboard
+    - roller skates
+    - bicycle helmet
+    - climbing harness
+    - archery bow
+    - dumbbells
+    - jump rope
+    - yoga mat
+    - treadmill
+    - resistance bands
+    - weightlifting barbell
+    - punching bag
+    - surfboard
+    - kayak
+    - ski boots
+    - snowboard
+    - gymnastics rings
+    - trampoline
+    - frisbee
+    - canoe paddle
+    - bowling ball
+    - rugby ball
+    - snorkel
+    - hiking boots
+    - ice skates
+    - squash racket
+    - cycling shoes
+    - boxing headgear
+  sportcar1:
+    - supercar
+    - sports coupe
+    - sports sedan
+    - sports convertible
+    - sports suv
+    - muscle car
+    - sports compact
+    - sports hatchback
+    - sports wagon
+    - roadster
+    - track car
+    - off-road buggy
+    - rally car
+    - hypercar
+    - sports motorcycle
+  sportcar2:
+    - lamborghini aventador
+    - ferrari 488 gtb
+    - porsche 911 gt3
+    - chevrolet corvette
+    - mclaren 720s
+    - ford mustang shelby gt500
+    - audi r8
+    - nissan gt-r
+    - bmw m4
+    - dodge challenger srt hellcat
+    - jaguar f-type
+    - mercedes-amg gt
+    - subaru wrx sti
+    - aston martin vantage
+    - acura nsx
+    - alfa romeo 4c
+    - lotus evora
+    - maserati granturismo
+    - tesla model s performance
+    - bugatti chiron
+  sportcar3:
+    - ferrari
+    - lamborghini
+    - porsche
+    - mclaren
+    - bugatti
+    - aston martin
+    - maserati
+    - bmw m series
+    - mercedes-amg
+    - audi r8
+    - chevrolet corvette
+    - ford mustang shelby gt
+    - nissan gt-r
+    - dodge viper
+    - jaguar f-type
+  stationery:
+    - pen
+    - pencil
+    - notebook
+    - paperclip
+    - eraser
+    - ruler
+    - highlighter
+    - stapler
+    - binder
+    - scissors
+    - markers
+    - sharpener
+    - glue
+    - tape
+    - pushpin
+    - post-it
+    - envelope
+    - folder
+    - calculator
+    - rubber band
+    - correction fluid
+    - index cards
+    - sticky notes
+    - drawing pad
+    - paper cutter
+    - ballpoint pen
+    - gel pen
+    - whiteboard
+    - chalkboard
+    - drawing pins
+    - hole punch
+    - compass
+    - protractor
+    - laminator
+    - sticky tack
+    - graph paper
+    - colored pencils
+    - watercolor paints
+    - calligraphy pen
+    - easel
+    - push pin
+    - paintbrush
+  student:
+    - textbooks
+    - notebooks
+    - pens and pencils
+    - backpack
+    - laptop
+    - calculator
+    - highlighters
+    - binders and folders
+    - ruler
+    - erasers
+    - sticky notes
+    - index cards
+    - usb flash drive
+    - water bottle
+    - lunchbox
+    - headphones
+    - student id card
+    - school uniform
+    - gym bag
+    - planner and agenda
+  teacher:
+    - whiteboard
+    - marker or chalk
+    - teaching materials (worksheets, textbooks
+    - projector
+    - computer
+    - educational software
+    - document camera
+    - classroom posters
+    - telescopic rod
+    - classroom seating chart
+    - pens
+    - pencils
+    - rubrics
+    - lesson plans
+    - classroom timer
+    - smartboard
+    - classroom calendar
+    - classroom library
+    - educational games
+    - visual aids
+    - charts
+    - diagrams
+    - bulletin board
+    - teaching aids
+    - manipulatives
+    - flashcards
+  trans1:
+    - car
+    - bus
+    - train
+    - bicycle
+    - motorcycle
+    - tank
+    - helicopter
+    - fighter jet
+    - submarine
+    - aircraft carrier
+    - bomber
+    - humvee
+    - drone
+    - missile launcher
+  trans2:
+    - car
+    - bicycle
+    - motorcycle
+    - bus
+    - train
+    - truck
+    - boat
+    - ship
+    - airplane
+    - helicopter
+    - subway
+    - scooter
+    - taxi
+    - tram
+    - van
+    - yacht
+    - jet
+    - hot air balloon
+    - ferry
+    - rv
+  vegetable:
+    - carrot
+    - potato
+    - tomato
+    - spinach
+    - broccoli
+    - onion
+    - bell pepper
+    - cauliflower
+    - cucumber
+    - lettuce
+    - zucchini
+    - eggplant
+    - peas
+    - green beans
+    - brussels sprouts
+    - asparagus
+    - kale
+    - cabbage
+    - radish
+    - sweet potato
+  washing:
+    - washing machine
+    - laundry detergent
+    - clothes dryer
+    - laundry basket
+    - clothesline
+    - fabric softener
+    - washing tub
+    - bleach
+    - stain remover
+    - lint roller
+    - iron
+    - ironing board
+    - laundry bag
+    - hanger
+    - laundry brush
+    - laundry soap
+    - washer and dryer combo
+    - handwashing basin
+    - washing board (used for handwashing)
+    - laundry sorter
+  watertrans:
+    - boat
+    - ship
+    - sailboat
+    - yacht
+    - canoe
+    - kayak
+    - rowboat
+    - fishing boat
+    - cargo ship
+    - cruise ship
+    - submarine
+    - jet ski
+    - ferry
+    - catamaran
+    - tugboat
+    - barge
+    - dinghy
+    - lifeboat
+    - raft
+    - hovercraft
+  vegetables:
+    - Carrot
+    - Cucumber
+    - Potato
+    - Tomato
+    - Bell Pepper
+    - Eggplant
+    - Zucchini
+    - Cabbage
+    - Broccoli
+    - Cauliflower
+    - Artichoke
+    - Pumpkin
+    - Squash
+    - Radish
+    - Turnip
+    - Sweet Potato
+    - Celery
+    - Asparagus
+    - Leek
+    - Okra
+    - Spinach
+    - Swiss Chard
+    - Kale
+    - Romaine Lettuce
+    - Iceberg Lettuce
+    - Red Cabbage
+    - Bok Choy
+    - Brussels Sprouts
+    - Fennel
+    - Green Beans
+    - Peas
+    - Corn
+    - Onions
+    - Garlic
+    - Ginger
+    - Radicchio
+    - Shallot
+    - Watercress
+    - Arugula
+    - Endive
+    - Escarole
+    - Cilantro
+    - Parsley
+    - Chives
+    - Dill
+    - Basil
+    - Thyme
+    - Rosemary
+    - Sage
+    - Mint
+    - Tarragon
+    - Oregano
+    - Bay Leaf
+    - Coriander
+    - Parsnip
+    - Beet
+    - Kohlrabi
+    - Jicama
+  mail:
+    - Envelope
+    - Postcard
+    - Letter
+    - Parcel
+    - Package
+    - Mailbox
+    - Stamp
+    - Postage Meter
+    - Postal Scale
+    - Postal Box
+    - Mail Sorter
+    - Mail Truck
+    - Mail Cart
+    - Padded Envelope
+    - Bubble Mailer
+    - Packing Tape
+    - Address Label
+    - Postal Key
+    - Mailroom Trolley
+    - Mail Opener
+    - Mail Sack
+    - Mail Tray
+    - Mail Slot Cover
+    - Postal Lock
+    - Mail Scraper
+  flowers:
+    - Rose
+    - Tulip
+    - Daisy
+    - Sunflower
+    - Lily
+    - Orchid
+    - Daffodil
+    - Carnation
+    - Hydrangea
+    - Peony
+    - Marigold
+    - Chrysanthemum
+    - Violet
+    - Snapdragon
+    - Gladiolus
+    - Iris
+    - Pansy
+    - Petunia
+    - Zinnia
+    - Geranium
+    - Bluebell
+    - Amaryllis
+    - Camellia
+    - Cosmos
+    - Poppy
+    - Lilac
+    - Lavender
+    - Fuchsia
+    - Magnolia
+    - Azalea
+    - Anemone
+    - Bleeding Heart
+    - Calendula
+    - Foxglove
+    - Honeysuckle
+    - Jasmine
+    - Morning Glory
+    - Narcissus
+    - Sweet Pea
+    - Canna Lily
+    - Coneflower
+    - Delphinium
+    - Forget-Me-Not
+    - Gerbera Daisy
+    - Hollyhock
+    - Hyacinth
+    - Queen Anne's Lace
+    - Ranunculus
+    - Salvia
+    - Snowdrop
+    - Statice
+    - Yarrow
+    - Buttercup
+    - Calla Lily
+    - Chrysopsis
+    - Columbine
+    - Crocus
+    - Cyclamen
+    - Dandelion
+    - Freesia
+    - Gardenia
+    - Gentian
+    - Goldenrod
+    - Hellebore
+    - Impatiens
+    - Larkspur
+    - Nasturtium
+    - Osteospermum
+    - Oxalis
+    - Peppermint
+    - Primrose
+    - Rhododendron
+    - Rockcress
+    - Rudbeckia
+    - Thistle
+    - Wisteria
+    - Yucca
+    - Blewit
+    - Blue-Eyed Grass
+    - Butterwort
+    - Celosia
+    - Clivia
+    - Flax
+    - Gazania
+    - Hosta
+    - Liatris
+    - Lobelia
+    - Lupine
+    - Mimosa
+    - Orchis
+    - Pasque Flower
+    - Queen of the Night
+    - Spider Flower
+    - Toadflax
+    - Viola
+    - Wormwood
+    - Xeranthemum
+    - Yarrow
+    - Zantedeschia
+  construction-tool:
+    - Hammer
+    - Screwdriver
+    - Pliers
+    - Wrench
+    - Tape Measure
+    - Level
+    - Chalk Line
+    - Utility Knife
+    - Power Drill
+    - Circular Saw
+    - Hacksaw
+    - Crowbar
+    - Pry Bar
+    - Trowel
+    - Shovel
+    - Rake
+    - Wheelbarrow
+    - Nail Gun
+    - Staple Gun
+    - Sledgehammer
+    - Chisel
+    - Masonry Trowel
+    - Carpenter's Square
+    - Screw Gun
+    - Caulking Gun
+    - Pipe Wrench
+    - Plumb Bob
+    - Hammerset Anchor
+    - Stud Finder
+    - Safety Helmet
+    - Ear Protection
+    - Safety Glasses
+    - Respirator
+    - Work Gloves
+    - Safety Vest
+    - Dust Mask
+    - Hard Hat
+    - Steel-Toed Boots
+    - Ladder
+    - Extension Cord
+    - Extension Ladder
+    - Chainsaw
+    - Sander
+    - Router
+    - Jigsaw
+    - Brick Trowel
+    - Mortar Hoe
+    - Cement Mixer
+    - Angle Grinder
+    - Rebar Cutter
+    - Masonry Saw
+    - Masonry Drill Bit
+    - Masonry Anchor
+    - Scaffolding
+    - Wire Mesh
+    - Concrete Forms
+    - Jackhammer
+    - Drywall Trowel
+    - Drywall Screws
+    - Drywall Joint Tape
+    - Drywall Saw
+    - Paint Roller
+    - Paintbrush
+    - Paint Sprayer
+    - Spatula
+    - Chalkboard Paint
+    - Primer
+    - Drop Cloth
+    - Putty Knife
+    - Lath and Plaster
+    - Roofing Nails
+    - Roofing Shingles
+    - Roofing Tar
+    - Flashing
+    - Tarp
+    - Stilts
+    - Tile Cutter
+    - Tile Spacers
+    - Tile Adhesive
+    - Grout Float
+    - Mason's Line
+    - Line Level
+    - Post Hole Digger
+    - Laser Level
+    - Surveyor's Transit
+    - Concrete Float
+    - Tack Hammer
+    - Roofing Hammer
+    - Fence Pliers
+    - Welding Machine
+    - Caulk
+    - Masonry Nails
+    - Workbench
+    - Toolbox
+  construction-machines:
+    - Excavator
+    - Bulldozer
+    - Backhoe Loader
+    - Crane
+    - Skid Steer Loader
+    - Wheel Loader
+    - Paver
+    - Concrete Mixer
+    - Road Roller
+    - Grader
+    - Dump Truck
+    - Compactor
+    - Crawler Loader
+    - Forklift
+    - Telehandler
+    - Trencher
+    - Asphalt Plant
+    - Mini Excavator
+    - Articulated Hauler
+    - Scraper
+    - Tractor Loader Backhoe (TLB)
+    - Utility Vehicle
+    - Concrete Pump
+    - Tower Crane
+    - Mobile Crane
+    - Demolition Excavator
+    - Motor Grader
+    - Hydraulic Breaker
+    - Earth Auger
+    - Drill Rig
+    - Asphalt Paver
+    - Conveyor Belt
+    - Reach Stacker
+    - Hydraulic Shovel
+    - Concrete Vibrator
+    - Tunnel Boring Machine (TBM)
+    - Off-Highway Truck
+    - Front-End Loader
+    - Compaction Roller
+    - Crawler Crane
+    - Bulldozer Ripper
+    - Rock Crusher
+    - Pneumatic Roller
+    - Gravel Spreader
+    - Excavator Bucket
+    - Backhoe Attachment
+    - Crane Hook
+    - Concrete Bucket
+    - Bulldozer Blade
+    - Mini Loader Bucket
+    - Asphalt Compactor
+    - Grader Blade
+    - Hydraulic Hammer
+    - Compaction Plate
+    - Forklift Forks
+    - Paver Screed
+    - Trencher Teeth
+    - Asphalt Paver Auger
+    - Excavator Track
+    - Roller Drum
+    - Crane Boom
+    - Skid Steer Attachment
+    - Excavator Grapple
+    - Bulldozer Rippers
+    - Concrete Pump Hose
+    - Crawler Loader Tracks
+    - Grader Moldboard
+    - Dump Truck Bed
+    - Compactor Plate
+    - Wheel Loader Bucket
+    - Mobile Crane Outrigger
+    - Pneumatic Roller Tire
+    - Telehandler Forks
+    - Utility Vehicle Bed
+    - Reach Stacker Spreader
+    - Hydraulic Shovel Bucket
+    - Demolition Excavator Arm
+    - Earth Auger Bit
+    - Drill Rig Mast
+    - Asphalt Plant Conveyor
+    - Conveyor Belt Roller
+    - Articulated Hauler Bed
+    - Hydraulic Breaker Chisel
+    - Rock Crusher Jaw
+    - Scraper Blade
+    - Compaction Roller Wheel
+    - Off-Highway Truck Bed
+  bubble:
+    - bubble
+    - Balloon
+    - Blister
+    - Froth
+    - Spherule
+    - Air sac
+    - Globule
+    - Droplet
+    - Bead
+    - Vesicle
+    - Spheroid
+    - Pellet
+    - Ball
+    - Bobble
+    - Nodule
+    - Nubbin
+    - Pustule
+    - Cyst
+    - Bleb
+    - Ballon
+    - Bubbly
+    - Air pocket
+    - Foam
+    - Fizz
+    - Sputter
+    - Spume
+    - Pearls
+    - Effervescence
+    - Effervescing
+    - Gasbag
+

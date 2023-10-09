@@ -1,0 +1,2025 @@
+# billions of plants
+boplants:
+    random-plant:
+        - "{
+        __properties/size/plants__ __properties/colors/*__ __plants/growth-habit__ __properties/shape/plants__ plant,
+        {__properties/texture/stem__ __properties/shape/stem__ __plants/stem__, __properties/texture/bark__,|}
+        {__properties/shape/leaf__ __plants/leaf__ leaf, __plants/leaf-venation__, __plants/leaf-arrangement__, __plants/leaf-margin__,|}
+        {__properties/colors/*__ __plants/inflorescence__ __plants/flower__ flower, __properties/shape/petal__,|}
+        {__properties/colors/*__ {__plants/fruit__ fruit| __plants/seed__}, {__properties/pattern/plants__,|__properties/pattern/mushrooms__,}|}
+        {__plants/sepal-configuration__, __plants/foliage-arrangement__,|}
+        {__properties/structure/root__ root|}
+        }"
+    random-shroom:
+        - "{
+        __properties/colors/*__ __properties/size/*__ __properties/shape/mushrooms__ __properties/texture/mushrooms__ mushroom,
+        __properties/texture/*__, {__properties/pattern/plants__,|__properties/pattern/mushrooms__,|} __mushrooms/mycorrhizal-association__, __mushrooms/habitat__, __mushrooms/growth-form__,
+        {__mushrooms/bioluminescence__,|}
+        {__properties/colors/*__ __mushrooms/gill__,|}
+        {1-3$$__mushrooms/veil__,|__mushrooms/ring__,|__mushrooms/bruising__,|__mushrooms/annulus__,|__mushrooms/volva__,|__mushrooms/pileus__,|__mushrooms/pores__,|
+        __mushrooms/hymenium__,| __mushrooms/latex__ latex,|}
+        {__properties/colors/*__ __mushrooms/stipe__,|}
+        {__mushrooms/poisonous-properties,|__mushrooms/medicinal-properties,|}
+        }"
+plants:
+    types:
+        - tree
+        - shrub
+        - grass
+        - herb
+        - vine
+        - fern
+        - moss
+        - alga
+        - succulent
+        - cactus
+        - aquatic plant
+        - epiphyte
+        - wildflower
+        - bulb
+        - palm
+        - orchid
+        - conifer
+        - fruit
+        - vegetable
+        - flower
+        - houseplant
+        - medicinal plant
+        - aromatic plant
+        - edible plant
+        - ornamental plant
+        - desert plant
+        - aquatic plant
+        - bog plant
+        - alpine plant
+        - carnivorous plant
+        - climbing plant
+        - ground cover plant
+        - indoor plant
+        - outdoor plant
+        - perennial plant
+        - annual plant
+        - biennial plant
+    growth-habit:
+        - arching
+        - ascending
+        - bush-like
+        - bushy
+        - clump-forming
+        - clumping
+        - columnar
+        - compact
+        - creeping
+        - climbing
+        - decumbent
+        - erect
+        - fan-shaped
+        - fastigiate
+        - fibrous-rooted
+        - fleshy-rooted
+        - herbaceous-stemmed
+        - low-growing
+        - mat-forming
+        - mat-like
+        - matting
+        - mound-forming
+        - pendulous
+        - prostrate
+        - rhizome-forming
+        - robust
+        - rosette
+        - runnering
+        - scrambling
+        - slender
+        - slender-arching
+        - spherical
+        - spreading
+        - stiffly upright
+        - stolon-spreading
+        - stoloniferous
+        - suckering
+        - suckering-spreading
+        - suckering-stoloniferous
+        - taprooted
+        - trailing
+        - tufted
+        - tuberous-rooted
+        - twining
+        - upright
+        - vining
+        - weeping
+        - woody-stemmed
+    leaf:
+        - simple
+        - compound
+        - pinnate
+        - palmate
+        - lobed
+        - toothed
+        - serrated
+        - smooth
+        - wavy
+        - ruffled
+        - curled
+        - spiky
+        - needle-like
+        - lanceolate
+        - oblong
+        - elliptical
+        - oval
+        - round
+        - heart-shaped
+        - arrow-shaped
+        - feather-like
+        - filamentous
+        - linear
+        - scale-like
+        - fleshy
+        - succulent
+        - trifoliate
+        - bipinnate
+        - tripinnate
+        - peltate
+        - cordate
+        - crenate
+        - ciliate
+        - glabrous
+        - pubescent
+        - hairy
+        - woolly
+        - leathery
+        - glossy
+        - veined
+        - variegated
+        - mottled
+        - undulate
+        - parallel-veined
+        - retuse
+        - cleft
+        - parted
+        - frond-like
+        - whorled
+        - opposite
+        - alternate
+        - basal
+        - deciduous
+        - evergreen
+        - persistent
+        - petiolate
+        - sessile
+    flower:
+        - single
+        - double
+        - petaloid
+        - rayed
+        - tubular
+        - funnel-shaped
+        - bell-shaped
+        - trumpet-shaped
+        - star-shaped
+        - bowl-shaped
+        - disk-shaped
+        - cup-shaped
+        - saucer-shaped
+        - umbel
+        - spike
+        - raceme
+        - panicle
+        - corymb
+        - cyme
+        - capitulum
+        - solitary
+        - clustered
+        - whorled
+        - terminal
+        - axillary
+        - inflorescence
+        - composite
+        - floret
+        - staminate
+        - pistillate
+        - perfect
+        - imperfect
+        - complete
+        - incomplete
+        - actinomorphic
+        - zygomorphic
+        - regular
+        - irregular
+        - radial
+        - bilateral
+        - corolla
+        - calyx
+        - sepal
+        - petal
+        - stamen
+        - anther
+        - filament
+        - pistil
+        - ovary
+        - style
+        - stigma
+        - pedicel
+        - receptacle
+        - bract
+        - bracteole
+        - nectary
+        - spur
+        - labellum
+        - keel
+        - banner
+        - wing
+        - standard
+        - labiate
+        - spadix
+        - spathe
+        - catkin
+        - sessile
+        - peduncle
+    fruit:
+        - berry
+        - drupe
+        - pome
+        - aggregate fruit
+        - multiple fruit
+        - capsule
+        - legume
+        - follicle
+        - silique
+        - nut
+        - achene
+        - samara
+        - caryopsis
+        - schizocarp
+        - pepo
+        - hesperidium
+        - sorosis
+        - syncarp
+        - accessory fruit
+    stem:
+        - herbaceous stem
+        - woody stem
+        - rhizome
+        - stolon
+        - tuber
+        - bulb
+        - corm
+        - vine
+        - runner
+        - aerial stem
+        - sucker
+        - scape
+        - culm
+        - pseudostem
+        - spine
+        - thorn
+        - prickle
+    foliage-arrangement:
+        - alternate
+        - opposite
+        - whorled
+        - spiral
+        - rosette
+        - basal
+        - decussate
+        - fasciculate
+        - tufted
+        - clustered
+        - scattered
+        - basal rosette
+        - spiral phyllotaxy
+        - distichous phyllotaxy
+        - tristichous phyllotaxy
+        - tetracladous phyllotaxy
+        - decussate phyllotaxy
+        - whorled phyllotaxy
+    inflorescence:
+        - raceme
+        - panicle
+        - spike
+        - umbel
+        - corymb
+        - cyme
+        - capitulum
+        - spadix
+        - catkin
+        - globose
+        - head
+        - racemose
+        - cymose
+        - simple inflorescence
+        - compound inflorescence
+        - peduncle
+        - pedicel
+        - bract
+        - bracteole
+        - receptacle
+        - ray floret
+        - disk floret
+        - ligulate floret
+        - tubular floret
+        - discoid inflorescence
+        - liguliflorous inflorescence
+        - corymbose cyme
+        - compound umbel
+        - spikelet
+        - umbellate cyme
+        - thyrse
+    leaf-venation:
+        - parallel venation
+        - pinnate venation
+        - palmate venation
+        - reticulate venation
+        - arcuate venation
+        - dichotomous venation
+        - longitudinal venation
+        - transverse venation
+        - irregular venation
+        - arching venation
+        - diagonal venation
+        - netted venation
+        - veinless
+        - fan-shaped venation
+        - penninerved venation
+        - pinninerved venation
+        - actinodromous venation
+        - plinerved venation
+        - craspedodromous venation
+        - brochidodromous venation
+    sepal-configuration:
+        - polysepalous
+        - gamosepalous
+        - aposepalous
+        - synsepalous
+        - sepaloid
+        - calyculate
+        - epicalyx
+        - bracteolate
+        - involucrate
+        - involucre
+        - ebracteolate
+        - bracteolate
+        - epicalyx
+        - bracteolate
+        - involucrate
+        - involucre
+    seed:
+        - naked seeds
+        - angiosperm seeds
+        - gymnosperm seeds
+        - dicotyledonous seeds
+        - monocotyledonous seeds
+        - endospermic seeds
+        - non-endospermic seeds
+        - albuminous seeds
+        - exalbuminous seeds
+        - orthotropous seeds
+        - anatropous seeds
+        - campylotropous seeds
+        - amphitropous seeds
+        - heteromorphic seeds
+        - homomorphic seeds
+        - radicle upward seeds
+        - radicle downward seeds
+        - micropylar endosperm seeds
+        - chalazal endosperm seeds
+        - starchy seeds
+        - non-starchy seeds
+        - albuminous seeds
+        - non-albuminous seeds
+    leaf-margin:
+        - entire leaf margin
+        - toothed leaf margin
+        - lobed leaf margin
+        - sinuate leaf margin
+        - serrate leaf margin
+        - dentate leaf margin
+        - crenate leaf margin
+        - undulate leaf margin
+        - spiny leaf margin
+        - incised leaf margin
+        - pinnatifid leaf margin
+        - pinnatisect leaf margin
+        - bipinnatifid leaf margin
+        - bipinnatisect leaf margin
+        - serrulate leaf margin
+        - doubly toothed leaf margin
+        - doubly serrate leaf margin
+        - revolute leaf margin
+        - crisped leaf margin
+        - wavy leaf margin
+        - repand leaf margin
+        - entirely lobed leaf margin
+    leaf-arrangement:
+        - alternate
+        - opposite
+        - whorled
+        - basal
+        - rosette
+        - spiral
+        - clustered
+        - crowded
+        - scattered
+        - tufted
+        - whorled-alternate
+        - basal-rosette
+        - tufted-rosette
+        - rosette-basal
+
+
+mushrooms:
+    types:
+        - agarics
+        - boletes
+        - chanterelles
+        - crust fungi
+        - gilled fungi
+        - jelly fungi
+        - morels
+        - puffballs
+        - tooth fungi
+        - truffles
+        - polypores
+        - coral fungi
+        - stinkhorns
+        - earthstars
+        - bird's nest fungi
+        - cup fungi
+        - bracket fungi
+        - club fungi
+        - chanterelle-like mushrooms
+        - cortinarius
+        - amanitas
+        - russulas
+        - lactarius
+        - coprinoids
+        - psilocybin mushrooms
+        - mycena
+        - parasitic fungi
+        - lichenized fungi
+    gill:
+        - adnate gills
+        - attached gills
+        - free gills
+        - emarginate gills
+        - sinuate gills
+        - decurrent gills
+        - depressed gills
+        - adnexed gills
+        - subdecurrent gills
+        - slightly decurrent gills
+        - close gills
+        - distant gills
+        - crowded gills
+        - spaced gills
+        - forked gills
+        - crossed gills
+        - interveined gills
+        - ventricose gills
+        - runcinate gills
+        - crinkled gills
+        - segmented gills
+        - lamellate gills
+        - sublamellate gills
+        - gills with veins
+        - gills with pores
+        - gills with teeth
+        - gills with folds
+        - gills with cross-veins
+        - gills with anastomosing veins
+        - gills with lateral veins
+        - gills with intermediate gills
+        - gills with short gills
+        - gills with long gills
+        - gills with lamellulae
+        - gills with trama
+        - gills with paratrama
+        - gills with cystidia
+        - gills with hyphae
+        - gills with cheilocystidia
+        - gills with pleurocystidia
+        - gills with leptocystidia
+    veil:
+        - partial veil
+        - universal veil
+        - membranous veil
+        - cortina
+        - annulus (ring)
+        - volva
+        - fibrillose veil
+        - evanescent veil
+        - persistent veil
+        - disintegrating veil
+        - double ring
+        - absent veil
+    ring:
+        - evanescent ring
+        - persistent ring
+        - movable ring
+        - pendant ring
+        - double ring
+        - slender ring
+        - broad ring
+        - membranous ring
+        - flaring ring
+        - sheathing ring
+        - fragile ring
+        - absent ring
+    bruising:
+        - blue bruising
+        - brown bruising
+        - darkening bruising
+        - yellow bruising
+        - purple bruising
+        - green bruising
+        - reddish bruising
+        - fading bruising
+        - slow bruising
+        - quick bruising
+        - sensitive bruising
+        - moderate bruising
+        - intense bruising
+        - spotty bruising
+        - uniform bruising
+    annulus:
+        - thin annulus
+        - delicate annulus
+        - evanescent annulus
+        - persistent annulus
+        - fragile annulus
+        - membranous annulus
+        - pendant annulus
+        - hanging annulus
+        - sheathing annulus
+        - flaring annulus
+        - fugacious annulus
+        - partial annulus
+        - disappearing annulus
+        - remnant annulus
+        - collapsing annulus
+        - slender annulus
+        - torn annulus
+        - edged annulus
+        - rippled annulus
+        - furrowed annulus
+        - lined annulus
+        - flaky annulus
+        - segmented annulus
+        - multi-layered annulus
+        - fibrillose annulus
+        - scaly annulus
+        - split annulus
+        - fringed annulus
+        - tattered annulus
+        - webby annulus
+        - cobwebby annulus
+        - veil-like annulus
+        - netted annulus
+        - fine annulus
+        - coarse annulus
+        - fibrous annulus
+        - floccose annulus
+        - lace-like annulus
+        - textured annulus
+        - patterned annulus
+        - decorated annulus
+        - ornate annulus
+        - smooth annulus
+        - glandular annulus
+        - glabrous annulus
+    volva:
+        - cup-shaped volva
+        - saccate volva
+        - bag-like volva
+        - sac-like volva
+        - bulbous volva
+        - flaring volva
+        - tapered volva
+        - collar-like volva
+        - flattened volva
+        - lobe-like volva
+        - free volva
+        - adherent volva
+        - persistent volva
+        - evanescent volva
+        - membranous volva
+        - fragmented volva
+        - universal volva
+        - partial volva
+        - remnant volva
+        - fleshy volva
+        - gelatinous volva
+        - watery volva
+        - waxy volva
+        - glandular volva
+        - smooth volva
+        - rough volva
+        - scaly volva
+        - veil-like volva
+        - webbed volva
+        - torn volva
+        - fringed volva
+        - plicate volva
+        - grooved volva
+        - furrowed volva
+        - furrowed and grooved volva
+        - wrinkled volva
+        - pitted volva
+        - textured volva
+        - patterned volva
+        - radially split volva
+        - lobed volva
+        - scalloped volva
+        - uneven volva
+        - multi-layered volva
+        - outer layered volva
+        - inner layered volva
+        - multi-lobed volva
+        - flaky volva
+        - fibrous volva
+        - thin volva
+        - thick volva
+        - leathery volva
+        - tattered volva
+        - hairy volva
+        - fibrillose volva
+        - granulated volva
+        - ornate volva
+        - decorated volva
+        - gland-covered volva
+        - rough-textured volva
+    pileus:
+        - convex pileus
+        - flat pileus
+        - umbonate pileus
+        - depressed pileus
+        - campanulate pileus
+        - bell-shaped pileus
+        - conical pileus
+        - conical to convex pileus
+        - hemispherical pileus
+        - umbrella-shaped pileus
+        - expanding pileus
+        - margin curled up pileus
+        - incurved margin pileus
+        - decurved margin pileus
+        - straight margin pileus
+        - overhanging margin pileus
+        - rolled margin pileus
+        - wavy margin pileus
+        - lobed margin pileus
+        - cracked margin pileus
+        - split margin pileus
+        - lobed and split margin pileus
+        - undulating margin pileus
+        - furrowed margin pileus
+        - margin striate pileus
+        - marginate pileus
+        - non-marginate pileus
+        - undulating marginate pileus
+        - cap margin grooved pileus
+        - cap margin bumpy pileus
+        - cap margin smooth pileus
+        - cap margin ridged pileus
+        - cap margin wavy pileus
+        - cap margin scalloped pileus
+        - cap margin toothed pileus
+        - cap margin fringed pileus
+        - cap margin fimbriate pileus
+        - cap margin crenate pileus
+        - cap margin lacerate pileus
+        - cap margin scaly pileus
+        - cap margin woolly pileus
+        - cap margin felted pileus
+        - cap margin velvety pileus
+        - cap margin silky pileus
+        - cap margin viscid pileus
+        - cap margin slimy pileus
+        - cap margin sticky pileus
+        - cap margin glandular pileus
+        - cap margin glistening pileus
+        - cap margin glowing pileus
+        - cap margin luminescent pileus
+        - cap margin translucent pileus
+        - cap margin opaque pileus
+        - cap surface smooth pileus
+        - cap surface grooved pileus
+        - cap surface bumpy pileus
+        - cap surface ridged pileus
+        - cap surface wavy pileus
+        - cap surface scalloped pileus
+        - cap surface toothed pileus
+        - cap surface fringed pileus
+        - cap surface fimbriate pileus
+        - cap surface crenate pileus
+        - cap surface lacerate pileus
+        - cap surface scaly pileus
+        - cap surface woolly pileus
+        - cap surface felted pileus
+        - cap surface velvety pileus
+        - cap surface silky pileus
+        - cap surface viscid pileus
+        - cap surface slimy pileus
+        - cap surface sticky pileus
+        - cap surface glandular pileus
+        - cap surface glistening pileus
+        - cap surface glowing pileus
+        - cap surface luminescent pileus
+        - cap surface translucent pileus
+        - cap surface opaque pileus
+    pores:
+        - circular pores
+        - round pores
+        - angular pores
+        - elongated pores
+        - irregular pores
+        - hexagonal pores
+        - rectangular pores
+        - polygonal pores
+        - stellate pores
+        - compound pores
+        - simple pores
+        - confluent pores
+        - gaping pores
+        - tiny pores
+        - large pores
+        - sunken pores
+        - raised pores
+        - evenly spaced pores
+        - clumped pores
+        - radially arranged pores
+        - irregularly arranged pores
+        - sparse pores
+        - dense pores
+        - cracked pores
+        - divided pores
+        - unbranched pores
+        - branched pores
+        - fused pores
+        - whitish pores
+        - cream-colored pores
+        - yellow pores
+        - orange pores
+        - reddish pores
+        - pinkish pores
+        - brown pores
+        - grayish pores
+        - bluish pores
+        - greenish pores
+        - blackish pores
+        - pale pores
+        - dark pores
+        - uniformly colored pores
+        - variegated pores
+        - radially colored pores
+        - zoned pores
+        - spotted pores
+        - speckled pores
+        - dotted pores
+        - striated pores
+        - ridged pores
+        - grooved pores
+        - scaly pores
+        - velvet-textured pores
+        - felted pores
+        - woolly pores
+        - smooth pores
+        - rough pores
+        - shiny pores
+        - matte pores
+        - porous pores
+        - non-porous pores
+        - glistening pores
+        - glowing pores
+        - luminescent pores
+        - translucent pores
+        - opaque pores
+    hymenium:
+        - smooth hymenium
+        - wrinkled hymenium
+        - pitted hymenium
+        - toothed hymenium
+        - gilled hymenium
+        - porous hymenium
+        - polypore hymenium
+        - lamellate hymenium
+        - labyrinthine hymenium
+        - maze-like hymenium
+        - irregular hymenium
+        - uniform hymenium
+        - radially arranged hymenium
+        - concentrically arranged hymenium
+        - interrupted hymenium
+        - continuous hymenium
+        - infundibuliform hymenium
+        - tubular hymenium
+        - crinkled hymenium
+        - dimpled hymenium
+        - reticulated hymenium
+        - spore-bearing hymenium
+        - sterile hymenium
+        - even hymenium
+        - bumpy hymenium
+        - sunken hymenium
+        - raised hymenium
+        - marginate hymenium
+        - stipitate hymenium
+        - subsessile hymenium
+        - pendent hymenium
+        - horizontal hymenium
+        - ascendant hymenium
+        - descendant hymenium
+        - adnate hymenium
+        - sinuate hymenium
+        - hymenium with lamellae
+        - hymenium with pores
+        - hymenium with teeth
+        - hymenium with gills
+        - hymenium with ridges
+        - hymenium with folds
+        - hymenium with tubes
+        - hymenium with pits
+        - hymenium with cracks
+        - hymenium with grooves
+        - hymenium with scales
+        - hymenium with patterns
+        - hymenium with textures
+        - hymenium with structures
+        - hymenium with shapes
+    stipe-base:
+        - bulbous base
+        - club-shaped base
+        - tapered base
+        - enlarged base
+        - rounded base
+        - flaring base
+        - equal base
+        - slightly bulbous base
+        - cylindrical base
+        - narrowing base
+        - rooting base
+        - saccate base
+        - cordate base
+        - cup-shaped base
+        - swollen base
+        - marginate base
+        - fusiform base
+        - stilted base
+        - elongated base
+        - gradually tapering base
+        - constricted base
+        - flattened base
+        - incurved base
+        - eccentric base
+        - discrete base
+        - eccentrobase
+        - bulbose base
+        - stout base
+        - slightly tapered base
+        - subtubular base
+        - subbulbous base
+        - subglobose base
+        - acute base
+        - truncate base
+        - obconic base
+        - ventricose base
+        - tapering to a point base
+        - tapering to a stem base
+        - marginate-attached base
+        - rhizomorphic base
+        - hollow base
+        - solid base
+        - undulate base
+        - irregular base
+        - elongated and flaring base
+        - tapering and slightly bulbous base
+        - smooth base
+        - wavy base
+        - short and stout base
+        - gradually enlarged base
+        - rough base
+        - furrowed base
+        - flexuous base
+        - slightly flaring base
+        - gradually tapering and rooting base
+        - straight base
+        - caudate base
+        - flexuous to flaring base
+        - pointed base
+        - stout and bulbous base
+        - tapering to a nipple base
+        - cuneate base
+        - subrhizomorphic base
+        - slightly tapered and flaring base
+        - bulbous and flaring base
+        - tapered to an elongated bulb base
+        - flexuous and tapered base
+        - slightly bulbous and tapered base
+        - flexuous to flattened base
+        - flattened to bulbous base
+        - gradually tapering and cylindrical base
+        - gradually tapering and flaring base
+        - rounded and tapered base
+        - gradually tapering and saccate base
+        - gradually tapering to a bulb base
+        - flaring and rooting base
+        - gradually enlarged and rooting base
+        - gradually tapering and acute base
+        - gradually tapering to a club base
+        - flaring and flexuous base
+        - flaring and stout base
+        - gradually tapering and irregular base
+        - gradually tapering to a point base
+        - flaring to cylindrical base
+        - slightly tapered and acute base
+        - cylindrical and tapered base
+        - tapering and rooting base
+        - gradually tapering to a stem base
+        - flaring and rounded base
+        - flaring to cylindrical and rooting base
+        - gradually tapering to a flaring base
+        - gradually tapering to a saccate base
+        - flaring and tapering to a point base
+        - gradually tapering and stout base
+        - gradually tapering to a nipple base
+        - cylindrical and rooting base
+        - gradually tapering and flexuous base
+        - gradually tapering and rooting base
+        - gradually tapering to an elongated bulb base
+        - cylindrical and flaring base
+        - gradually tapering and furrowed base
+        - gradually tapering to a club-shaped base
+        - gradually tapering and hollow base
+        - gradually tapering and rhizomorphic base
+        - gradually tapering to a cup-shaped base
+        - gradually tapering and subbulbous base
+        - gradually tapering to a cuneate base
+        - flaring to a point base
+        - flaring and gradually tapering base
+        - flaring and acute base
+        - tapering and cordate base
+        - gradually tapering and cuneate base
+        - gradually tapering to a rhizomorphic base
+        - flaring and rooting base
+        - gradually tapering and ventricose base
+        - flaring and cylindrical base
+        - gradually tapering and cup-shaped base
+        - gradually tapering and subglobose base
+        - gradually tapering to a subglobose base
+        - gradually tapering and truncate base
+        - gradually tapering to an obconic base
+        - gradually tapering and equal base
+        - gradually tapering and ventricose base
+        - gradually tapering to a rooting base
+        - gradually tapering and swollen base
+        - gradually tapering to an acute base
+        - gradually tapering and tapered to a point base
+        - gradually tapering to a truncate base
+        - gradually tapering and marginate base
+        - gradually tapering and tapered to a stem base
+        - gradually tapering to an equal base
+        - gradually tapering and marginate-attached base
+        - gradually tapering and slightly tapered base
+        - gradually tapering to a marginate base
+        - gradually tapering and tapered to a nipple base
+    latex:
+        - milky
+        - watery
+        - thick
+        - sticky
+        - oozing
+        - viscous
+        - cloudy
+        - clear
+        - colored
+        - translucent
+        - transparent
+        - gelatinous
+        - gel-like
+        - amber
+        - white
+        - creamy
+        - yellowish
+        - orange
+        - reddish
+        - brownish
+        - greenish
+        - bluish
+        - pinkish
+        - blackish
+    mycorrhizal-association:
+        - symbiotic connection
+        - root interlocking
+        - mutualistic relationship
+        - underground exchange
+        - nutrient sharing
+        - fungal filaments entwined with roots
+        - beneficial interaction
+        - cooperative nutrient absorption
+        - root envelopment
+        - fungal hyphae surrounding root cells
+        - mycorrhizal network
+        - fungal-plant symbiosis
+        - enhanced nutrient uptake
+        - root extension into fungal mycelium
+        - root colonization by fungi
+        - plant-fungus cooperation
+        - beneficial mycorrhizae
+        - plant health enhancement
+        - subterranean partnership
+    habitat:
+        - forest
+        - rainforest
+        - desert
+        - grassland
+        - tundra
+        - wetland
+        - marsh
+        - swamp
+        - lake
+        - river
+        - pond
+        - ocean
+        - coral reef
+        - mountain
+        - alpine
+        - cave
+        - underground
+        - urban
+        - rural
+        - suburban
+        - savanna
+        - prairie
+        - steppe
+        - taiga
+        - boreal forest
+        - deciduous forest
+        - coniferous forest
+        - coastal
+        - estuary
+        - mangrove
+        - arctic
+        - antarctic
+        - volcanic
+        - geothermal
+        - hydrothermal vent
+        - abyssal zone
+        - deep sea
+        - seafloor
+        - woodland
+        - heathland
+        - moorland
+        - fen
+        - fenland
+        - lagoon
+        - delta
+        - plateau
+        - canyon
+        - gorge
+        - ridge
+        - dune
+        - oasis
+        - fjord
+        - glacial
+        - cavern
+        - bog
+        - salt flat
+        - sand dunes
+        - caldera
+        - rift valley
+        - kelp forest
+        - littoral zone
+        - hinterland
+        - backwater
+        - meander
+        - estuary
+        - wet meadow
+        - salt marsh
+        - freshwater
+        - saline
+        - volcanic island
+        - barrier island
+        - archipelago
+        - atoll
+        - karst
+        - swell
+        - expanse
+        - vastness
+        - natural habitat
+    growth-form:
+        - single
+        - clustered
+        - scattered
+        - grouped
+        - solitary
+        - trooping
+        - clumped
+        - cespitose
+        - tufted
+        - fasciculate
+        - gregarious
+        - dense
+        - scattered
+        - proliferating
+        - stellate
+        - effuse
+        - subcespitose
+        - hypogeous
+        - epigeous
+        - hypogeal
+        - subterranean
+        - terrestrial
+        - lignicolous
+        - terrestrial-woodland
+        - mycorrhizal
+        - saprophytic
+        - parasitic
+        - endophytic
+        - epiphytic
+        - coprophilous
+    bioluminescence:
+        - bioluminescence
+        - glowing
+        - illuminated
+        - luminous
+        - radiant
+        - bio-lit
+        - phosphorescent
+        - fluorescent
+        - light-emitting
+        - self-illuminating
+        - shimmering
+        - sparkling
+        - gleaming
+        - glistening
+        - incandescent
+        - luminescent
+        - radiating light
+        - emitting light
+        - biogenic light
+        - otherworldly glow
+    poisonous-properties:
+        - toxic
+        - venomous
+        - harmful
+        - lethal
+        - dangerous
+        - deadly
+        - noxious
+        - poison-filled
+        - caustic
+        - corrosive
+        - irritant
+        - laced with poison
+        - potentially lethal
+        - hazardous
+        - contaminated
+        - laced with toxins
+        - harm-inflicting
+        - hazardous to touch
+        - poison-spewing
+        - deadly to ingest
+        - venom-laden
+        - poisonous secretion
+        - bitter-tasting poison
+        - noxious fumes
+        - poisonous essence
+        - toxic residue
+        - harmful extracts
+        - poisonous compounds
+        - lethal toxins
+        - corroding agent
+        - lethal chemicals
+        - venomous essence
+    medicinal-properties:
+        - healing
+        - therapeutic
+        - medicinal
+        - curative
+        - remedy
+        - health-enhancing
+        - restorative
+        - beneficial
+        - soothing
+        - herbal remedy
+        - natural medicine
+        - therapeutic extract
+        - healing properties
+        - medicinal benefits
+        - health-promoting
+        - curative powers
+        - remedy attributes
+        - restorative effects
+        - therapeutic qualities
+        - herbal healing
+        - natural remedy
+        - medicinal treatment
+        - health-enhancing elements
+        - soothing properties
+        - herbal therapy
+        - medicinal applications
+        - curative compounds
+        - healing properties
+        - therapeutic properties
+        - medicinal properties
+        - health-enhancing attributes
+        - restorative qualities
+        - beneficial effects
+        - soothing qualities
+        - herbal remedy
+        - natural healing
+        - therapeutic benefits
+        - healing extracts
+        - medicinal potential
+        - curative capabilities
+        - remedy components
+        - restorative attributes
+        - herbal medicine
+
+properties:
+    colors:
+        plants:
+            - green
+            - brown
+            - red
+            - yellow
+            - orange
+            - pink
+            - purple
+            - blue
+            - white
+            - cream
+            - beige
+            - gray
+            - silver
+            - gold
+            - burgundy
+            - maroon
+            - olive
+            - teal
+            - turquoise
+            - cyan
+            - indigo
+            - lavender
+            - magenta
+            - peach
+            - coral
+            - tan
+            - rust
+            - amber
+            - ebony
+            - jet black
+            - charcoal
+            - slate
+            - ash gray
+            - pearl
+            - ivory
+            - cream
+            - mint green
+            - emerald green
+            - forest green
+            - lime green
+            - chartreuse
+            - tangerine
+            - salmon
+            - rose
+            - lilac
+            - orchid
+            - azure
+            - sky blue
+            - navy blue
+            - royal blue
+            - cobalt blue
+            - cerulean
+            - aquamarine
+            - seafoam green
+            - turquoise
+            - aquamarine
+            - cyan
+            - periwinkle
+            - plum
+            - mauve
+            - slate gray
+            - smoke gray
+            - pewter
+            - taupe
+            - mahogany
+            - copper
+            - bronzete
+        mushrooms:
+            - white
+            - brown
+            - red
+            - yellow
+            - orange
+            - green
+            - blue
+            - purple
+            - black
+            - gray
+            - pink
+            - tan
+            - cream
+            - beige
+            - maroon
+            - burgundy
+            - lavender
+            - indigo
+            - teal
+            - olive
+        spore-print:
+            - white spore print
+            - cream spore print
+            - pale spore print
+            - light spore print
+            - yellow spore print
+            - golden spore print
+            - orange spore print
+            - rust spore print
+            - red spore print
+            - pink spore print
+            - salmon spore print
+            - brown spore print
+            - chocolate spore print
+            - dark spore print
+            - black spore print
+            - gray spore print
+            - purple spore print
+            - lilac spore print
+            - blue spore print
+            - green spore print
+            - olive spore print
+            - blue-green spore print
+            - bluish-black spore print
+            - bluish-green spore print
+            - bluish-gray spore print
+            - bluish-white spore print
+            - bluish-yellow spore print
+            - bluish-violet spore print
+            - bluish-red spore print
+            - bluish-brown spore print
+            - bluish-purple spore print
+            - bluish-pink spore print
+            - bluish-orange spore print
+            - bluish-golden spore print
+        stipe:
+            - white
+            - cream
+            - yellow
+            - orange
+            - red
+            - pink
+            - brown
+            - gray
+            - black
+            - pale
+            - dark
+            - light
+            - tan
+            - beige
+            - golden
+            - copper
+            - rust
+            - mottled
+            - banded
+            - striped
+            - spotted
+            - flecked
+            - speckled
+            - variegated
+            - multicolored
+            - blotchy
+            - marbled
+            - two-toned
+            - colorful
+            - monochromatic
+            - vibrant
+            - subdued
+            - pastel
+            - earthy
+            - muted
+            - gradient
+            - iridescent
+            - metallic
+            - shiny
+            - matte
+            - glossy
+            - translucent
+            - opaque
+            - glazed
+            - sparkling
+            - dull
+            - bright
+            - lustrous
+            - pale to dark
+            - contrasting
+            - harmonious
+            - unique
+            - natural
+            - unusual
+            - striking
+            - elegant
+            - richly colored
+            - patterned
+            - textured
+            - solid
+        gill:
+            - white
+            - cream
+            - yellow
+            - pink
+            - red
+            - orange
+            - brown
+            - gray
+            - black
+            - green
+            - blue
+            - lilac
+            - purple
+            - bicolored
+            - multicolored
+            - pale
+            - dark
+            - mottled
+            - striped
+            - spotted
+            - streaked
+            - irregularly colored
+            - translucent
+            - gradient
+            - pigmented
+            - unpigmented
+    size:
+        plants:
+            - microscopic
+            - minuscule
+            - tiny
+            - petite
+            - lilliputian
+            - dwarf
+            - wee
+            - miniature
+            - diminutive
+            - small
+            - compact
+            - dainty
+            - delicate
+            - medium-sized
+            - average
+            - palm-sized
+            - substantial
+            - generous
+            - ample
+            - sprawling
+            - prolific
+            - medium-sized
+            - large
+            - robust
+            - sturdy
+            - majestic
+            - lush
+            - gigantic
+            - towering
+            - huge
+            - enormous
+            - colossal
+            - oversized
+            - vast
+            - monumental
+            - mighty
+        mushrooms:
+            - small
+            - medium
+            - large
+            - miniature
+            - giant
+            - tiny
+            - massive
+            - compact
+            - oversized
+            - diminutive
+            - petite
+            - jumbo
+            - microscopic
+            - colossal
+            - minute
+    shape:
+        plants:
+            - rounded
+            - oval
+            - heart-shaped
+            - lanceolate
+            - linear
+            - elliptical
+            - lance-shaped
+            - lanceolate
+            - needle-like
+            - linear-lanceolate
+            - spatulate
+            - obovate
+            - oblong
+            - triangular
+            - circular
+            - fan-shaped
+            - palmate
+            - pinnate
+            - lobed
+            - lobeless
+            - toothed
+            - serrated
+            - wavy-edged
+            - smooth-edged
+            - undulate
+            - jagged
+            - irregular
+            - curved
+            - twisted
+            - spiraled
+            - coiled
+            - whorled
+            - clustered
+            - rosette
+            - upright
+            - erect
+            - arching
+            - cascading
+            - pendulous
+            - creeping
+            - spreading
+            - mat-forming
+            - vining
+            - climbing
+            - bushy
+            - compact
+            - columnar
+            - pyramidal
+            - conical
+            - globular
+            - spherical
+            - semicircular
+            - flattened
+            - triangular
+            - cylindrical
+            - tapered
+            - tendril-bearing
+            - strap-like
+            - strap-shaped
+        mushrooms:
+            - bell
+            - umbrella
+            - conical
+            - convex
+            - flat
+            - spherical
+            - cylindrical
+            - cup-shaped
+            - fan-shaped
+            - saddle-shaped
+            - disk-shaped
+            - trumpet-shaped
+            - coral-like
+            - club-shaped
+            - cushion-shaped
+            - shell-shaped
+        leaf:
+            - linear
+            - lanceolate
+            - oblong
+            - oval
+            - elliptical
+            - ovate
+            - heart-shaped
+            - cordate
+            - reniform
+            - round
+            - circular
+            - orbicular
+            - acicular
+            - needle-like
+            - filiform
+            - needle-shaped
+            - linear-lanceolate
+            - elliptic-ovate
+            - spatulate
+            - triangular
+            - palmate
+            - digitate
+            - pinnate
+            - bipinnate
+            - trifoliate
+            - simple
+            - compound
+            - lobed
+            - toothed
+            - serrated
+            - entire
+            - palmately-lobed
+            - palmately-cleft
+            - palmately-compound
+            - pinnately-lobed
+            - pinnately-cleft
+            - pinnately-compound
+            - bipinnately-lobed
+            - bipinnately-cleft
+            - bipinnately-compound
+            - trifoliate
+            - undivided
+        petal:
+            - round
+            - oval
+            - lanceolate
+            - linear
+            - spatulate
+            - oblong
+            - elliptical
+            - ovate
+            - cordate
+            - reniform
+            - flabellate
+            - acuminate
+            - acute
+            - truncate
+            - emarginate
+            - cuneate
+            - sagittate
+            - hastate
+            - obovate
+            - ligulate
+            - tubular
+            - funnel-shaped
+            - bell-shaped
+            - rotate
+            - cruciform
+            - cross-shaped
+            - salverform
+            - hypocrateriform
+            - urceolate
+            - campanulate
+            - cyathiform
+            - bilabiate
+            - labiate
+            - papilionaceous
+            - liguliflorous
+            - discoid
+            - radiate
+            - tubuliflorous
+            - funnelform
+            - tubular-funnelform
+            - tubular-rotate
+        stem:
+            - cylindrical
+            - tapering
+            - bulbous
+            - club-shaped
+            - fluted
+            - tapered base
+            - enlarged base
+            - equal
+            - elongated
+            - short
+            - stubby
+            - slender
+            - curved
+            - straight
+            - twisted
+            - smooth
+            - ridged
+            - grooved
+            - fibrillose
+            - fibrous
+            - prickly
+            - scaly
+            - bumpy
+            - wavy
+            - knobby
+            - scabrous
+            - flexuous
+            - ribbed
+            - serrated
+            - furrowed
+            - striate
+            - flaky
+            - shaggy
+            - annulus base
+            - cartilaginous
+            - hollow
+            - solid
+            - tuberous
+            - root-like
+            - mycelial
+            - rhizomorph
+            - subterranean
+            - aerial
+            - underground
+            - ascendant
+            - erect
+            - prostrate
+            - twining
+            - flexuose
+            - geniculate
+            - lateral
+            - central
+            - off-centered
+            - eccentric
+        bud:
+            - conical buds
+            - ovoid buds
+            - globular buds
+            - cylindrical buds
+            - lanceolate buds
+            - acuminate buds
+            - clavate buds
+            - elliptical buds
+            - reniform buds
+            - oblong buds
+            - fusiform buds
+            - spatulate buds
+            - subulate buds
+            - linear buds
+            - globose buds
+            - pyramidal buds
+            - ovate buds
+            - cordate buds
+            - cuneate buds
+            - napiform buds
+            - capitate buds
+    texture:
+        stem:
+            - smooth texture
+            - silky texture
+            - velvety texture
+            - fuzzy texture
+            - hairy texture
+            - scaly texture
+            - prickly texture
+            - ribbed texture
+            - ridged texture
+            - grooved texture
+            - fluted texture
+            - wavy texture
+            - bumpy texture
+            - tuberculate texture
+            - fibrillose texture
+            - fibrous texture
+            - granular texture
+            - glandular texture
+            - cracked texture
+            - warty texture
+            - crinkled texture
+            - pitted texture
+            - spongy texture
+            - pore-like texture
+            - slimey texture
+            - slimy texture
+            - glutinous texture
+            - gooey texture
+            - stiff texture
+            - tough texture
+            - brittle texture
+            - corky texture
+            - woody texture
+            - mushy texture
+            - gelatinous texture
+            - leathery texture
+            - papery texture
+            - membranous texture
+            - crust-like texture
+            - subtle texture
+            - coarse texture
+            - fine texture
+            - matte texture
+            - glossy texture
+            - satin texture
+            - pearlized texture
+            - iridescent texture
+            - lustrous texture
+            - shiny texture
+            - frosted texture
+            - pearly texture
+            - metallic texture
+            - textured texture (e.g., textured stem)
+        mushrooms:
+            - smooth
+            - warty
+            - scaly
+            - rough
+            - fuzzy
+            - velvety
+            - silky
+            - pitted
+            - spongy
+            - fibrous
+            - powdery
+            - slimy
+            - crinkled
+            - bumpy
+            - knobby
+            - hairy
+            - pimpled
+            - wrinkled
+            - grooved
+            - ribbed
+            - veined
+            - ridged
+            - gilled
+            - furrowed
+        bark:
+            - smooth
+            - rough
+            - furrowed
+            - peeling
+            - shaggy
+            - scaly
+            - corky
+            - flaky
+            - ridged
+            - grooved
+            - striated
+            - warty
+            - papery
+            - fibrous
+            - plate-like
+            - cracked
+            - prickly
+            - bumpy
+            - knobby
+        plants:
+            - smooth
+            - rough
+            - velvety
+            - prickly
+            - fuzzy
+            - waxy
+            - spongy
+            - bumpy
+            - ribbed
+            - lustrous
+            - shiny
+            - matte
+            - glossy
+            - silky
+            - papery
+            - crispy
+            - brittle
+            - leathery
+            - scaled
+            - peeling
+            - flaky
+            - crinkled
+            - rigid
+            - flexible
+            - stiff
+            - delicate
+            - tough
+            - frilly
+            - fringed
+            - spiky
+            - jagged
+            - veined
+            - lacy
+            - webbed
+            - lumpy
+            - ridged
+            - knotted
+            - corded
+            - twisted
+            - curled
+            - tangled
+            - whorled
+            - pitted
+            - puckered
+            - bristly
+            - hairy
+            - grooved
+            - divided
+            - poreous
+            - textured
+            - coarse
+            - fine
+            - embossed
+            - engraved
+            - rugged
+            - bristled
+            - irregular
+            - slender
+            - bulbous
+    pattern:
+        mushrooms:
+            - speckled
+            - striped
+            - spotted
+            - banded
+            - ringed
+            - zoned
+            - marbled
+            - checkered
+            - mottled
+            - reticulated
+            - radial
+            - concentric
+            - wavy
+            - latticed
+            - netted
+            - streaked
+            - blotchy
+            - patchy
+            - flecked
+            - dotted
+            - veined
+            - scaly
+            - cracked
+            - filamentous
+            - fibrillose
+            - furrowed
+            - furrowed-grooved
+            - furrowed-wrinkled
+            - smooth
+        plants:
+            - smooth
+            - rough
+            - velvety
+            - prickly
+            - fuzzy
+            - waxy
+            - spongy
+            - bumpy
+            - ribbed
+            - lustrous
+            - shiny
+            - matte
+            - glossy
+            - silky
+            - papery
+            - crispy
+            - brittle
+            - leathery
+            - scaled
+            - peeling
+            - flaky
+            - crinkled
+            - rigid
+            - flexible
+            - stiff
+            - delicate
+            - tough
+            - frilly
+            - fringed
+            - spiky
+            - jagged
+            - veined
+            - lacy
+            - webbed
+            - lumpy
+            - ridged
+            - knotted
+            - corded
+            - twisted
+            - curled
+            - tangled
+            - whorled
+            - pitted
+            - puckered
+            - bristly
+            - hairy
+            - grooved
+            - divided
+            - poreous
+            - textured
+            - coarse
+            - fine
+            - embossed
+            - engraved
+            - rugged
+            - bristled
+            - irregular
+            - slender
+            - bulbous
+    structure:
+        root:
+            - taproot
+            - fibrous
+            - adventitious
+            - propagative
+            - lateral
+            - bulbous
+            - tuberous
+            - stoloniferous
+            - rhizomatous
+            - creeping
+            - fleshy
+            - aerial
+            - contractile
+            - haustorial
+            - parasitic
+            - anchor
+            - clustered
+            - dense
+            - shallow
+            - deep
+            - spreading
+            - branched
+            - tubular
+            - woody
+            - fleshy
+
