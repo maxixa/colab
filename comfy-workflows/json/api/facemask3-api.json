@@ -1,0 +1,146 @@
+{
+  "3": {
+    "inputs": {
+      "model_name": "bbox/face_yolov8m.pt"
+    },
+    "class_type": "UltralyticsDetectorProvider"
+  },
+  "13": {
+    "inputs": {
+      "threshold": 0.5,
+      "dilation": 10,
+      "crop_factor": 3,
+      "drop_size": 10,
+      "bbox_detector": [
+        "3",
+        0
+      ],
+      "image": [
+        "80",
+        0
+      ]
+    },
+    "class_type": "BboxDetectorSEGS"
+  },
+  "14": {
+    "inputs": {
+      "model_name": "sam_vit_b_01ec64.pth",
+      "device_mode": "CPU"
+    },
+    "class_type": "SAMLoader"
+  },
+  "15": {
+    "inputs": {
+      "detection_hint": "center-1",
+      "dilation": 0,
+      "threshold": 0.1,
+      "bbox_expansion": 0,
+      "mask_hint_threshold": 1,
+      "mask_hint_use_negative": "False",
+      "sam_model": [
+        "14",
+        0
+      ],
+      "segs": [
+        "13",
+        0
+      ],
+      "image": [
+        "80",
+        0
+      ]
+    },
+    "class_type": "SAMDetectorCombined"
+  },
+  "16": {
+    "inputs": {
+      "mask": [
+        "82",
+        0
+      ]
+    },
+    "class_type": "MaskToImage"
+  },
+  "75": {
+    "inputs": {
+      "output_path": "/home/studio-lab-user/sagemaker-studiolab-notebooks/ComfyUI/test",
+      "filename_prefix": [
+        "80",
+        1
+      ],
+      "filename_delimiter": "_",
+      "filename_number_padding": 2,
+      "filename_number_start": "false",
+      "extension": "jpeg",
+      "quality": 40,
+      "lossless_webp": "false",
+      "overwrite_mode": "false",
+      "show_history": "false",
+      "show_history_by_prefix": "true",
+      "embed_workflow": "true",
+      "show_previews": "true",
+      "images": [
+        "81",
+        0
+      ]
+    },
+    "class_type": "Image Save"
+  },
+  "80": {
+    "inputs": {
+      "mode": "incremental_image",
+      "index": 0,
+      "label": "Batch 001",
+      "path": "/home/studio-lab-user/sagemaker-studiolab-notebooks/ComfyUI/89-closeup-resized",
+      "pattern": "*",
+      "allow_RGBA_output": "false",
+      "filename_text_extension": "true"
+    },
+    "class_type": "Load Image Batch"
+  },
+  "81": {
+    "inputs": {
+      "image": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "ImageInvert"
+  },
+  "82": {
+    "inputs": {
+      "masks_a": [
+        "15",
+        0
+      ],
+      "masks_b": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "Masks Add"
+  },
+  "84": {
+    "inputs": {
+      "detection_hint": "none",
+      "dilation": 0,
+      "threshold": 0.1,
+      "bbox_expansion": 0,
+      "mask_hint_threshold": 1,
+      "mask_hint_use_negative": "False",
+      "sam_model": [
+        "14",
+        0
+      ],
+      "segs": [
+        "13",
+        0
+      ],
+      "image": [
+        "80",
+        0
+      ]
+    },
+    "class_type": "SAMDetectorCombined"
+  }
+}

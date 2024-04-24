@@ -1,0 +1,588 @@
+{
+  "last_node_id": 84,
+  "last_link_id": 118,
+  "nodes": [
+    {
+      "id": 3,
+      "type": "UltralyticsDetectorProvider",
+      "pos": [
+        132,
+        -345
+      ],
+      "size": {
+        "0": 300,
+        "1": 80
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "BBOX_DETECTOR",
+          "type": "BBOX_DETECTOR",
+          "links": [
+            12
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "SEGM_DETECTOR",
+          "type": "SEGM_DETECTOR",
+          "links": [],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UltralyticsDetectorProvider"
+      },
+      "widgets_values": [
+        "bbox/face_yolov8m.pt"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 75,
+      "type": "Image Save",
+      "pos": [
+        2310,
+        -276
+      ],
+      "size": {
+        "0": 315,
+        "1": 554
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 112
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "link": 110,
+          "widget": {
+            "name": "filename_prefix"
+          }
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Image Save"
+      },
+      "widgets_values": [
+        "/home/studio-lab-user/sagemaker-studiolab-notebooks/ComfyUI/test",
+        "ComfyUI",
+        "_",
+        2,
+        "false",
+        "jpeg",
+        40,
+        "false",
+        "false",
+        "false",
+        "true",
+        "true",
+        "true"
+      ]
+    },
+    {
+      "id": 16,
+      "type": "MaskToImage",
+      "pos": [
+        1875,
+        -293
+      ],
+      "size": {
+        "0": 176.39999389648438,
+        "1": 26
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 113
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            111
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MaskToImage"
+      },
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 15,
+      "type": "SAMDetectorCombined",
+      "pos": [
+        1244,
+        -333
+      ],
+      "size": {
+        "0": 280,
+        "1": 220
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "sam_model",
+          "type": "SAM_MODEL",
+          "link": 15
+        },
+        {
+          "name": "segs",
+          "type": "SEGS",
+          "link": 17
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 109
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            114
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SAMDetectorCombined"
+      },
+      "widgets_values": [
+        "center-1",
+        0,
+        0.1,
+        0,
+        1,
+        "False"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 14,
+      "type": "SAMLoader",
+      "pos": [
+        866,
+        -393
+      ],
+      "size": {
+        "0": 290,
+        "1": 82
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "SAM_MODEL",
+          "type": "SAM_MODEL",
+          "links": [
+            15,
+            115
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SAMLoader"
+      },
+      "widgets_values": [
+        "sam_vit_b_01ec64.pth",
+        "CPU"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 13,
+      "type": "BboxDetectorSEGS",
+      "pos": [
+        484,
+        -337
+      ],
+      "size": {
+        "0": 210,
+        "1": 150
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "bbox_detector",
+          "type": "BBOX_DETECTOR",
+          "link": 12
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 108
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SEGS",
+          "type": "SEGS",
+          "links": [
+            17,
+            116
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BboxDetectorSEGS"
+      },
+      "widgets_values": [
+        0.5,
+        10,
+        3,
+        10
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 82,
+      "type": "Masks Add",
+      "pos": [
+        1634,
+        -248
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "masks_a",
+          "type": "MASK",
+          "link": 114
+        },
+        {
+          "name": "masks_b",
+          "type": "MASK",
+          "link": 118
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASKS",
+          "type": "MASK",
+          "links": [
+            113
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Masks Add"
+      }
+    },
+    {
+      "id": 81,
+      "type": "ImageInvert",
+      "pos": [
+        2104,
+        -310
+      ],
+      "size": {
+        "0": 210,
+        "1": 26
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 111
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            112
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      }
+    },
+    {
+      "id": 80,
+      "type": "Load Image Batch",
+      "pos": [
+        23,
+        134
+      ],
+      "size": {
+        "0": 315,
+        "1": 222
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            108,
+            109,
+            117
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "filename_text",
+          "type": "STRING",
+          "links": [
+            110
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Load Image Batch"
+      },
+      "widgets_values": [
+        "incremental_image",
+        0,
+        "Batch 001",
+        "/home/studio-lab-user/sagemaker-studiolab-notebooks/ComfyUI/89-closeup-resized",
+        "*",
+        "false",
+        "true"
+      ]
+    },
+    {
+      "id": 84,
+      "type": "SAMDetectorCombined",
+      "pos": [
+        1230,
+        -62
+      ],
+      "size": {
+        "0": 280,
+        "1": 220
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "sam_model",
+          "type": "SAM_MODEL",
+          "link": 115
+        },
+        {
+          "name": "segs",
+          "type": "SEGS",
+          "link": 116
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 117
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            118
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SAMDetectorCombined"
+      },
+      "widgets_values": [
+        "none",
+        0,
+        0.1,
+        0,
+        1,
+        "False"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    }
+  ],
+  "links": [
+    [
+      12,
+      3,
+      0,
+      13,
+      0,
+      "BBOX_DETECTOR"
+    ],
+    [
+      15,
+      14,
+      0,
+      15,
+      0,
+      "SAM_MODEL"
+    ],
+    [
+      17,
+      13,
+      0,
+      15,
+      1,
+      "SEGS"
+    ],
+    [
+      108,
+      80,
+      0,
+      13,
+      1,
+      "IMAGE"
+    ],
+    [
+      109,
+      80,
+      0,
+      15,
+      2,
+      "IMAGE"
+    ],
+    [
+      110,
+      80,
+      1,
+      75,
+      1,
+      "STRING"
+    ],
+    [
+      111,
+      16,
+      0,
+      81,
+      0,
+      "IMAGE"
+    ],
+    [
+      112,
+      81,
+      0,
+      75,
+      0,
+      "IMAGE"
+    ],
+    [
+      113,
+      82,
+      0,
+      16,
+      0,
+      "MASK"
+    ],
+    [
+      114,
+      15,
+      0,
+      82,
+      0,
+      "MASK"
+    ],
+    [
+      115,
+      14,
+      0,
+      84,
+      0,
+      "SAM_MODEL"
+    ],
+    [
+      116,
+      13,
+      0,
+      84,
+      1,
+      "SEGS"
+    ],
+    [
+      117,
+      80,
+      0,
+      84,
+      2,
+      "IMAGE"
+    ],
+    [
+      118,
+      84,
+      0,
+      82,
+      1,
+      "MASK"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "Create FACE mask",
+      "bounding": [
+        385,
+        -477,
+        1747,
+        489
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    }
+  ],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

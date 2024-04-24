@@ -1,0 +1,109 @@
+{
+  "3": {
+    "inputs": {
+      "width": 1024,
+      "height": 1400,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage"
+  },
+  "4": {
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "PreviewImage"
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "9",
+        0
+      ],
+      "vae": [
+        "12",
+        2
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "9": {
+    "inputs": {
+      "seed": 1286079241,
+      "steps": 30,
+      "cfg": 3.5,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 1,
+      "noise_mode": "GPU(=A1111)",
+      "model": [
+        "14",
+        0
+      ],
+      "positive": [
+        "11",
+        0
+      ],
+      "negative": [
+        "13",
+        0
+      ],
+      "latent_image": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "KSampler //Inspire"
+  },
+  "11": {
+    "inputs": {
+      "text": "photo of a cute goth girl, hacker, sit a desk,  working at pc, skirt, clutter metro, night, neon lights, nerd outfit, cinematic, cyberpunk, clutter large room, cables",
+      "token_normalization": "mean",
+      "weight_interpretation": "A1111",
+      "clip": [
+        "14",
+        1
+      ]
+    },
+    "class_type": "BNK_CLIPTextEncodeAdvanced"
+  },
+  "12": {
+    "inputs": {
+      "ckpt_name": "realVisionV51.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "13": {
+    "inputs": {
+      "text": "makeup",
+      "token_normalization": "mean",
+      "weight_interpretation": "A1111",
+      "clip": [
+        "14",
+        1
+      ]
+    },
+    "class_type": "BNK_CLIPTextEncodeAdvanced"
+  },
+  "14": {
+    "inputs": {
+      "wildcard_text": "",
+      "populated_text": "",
+      "mode": true,
+      "Select to add LoRA": "Select the LoRA to add to the text",
+      "Select to add Wildcard": "Select the Wildcard to add to the text",
+      "seed": 950397497035259,
+      "model": [
+        "12",
+        0
+      ],
+      "clip": [
+        "12",
+        1
+      ]
+    },
+    "class_type": "ImpactWildcardEncode"
+  }
+}

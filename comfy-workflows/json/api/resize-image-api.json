@@ -1,0 +1,183 @@
+{
+  "11": {
+    "inputs": {
+      "mode": "incremental_image",
+      "index": 0,
+      "label": "Batch 001",
+      "path": "/content/Masking/B4u/img",
+      "pattern": "*",
+      "allow_RGBA_output": "false",
+      "filename_text_extension": "true"
+    },
+    "class_type": "Load Image Batch"
+  },
+  "12": {
+    "inputs": {
+      "mode": "incremental_image",
+      "index": 0,
+      "label": "Batch 002",
+      "path": "/content/Masking/B4u/mask",
+      "pattern": "*",
+      "allow_RGBA_output": "false",
+      "filename_text_extension": "true"
+    },
+    "class_type": "Load Image Batch"
+  },
+  "14": {
+    "inputs": {
+      "width": 900,
+      "height": 1688,
+      "X": 50,
+      "Y": 0,
+      "rotation": 0,
+      "feathering": 0,
+      "image": [
+        "17",
+        0
+      ],
+      "image_overlay": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "Image Transpose"
+  },
+  "16": {
+    "inputs": {
+      "image_path": "/content/Masking/fullbody/img/A(22).jpg",
+      "RGBA": "false",
+      "filename_text_extension": "true"
+    },
+    "class_type": "Image Load"
+  },
+  "17": {
+    "inputs": {
+      "width": 1024,
+      "height": 1920,
+      "direction": "horizontal",
+      "tolerance": 0,
+      "gradient_stops": "25:255,255,255\n"
+    },
+    "class_type": "Image Generate Gradient"
+  },
+  "21": {
+    "inputs": {
+      "output_path": "/content/Masking1/B4u950/mask",
+      "filename_prefix": [
+        "12",
+        1
+      ],
+      "filename_delimiter": "",
+      "filename_number_padding": 2,
+      "filename_number_start": "false",
+      "extension": "jpeg",
+      "quality": 80,
+      "lossless_webp": "false",
+      "overwrite_mode": "false",
+      "show_history": "false",
+      "show_history_by_prefix": "true",
+      "embed_workflow": "true",
+      "show_previews": "false",
+      "images": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "Image Save"
+  },
+  "22": {
+    "inputs": {
+      "images": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "Images to RGB"
+  },
+  "23": {
+    "inputs": {
+      "width": 900,
+      "height": 1688,
+      "X": 50,
+      "Y": 0,
+      "rotation": 0,
+      "feathering": 0,
+      "image": [
+        "16",
+        0
+      ],
+      "image_overlay": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "Image Transpose"
+  },
+  "28": {
+    "inputs": {
+      "output_path": "/content/Masking1/B4u950/img",
+      "filename_prefix": [
+        "11",
+        1
+      ],
+      "filename_delimiter": "",
+      "filename_number_padding": 2,
+      "filename_number_start": "false",
+      "extension": "jpeg",
+      "quality": 80,
+      "lossless_webp": "false",
+      "overwrite_mode": "false",
+      "show_history": "false",
+      "show_history_by_prefix": "true",
+      "embed_workflow": "true",
+      "show_previews": "false",
+      "images": [
+        "29",
+        0
+      ]
+    },
+    "class_type": "Image Save"
+  },
+  "29": {
+    "inputs": {
+      "images": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "Images to RGB"
+  },
+  "35": {
+    "inputs": {
+      "expression": "a/1024*1920",
+      "a": [
+        "40",
+        0
+      ]
+    },
+    "class_type": "MathExpression|pysssss"
+  },
+  "39": {
+    "inputs": {
+      "expression": "a*1",
+      "a": [
+        "40",
+        0
+      ]
+    },
+    "class_type": "MathExpression|pysssss"
+  },
+  "40": {
+    "inputs": {}
+  },
+  "41": {
+    "inputs": {
+      "expression": "a/4",
+      "a": [
+        "40",
+        0
+      ]
+    },
+    "class_type": "MathExpression|pysssss"
+  }
+}

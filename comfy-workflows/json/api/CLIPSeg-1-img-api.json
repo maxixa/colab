@@ -1,0 +1,133 @@
+{
+  "21": {
+    "inputs": {
+      "grow_mask_by": 0,
+      "pixels": [
+        "54",
+        0
+      ],
+      "vae": [
+        "23",
+        2
+      ],
+      "mask": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "VAEEncodeForInpaint"
+  },
+  "22": {
+    "inputs": {
+      "seed": 845940526752100,
+      "steps": 20,
+      "cfg": 7,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "karras",
+      "denoise": 0.8,
+      "model": [
+        "23",
+        0
+      ],
+      "positive": [
+        "24",
+        0
+      ],
+      "negative": [
+        "25",
+        0
+      ],
+      "latent_image": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "KSampler"
+  },
+  "23": {
+    "inputs": {
+      "ckpt_name": "realVisionV51.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "24": {
+    "inputs": {
+      "text": "girl, yellow hat, blue skirt, pretty, blue sunny sky",
+      "clip": [
+        "23",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "25": {
+    "inputs": {
+      "text": "deformed, ugly, artifacts, extra limbs, jpg",
+      "clip": [
+        "23",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "47": {
+    "inputs": {
+      "text": "sky",
+      "blur": 0.1,
+      "threshold": 0.7000000000000001,
+      "dilation_factor": 5,
+      "image": [
+        "54",
+        0
+      ]
+    },
+    "class_type": "CLIPSeg"
+  },
+  "52": {
+    "inputs": {
+      "samples": [
+        "22",
+        0
+      ],
+      "vae": [
+        "23",
+        2
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "53": {
+    "inputs": {
+      "output_path": "[time(%Y-%m-%d)]",
+      "filename_prefix": "ComfyUI",
+      "filename_delimiter": "_",
+      "filename_number_padding": 4,
+      "filename_number_start": "false",
+      "extension": "jpg",
+      "quality": 80,
+      "lossless_webp": "false",
+      "overwrite_mode": "false",
+      "show_history": "false",
+      "show_history_by_prefix": "true",
+      "embed_workflow": "true",
+      "show_previews": "true",
+      "images": [
+        "52",
+        0
+      ]
+    },
+    "class_type": "Image Save"
+  },
+  "54": {
+    "inputs": {
+      "mode": "incremental_image",
+      "index": 0,
+      "label": "Batch 001",
+      "path": "",
+      "pattern": "*",
+      "allow_RGBA_output": "false",
+      "filename_text_extension": "true"
+    },
+    "class_type": "Load Image Batch"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "17": {
+    "inputs": {
+      "category_filter": "All",
+      "lora_name": "dwrtsg-65-512-DB2.ckpt",
+      "strength_model": 0.65,
+      "strength_clip": 0.65,
+      "inverse": false,
+      "seed": 1123877138563233,
+      "A": 4,
+      "B": 1,
+      "preset": "Preset",
+      "block_vector": "1,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0",
+      "bypass": false,
+      "model": [
+        "21",
+        0
+      ],
+      "clip": [
+        "21",
+        1
+      ]
+    },
+    "class_type": "LoraLoaderBlockWeight //Inspire"
+  },
+  "18": {
+    "inputs": {
+      "ckpt_name": "realVisionV51.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "20": {
+    "inputs": {
+      "filename_prefix": "checkpoints/RealV-SG-65-512-DB2_065-MEG-3_08",
+      "model": [
+        "17",
+        0
+      ],
+      "clip": [
+        "17",
+        1
+      ],
+      "vae": [
+        "18",
+        2
+      ]
+    },
+    "class_type": "CheckpointSave"
+  },
+  "21": {
+    "inputs": {
+      "lora_name": "meganekko-3.ckpt",
+      "strength_model": 0.8,
+      "strength_clip": 0.8,
+      "model": [
+        "18",
+        0
+      ],
+      "clip": [
+        "18",
+        1
+      ]
+    },
+    "class_type": "Load Lora"
+  }
+}
