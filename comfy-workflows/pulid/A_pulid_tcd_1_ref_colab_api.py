@@ -9,7 +9,7 @@ from dynamicprompts.generators import RandomPromptGenerator
 from dynamicprompts.wildcards.wildcard_manager import WildcardManager
 
 # g_template = "{red|pink|white|gold|silver} (glasses:1.4)"
-prrompt_template = "{full body||close up}, cinematic, glamour photo of woman, {||twintails}, {blonde|}, {bow hair|cat ears|Bows|Hair Clips|Headbands|Hair Ties|Barrettes|Hair Slides|Ponytail Holders|Hair Pins|Flower Crowns|Bobby Pins|Hair Sticks|Hair Combs|Scrunchies|Hair Tassels|Crown Headbands|Hair Charms|Braided Headbands|Hair Wraps|Ponytail Streamers|Glitter Hair Ties}, (sexy:1.3|){|pink|red|peach|maroon|light-blue|Navy|Scarlet|Royal-blue|Turquoise|Olive|Emerald|Sage|Gold|Cream|Purple|Lavender|Violet|Brown|Tan|Blush|Rose|Fuchsia|Magenta|pink||} {lolita dress|fairy dress, wings|princess dress|ballgown|wedding dress| BUTTERFLY DRESS, wings|BURLESQUE DRESS|CUTE mini DRESS|FLOWER DRESS|SAILOR SENSHI UNIFORM| VICTORIAN DRESS| VICTORIAN mini DRESS} ,{||white thighhighs||white stockings|}, {Sashes|Ruffles|Bows|Ribbons|Lace Trims|Petticoats|Tutus|Belts|Buckles|Brooches|Flower Pins|Appliques|Embroidery|Patches|Ribbon Bows|Dress Clips|Waist Belts|Dress Pins|Dress Brooches|Dress Sashes}, {(tutu:0.7)|(tutu:0.5)|||}, {|kitchen|bed room|garden|cosmic dust|cyber punk city|white|simple} background, model photoshot, fashion photoshot, highly detailed, 4k, high resolution"
+prrompt_template = "{(full body:1.4)|midshot|}, cinematic, glamour photo of woman, {||twintails}, {blonde|}, {bow hair|cat ears|Bows|Hair Clips|Headbands|Hair Ties|Barrettes|Hair Slides|Ponytail Holders|Hair Pins|Flower Crowns|Bobby Pins|Hair Sticks|Hair Combs|Scrunchies|Hair Tassels|Crown Headbands|Hair Charms|Braided Headbands|Hair Wraps|Ponytail Streamers|Glitter Hair Ties}, (sexy:1.3|){|pink|red|peach|maroon|light-blue|Navy|Scarlet|Royal-blue|Turquoise|Olive|Emerald|Sage|Gold|Cream|Purple|Lavender|Violet|Brown|Tan|Blush|Rose|Fuchsia|Magenta|pink||} {lolita dress|fairy dress, wings|princess dress|ballgown|wedding dress| BUTTERFLY DRESS, wings|BURLESQUE DRESS|CUTE mini DRESS|FLOWER DRESS|SAILOR SENSHI UNIFORM| VICTORIAN DRESS| VICTORIAN mini DRESS} ,{||white thighhighs||white stockings|}, {Sashes|Ruffles|Bows|Ribbons|Lace Trims|Petticoats|Tutus|Belts|Buckles|Brooches|Flower Pins|Appliques|Embroidery|Patches|Ribbon Bows|Dress Clips|Waist Belts|Dress Pins|Dress Brooches|Dress Sashes}, {(tutu:0.7)|(tutu:0.5)|||}, {depth of field|kitchen|garden|blurred|indoor|white|bokeh} background, {elegance|model photoshot}, {fashion|fashion photography},  dynamic pose, {high-resolution image-|high-resolution}"
 g_template = 'gold (glasses:1)'
 # prrompt_template = "lolita girl"
 # folder_save = "/content/drive/MyDrive/outputs/"
@@ -18,15 +18,16 @@ folder_name = "dwrt-pulid-1ref-tcd"
 output_path=f"{folder_save}{folder_name}-[time(%Y-%m-%d-%H)]"
 folder_ref = "/content/pulid-colab-1/"
 wm_folder = "/content/colab/wildcard"
-reppeat_num = 20 #
-num_images = 40 #number of prompt
-meg_weight = 0.75
+reppeat_num = 40 # overall rpeat
+num_images = 10 # number of prompt for img
+meg_weight = 0.65
 
 # ckpt_name="RealVisXL_V4.0.safetensors"
 # ckpt_name="RealVisV4-meg-out-all.safetensors"
 # ckpt_name="Realistic_Stock_Photo_v2.safetensors"
-ckpt_name="Juggernaut-X-RunDiffusion-NSFW.safetensors"
+# ckpt_name="Juggernaut-X-RunDiffusion-NSFW.safetensors"
 # ckpt_name="samaritan.safetensors"
+ckpt_name="Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors"
 
 def clean(text):
     text = text.lower() # Convert to lowercase
@@ -178,8 +179,8 @@ def main():
         loraloader_39 = loraloader.load_lora(
             # lora_name="DetailTweakerXL.safetensors",
             lora_name="extreamly-detailed.safetensors",
-            strength_model=0.7,
-            strength_clip=0.7,
+            strength_model=0.5,
+            strength_clip=0.5,
             model=get_value_at_index(loraloader_40, 0),
             clip=get_value_at_index(loraloader_40, 1),
         )

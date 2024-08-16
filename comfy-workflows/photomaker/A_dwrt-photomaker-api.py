@@ -7,9 +7,10 @@ import torch
 from pathlib import Path
 from dynamicprompts.generators import RandomPromptGenerator
 from dynamicprompts.wildcards.wildcard_manager import WildcardManager
+import textwrap
 
-g_template = "{red|pink|white|gold|silver} (glasses:1.1)"
-prrompt_template = "{full body||close up}, cinematic, glamour photo of woman, {||twintails}, {blonde|}, {bow hair|cat ears|Bows|Hair Clips|Headbands|Hair Ties|Barrettes|Hair Slides|Ponytail Holders|Hair Pins|Flower Crowns|Bobby Pins|Hair Sticks|Hair Combs|Scrunchies|Hair Tassels|Crown Headbands|Hair Charms|Braided Headbands|Hair Wraps|Ponytail Streamers|Glitter Hair Ties}, (sexy:1.3|){|pink|red|peach|maroon|light-blue|Navy|Scarlet|Royal-blue|Turquoise|Olive|Emerald|Sage|Gold|Cream|Purple|Lavender|Violet|Brown|Tan|Blush|Rose|Fuchsia|Magenta|pink||} {lolita dress|fairy dress, wings|princess dress|ballgown|wedding dress| BUTTERFLY DRESS, wings|BURLESQUE DRESS|CUTE mini DRESS|FLOWER DRESS|SAILOR SENSHI UNIFORM| VICTORIAN DRESS| VICTORIAN mini DRESS} ,{||white thighhighs||white stockings|}, {Sashes|Ruffles|Bows|Ribbons|Lace Trims|Petticoats|Tutus|Belts|Buckles|Brooches|Flower Pins|Appliques|Embroidery|Patches|Ribbon Bows|Dress Clips|Waist Belts|Dress Pins|Dress Brooches|Dress Sashes}, {(tutu:0.7)|(tutu:0.5)|||}, {|kitchen|bed room|garden|cosmic dust|cyber punk city|white|simple} background, model photoshot, fashion photoshot, highly detailed, 4k, high resolution"
+g_template = "{red|pink|white|gold|silver} {round|} glasses"
+prrompt_template = "{full body|midshot|full body, high hells|close-up}, cinematic, glamour photo of woman, {round|plastic} glasses, {||twintails}, {standing pose|dynamic pose|sitting pose|naughty pose|}flirting pose|, {blonde|}, {bow hair|cat ears|Bows|Hair Clips|Headbands|Hair Ties|Barrettes|Hair Slides|Ponytail Holders|Hair Pins|Flower Crowns|Bobby Pins|Hair Sticks|Hair Combs|Scrunchies|Hair Tassels|Crown Headbands|Hair Charms|Braided Headbands|Hair Wraps|Ponytail Streamers|Glitter Hair Ties}, (sexy:1.3|){|pink|red|peach|maroon|light-blue|Navy|Scarlet|Royal-blue|Turquoise|Olive|Emerald|Sage|Gold|Cream|Purple|Lavender|Violet|Brown|Tan|Blush|Rose|Fuchsia|Magenta|pink||} {lolita dress|fairy dress, wings|princess dress|ballgown|wedding dress| BUTTERFLY DRESS, wings|BURLESQUE DRESS|CUTE mini DRESS|FLOWER DRESS|SAILOR SENSHI UNIFORM| VICTORIAN DRESS| VICTORIAN mini DRESS} ,{||white thighhighs||white stockings|}, {Sashes|Ruffles|Bows|Ribbons|Lace Trims|Petticoats|Tutus|Belts|Buckles|Brooches|Flower Pins|Appliques|Embroidery|Patches|Ribbon Bows|Dress Clips|Waist Belts|Dress Pins|Dress Brooches|Dress Sashes}, {(tutu:0.7)|(tutu:0.5)|||}, {depth of field|kitchen|garden|blurred|indoor|white|bokeh} background, {elegance|model photoshot}, {fashion|fashion photography},  dynamic pose, {high-resolution image-|high-resolution}"
 # g_template = 'gold (glasses:1.4)'
 # prrompt_template = "lolita girl"
 folder_save = "/content/drive/MyDrive/outputs/"
@@ -21,45 +22,77 @@ num_images = 100
 meg_weight = 0.8
 
 lora_name_1="Hyper-SDXL-8steps-lora.safetensors"
-strength_model_1=0.9
+strength_model_1=0.95
 
 lora_name_2="sdxl_meg-240628-000020.safetensors"
-strength_model_2=0.6
+strength_model_2=0.75
+
+lora_name_3="photomaker-v2.bin"
+strength_model_3=0.85
 
 # ckpt_name="RealVisXL_V4.0.safetensors"
-# ckpt_name="RealVisV4-meg-out-all.safetensors"
-ckpt_name="Realistic_Stock_Photo_v2.safetensors"
+ckpt_name="Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors"
+# ckpt_name="Juggernaut-X-RunDiffusion-NSFW.safetensors"
+# ckpt_name="ProteusV0.4-RunDiffusionPhoto.safetensors"
+# ckpt_name="samaritan.safetensors"
+# ckpt_name="Realistic_Stock_Photo_v2.safetensors"
+# ckpt_name="ponyDiffusionV6XL_v6StartWithThisOne.safetensors"
+# ckpt_name=""
 
 img_ref_folder = (
+  (
+    f'{ref_path}02.jpg',
+    f'{ref_path}01.jpg',
+    f'{ref_path}03.jpg',
+    f'{ref_path}04.jpg',
+  ),
+  (
+    f'{ref_path}03.jpg',
+    f'{ref_path}04.jpg',
+    f'{ref_path}01.jpg',
+    f'{ref_path}02.jpg',
+  ),
+  # (
+  #     f'{ref_path}04-03.jpg',
+  #     f'{ref_path}04-02.jpg',
+  #     f'{ref_path}04-01.jpg',
+  #     f'{ref_path}04-04.jpg',
+  # ),
+  # (
+  #     f'{ref_path}16-03.jpg',
+  #     f'{ref_path}16-02.jpg',
+  #     f'{ref_path}16-01.jpg',
+  #     f'{ref_path}16-04.jpg',
+  # ),
+  # (
+  #     f'{ref_path}97-m-03.jpg',
+  #     f'{ref_path}97-m-02.jpg',
+  #     f'{ref_path}97-m-01.jpg',
+  #     f'{ref_path}97-m-04.jpg',
+  # ),
+  # (
+  #     f'{ref_path}97-p-03.jpg',
+  #     f'{ref_path}97-p-02.jpg',
+  #     f'{ref_path}97-p-01.jpg',
+  #     f'{ref_path}97-p-04.jpg',
+  # ),
   (
     f'{ref_path}01.jpg',
     f'{ref_path}02.jpg',
     f'{ref_path}03.jpg',
     f'{ref_path}04.jpg',
   ),
-  (
-      f'{ref_path}97-p-03.jpg',
-      f'{ref_path}97-p-02.jpg',
-      f'{ref_path}97-p-01.jpg',
-      f'{ref_path}97-p-04.jpg',
+    (
+    f'{ref_path}04.jpg',
+    f'{ref_path}03.jpg',
+    f'{ref_path}01.jpg',
+    f'{ref_path}02.jpg',
   ),
-  (
-      f'{ref_path}97-m-03.jpg',
-      f'{ref_path}97-m-02.jpg',
-      f'{ref_path}97-m-01.jpg',
-      f'{ref_path}97-m-04.jpg',
-  ),
-  (
-      f'{ref_path}97-p-03.jpg',
-      f'{ref_path}97-p-02.jpg',
-      f'{ref_path}97-p-01.jpg',
-      f'{ref_path}97-p-04.jpg',
-  ),
-  # (
-  #   f'{ref_path}01.jpg',
-  #   f'{ref_path}02.jpg',
-  #   f'{ref_path}03.jpg',
-  #   f'{ref_path}04.jpg',
+  #   (
+  #   f'{ref_path}22-04.jpg',
+  #   f'{ref_path}22-02.jpg',
+  #   f'{ref_path}22-03.jpg',
+  #   f'{ref_path}22-01.jpg',
   # ),
 
 
@@ -226,8 +259,8 @@ def main():
         )
 
         loraloadermodelonly_53 = loraloadermodelonly.load_lora_model_only(
-            lora_name="photomaker-v2.bin",
-            strength_model=1,
+            lora_name=lora_name_3,
+            strength_model=strength_model_3,
             model=get_value_at_index(loraloadermodelonly_89, 0),
         )
 
@@ -240,7 +273,7 @@ def main():
             "PhotoMakerInsightFaceLoader"
         ]()
         photomakerinsightfaceloader_76 = photomakerinsightfaceloader.load_insightface(
-            provider="CUDA"
+            provider="CPU"
         )
 
         vaeloader = VAELoader()
@@ -277,10 +310,10 @@ def main():
         image_save = NODE_CLASS_MAPPINGS["Image Save"]()
 
         tcdmodelsamplingdiscrete_82 = tcdmodelsamplingdiscrete.patch(
-            steps=8,
+            steps=10,
             scheduler="sgm_uniform",
             denoise=1,
-            eta=0.2,
+            eta=0.1,
             model=get_value_at_index(loraloadermodelonly_53, 0),
         )
 
@@ -365,7 +398,7 @@ def main():
 
                 image_save_79 = image_save.was_save_images(
                     output_path=output_path,
-                    filename_prefix=f"{clean(prompt)}-{clean(g_prompt[0])}",
+                    filename_prefix=f"{clean(textwrap.shorten(prompt, width=180))}-{ckpt_name}",
                     filename_delimiter="_",
                     filename_number_padding=4,
                     filename_number_start="false",

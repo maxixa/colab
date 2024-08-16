@@ -9,29 +9,28 @@ from dynamicprompts.generators import RandomPromptGenerator
 from dynamicprompts.wildcards.wildcard_manager import WildcardManager
 import textwrap
 
-g_template = "{red|pink|white|gold|silver} (glasses:1)"
-prrompt_template = "(full body:1.5), cinematic, glamour photo of woman, {||twintails}, {blonde|}, {bow hair|cat ears|Bows|Hair Clips|Headbands|Hair Ties|Barrettes|Hair Slides|Ponytail Holders|Hair Pins|Flower Crowns|Bobby Pins|Hair Sticks|Hair Combs|Scrunchies|Hair Tassels|Crown Headbands|Hair Charms|Braided Headbands|Hair Wraps|Ponytail Streamers|Glitter Hair Ties}, (sexy:1.3|){|pink|red|peach|maroon|light-blue|Navy|Scarlet|Royal-blue|Turquoise|Olive|Emerald|Sage|Gold|Cream|Purple|Lavender|Violet|Brown|Tan|Blush|Rose|Fuchsia|Magenta|pink||} {lolita dress|fairy dress, wings|princess dress|ballgown|wedding dress| BUTTERFLY DRESS, wings|BURLESQUE DRESS|CUTE mini DRESS|FLOWER DRESS|SAILOR SENSHI UNIFORM| VICTORIAN DRESS| VICTORIAN mini DRESS} ,{||white thighhighs||white stockings|}, {Sashes|Ruffles|Bows|Ribbons|Lace Trims|Petticoats|Tutus|Belts|Buckles|Brooches|Flower Pins|Appliques|Embroidery|Patches|Ribbon Bows|Dress Clips|Waist Belts|Dress Pins|Dress Brooches|Dress Sashes}, {(tutu:0.7)|(tutu:0.5)|||}, {|kitchen|bed room|garden|cosmic dust|cyber punk city|white|simple} background, model photoshot, fashion photoshot, highly detailed, 4k, high resolution"
+g_template = "{red|pink|white|gold|silver} (glasses:1.1)"
+prrompt_template = "{full body|}, cinematic, glamour photo of woman, {||twintails}, {blonde|}, {bow hair|cat ears|Bows|Hair Clips|Headbands|Hair Ties|Barrettes|Hair Slides|Ponytail Holders|Hair Pins|Flower Crowns|Bobby Pins|Hair Sticks|Hair Combs|Scrunchies|Hair Tassels|Crown Headbands|Hair Charms|Braided Headbands|Hair Wraps|Ponytail Streamers|Glitter Hair Ties}, (sexy:1.3|){|pink|red|peach|maroon|light-blue|Navy|Scarlet|Royal-blue|Turquoise|Olive|Emerald|Sage|Gold|Cream|Purple|Lavender|Violet|Brown|Tan|Blush|Rose|Fuchsia|Magenta|pink||} {lolita dress|fairy dress, wings|princess dress|ballgown|wedding dress| BUTTERFLY DRESS, wings|BURLESQUE DRESS|CUTE mini DRESS|FLOWER DRESS|SAILOR SENSHI UNIFORM| VICTORIAN DRESS| VICTORIAN mini DRESS} ,{||white thighhighs||white stockings|}, {Sashes|Ruffles|Bows|Ribbons|Lace Trims|Petticoats|Tutus|Belts|Buckles|Brooches|Flower Pins|Appliques|Embroidery|Patches|Ribbon Bows|Dress Clips|Waist Belts|Dress Pins|Dress Brooches|Dress Sashes}, {(tutu:0.7)|(tutu:0.5)|||}, {|kitchen|bed room|garden|cosmic dust|cyber punk city|white|simple} background, model photoshot, fashion photoshot, highly detailed, 4k, high resolution"
 # g_template = 'gold (glasses:1.4)'
 # prrompt_template = "lolita girl"
 folder_save = "/content/drive/MyDrive/outputs/"
-folder_name = "i2i-dwrt-photomaker-tcd"
+folder_name = "i2i-1ref-dwrt-photomaker-tcd"
 output_path=f"{folder_save}{folder_name}-[time(%Y-%m-%d-%H)]"
 ref_path = "/content/pulid-colab-1/"
-path_i2i = "/content/i2i-768"
+path_i2i = ""
 wm_folder = "/content/colab/wildcard"
-repeat_img = 75 #listdir
-num_images = 4 #reapet for each img
+num_images = 100
+meg_weight = 0.8
 
-
-width=768
-height=1344
-denoise=0.7
+width=576
+height=1024
+denoise=0.75
 
 lora_name_1="Hyper-SDXL-8steps-lora.safetensors"
-strength_model_1=0.95
+strength_model_1=0.9
 
 lora_name_2="sdxl_meg-240628-000020.safetensors"
-strength_model_2=0.5
+strength_model_2=0.65
 
 lora_name_3="photomaker-v2.bin"
 strength_model_3=0.85
@@ -278,7 +277,7 @@ def main():
             "PhotoMakerInsightFaceLoader"
         ]()
         photomakerinsightfaceloader_76 = photomakerinsightfaceloader.load_insightface(
-            provider="CPU"
+            provider="CUDA"
         )
 
         vaeloader = VAELoader()
@@ -298,10 +297,10 @@ def main():
         imageresize = NODE_CLASS_MAPPINGS["ImageResize+"]()
 
         tcdmodelsamplingdiscrete_82 = tcdmodelsamplingdiscrete.patch(
-            steps=10,
+            steps=8,
             scheduler="sgm_uniform",
             denoise=denoise,
-            eta=0.1,
+            eta=0.2,
             model=get_value_at_index(loraloadermodelonly_53, 0),
         )
 
@@ -344,7 +343,7 @@ def main():
                 insightface_opt=get_value_at_index(photomakerinsightfaceloader_76, 0),
             )
 
-            for q in range(repeat_img):
+            for prompt in prompts:
 
                 load_image_batch_88 = load_image_batch.load_batch_images(
                     mode="incremental_image",
@@ -371,64 +370,62 @@ def main():
                     vae=get_value_at_index(vaeloader_77, 0),
                 )
 
-                for prompt in prompts:
+                cliptextencode_99 = cliptextencode.encode(
+                    text=prompt,
+                    clip=get_value_at_index(checkpointloadersimple_4, 1),
+                )
 
-                    cliptextencode_99 = cliptextencode.encode(
-                        text=prompt,
-                        clip=get_value_at_index(checkpointloadersimple_4, 1),
-                    )
+                g_prompt = list(generator.generate(g_template, num_images=1))
 
-                    g_prompt = list(generator.generate(g_template, num_images=1))
+                cliptextencode_101 = cliptextencode.encode(
+                    text=g_prompt[0], clip=get_value_at_index(checkpointloadersimple_4, 1)
+                )
 
-                    cliptextencode_101 = cliptextencode.encode(
-                        text=g_prompt[0], clip=get_value_at_index(checkpointloadersimple_4, 1)
-                    )
+                conditioningconcat_102 = conditioningconcat.concat(
+                    conditioning_to=get_value_at_index(cliptextencode_99, 0),
+                    conditioning_from=get_value_at_index(cliptextencode_101, 0),
+                )
 
-                    conditioningconcat_102 = conditioningconcat.concat(
-                        conditioning_to=get_value_at_index(cliptextencode_99, 0),
-                        conditioning_from=get_value_at_index(cliptextencode_101, 0),
-                    )
+                conditioningconcat_98 = conditioningconcat.concat(
+                    conditioning_to=get_value_at_index(photomakerencodeplus_73, 0),
+                    conditioning_from=get_value_at_index(conditioningconcat_102, 0),
+                )
 
-                    conditioningconcat_98 = conditioningconcat.concat(
-                        conditioning_to=get_value_at_index(photomakerencodeplus_73, 0),
-                        conditioning_from=get_value_at_index(conditioningconcat_102, 0),
-                    )
+                samplercustom_81 = samplercustom.sample(
+                    add_noise=True,
+                    noise_seed=random.randint(1, 2**64),
+                    cfg=1,
+                    model=get_value_at_index(tcdmodelsamplingdiscrete_82, 0),
+                    positive=get_value_at_index(conditioningconcat_98, 0),
+                    negative=get_value_at_index(cliptextencode_7, 0),
+                    sampler=get_value_at_index(tcdmodelsamplingdiscrete_82, 1),
+                    sigmas=get_value_at_index(tcdmodelsamplingdiscrete_82, 2),
+                    latent_image=get_value_at_index(vaeencode_85, 0),
+                )
 
-                    samplercustom_81 = samplercustom.sample(
-                        add_noise=True,
-                        noise_seed=random.randint(1, 2**64),
-                        cfg=1,
-                        model=get_value_at_index(tcdmodelsamplingdiscrete_82, 0),
-                        positive=get_value_at_index(conditioningconcat_98, 0),
-                        negative=get_value_at_index(cliptextencode_7, 0),
-                        sampler=get_value_at_index(tcdmodelsamplingdiscrete_82, 1),
-                        sigmas=get_value_at_index(tcdmodelsamplingdiscrete_82, 2),
-                        latent_image=get_value_at_index(vaeencode_85, 0),
-                    )
+                vaedecode_8 = vaedecode.decode(
+                    samples=get_value_at_index(samplercustom_81, 0),
+                    vae=get_value_at_index(vaeloader_77, 0),
+                )
 
-                    vaedecode_8 = vaedecode.decode(
-                        samples=get_value_at_index(samplercustom_81, 0),
-                        vae=get_value_at_index(vaeloader_77, 0),
-                    )
-
-                    image_save_79 = image_save.was_save_images(
-                        output_path=output_path,
-                        filename_prefix=f"{clean(textwrap.shorten(prompt, width=180))}-{ckpt_name}",
-                        filename_delimiter="_",
-                        filename_number_padding=4,
-                        filename_number_start="false",
-                        extension="webp",
-                        dpi=300,
-                        quality=80,
-                        optimize_image="true",
-                        lossless_webp="false",
-                        overwrite_mode="false",
-                        show_history="false",
-                        show_history_by_prefix="true",
-                        embed_workflow="true",
-                        show_previews="true",
-                        images=get_value_at_index(vaedecode_8, 0),
-                    )
+                image_save_79 = image_save.was_save_images(
+                    output_path=output_path,
+                    filename_prefix=f"{clean(textwrap.shorten(prompt, width=180))}-{clean(g_prompt[0])}",
+                    filename_delimiter="_",
+                    filename_number_padding=4,
+                    filename_number_start="false",
+                    extension="webp",
+                    dpi=300,
+                    quality=80,
+                    optimize_image="true",
+                    lossless_webp="false",
+                    overwrite_mode="false",
+                    show_history="false",
+                    show_history_by_prefix="true",
+                    embed_workflow="true",
+                    show_previews="true",
+                    images=get_value_at_index(vaedecode_8, 0),
+                )
 
 
 if __name__ == "__main__":
