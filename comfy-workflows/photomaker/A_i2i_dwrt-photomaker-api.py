@@ -23,8 +23,8 @@ repeat_img = 75 #listdir
 num_images = 4 #reapet for each img
 
 
-width=768
-height=1344
+width=576
+height=1024
 denoise=0.7
 
 lora_name_1="Hyper-SDXL-8steps-lora.safetensors"
@@ -347,7 +347,8 @@ def main():
             for q in range(repeat_img):
 
                 load_image_batch_88 = load_image_batch.load_batch_images(
-                    mode="incremental_image",
+                    # mode="incremental_image",
+                    mode="random",
                     index=0,
                     label="Batch 001",
                     path=path_i2i,
