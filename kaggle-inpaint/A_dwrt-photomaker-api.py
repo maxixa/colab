@@ -13,7 +13,7 @@ g_template = "{red|pink|white|gold|silver} round glasses"
 prrompt_template = "{full body|midshot|full body, high hells|close-up}, {candid photography|elegance|fashion|fashion photography|stylish|casual style|cinematic} photo of woman, round glasses, {||twintails}, {standing pose|dynamic pose|sitting pose|naughty pose|flirting pose}, {blonde|}, {bow hair|cat ears|Bows|Hair Clips|Headbands|Hair Ties|Barrettes|Hair Slides|Ponytail Holders|Hair Pins|Flower Crowns|Bobby Pins|Hair Sticks|Hair Combs|Scrunchies|Hair Tassels|Crown Headbands|Hair Charms|Braided Headbands|Hair Wraps|Ponytail Streamers|Glitter Hair Ties}, (sexy:1.3|){|pink|red|peach|maroon|light-blue|Navy|Scarlet|Royal-blue|Turquoise|Olive|Emerald|Sage|Gold|Cream|Purple|Lavender|Violet|Brown|Tan|Blush|Rose|Fuchsia|Magenta|pink||} {lolita dress|fairy dress, wings|princess dress|ballgown|wedding dress| BUTTERFLY DRESS, wings|BURLESQUE DRESS|CUTE mini DRESS|FLOWER DRESS|SAILOR SENSHI UNIFORM| VICTORIAN DRESS| VICTORIAN mini DRESS} ,{||white thighhighs||white stockings|}, {Sashes|Ruffles|Bows|Ribbons|Lace Trims|Petticoats|Tutus|Belts|Buckles|Brooches|Flower Pins|Appliques|Embroidery|Patches|Ribbon Bows|Dress Clips|Waist Belts|Dress Pins|Dress Brooches|Dress Sashes}, {(tutu:0.7)|(tutu:0.5)|||}, {depth of field|kitchen|garden|blurred|indoor|white|bokeh} background, {elegance|model photoshot}, {fashion|fashion photography},  dynamic pose, {high-resolution image-|high-resolution}"
 # g_template = 'gold (glasses:1.4)'
 # prrompt_template = "lolita girl"
-folder_save = "/content/drive/MyDrive/outputs/"
+folder_save = "/kaggle/working/"
 folder_name = "dwrt-photomaker-tcd"
 output_path=f"{folder_save}{folder_name}-[time(%Y-%m-%d-%H)]"
 ref_path = "/content/pulid-colab-1/"
@@ -24,8 +24,8 @@ meg_weight = 0.8
 lora_name_1="Hyper-SDXL-8steps-lora.safetensors"
 strength_model_1=0.9
 
-# lora_name_2="sdxl_meg-240628-000020.safetensors"
-lora_name_2="sdxl_meg-metal-240831.safetensors"
+lora_name_2="sdxl_meg-240628-000020.safetensors"
+# lora_name_2="sdxl_meg-metal-240831.safetensors"
 strength_model_2=0.75
 
 lora_name_3="photomaker-v2.bin"

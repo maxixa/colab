@@ -30,7 +30,7 @@ height=1024
 # ckpt_name="Reliberate.safetensors"
 # ckpt_name="majicMIXrealistic.safetensors"
 # ckpt_name="epiCRealism.safetensors"
-# ckpt_name="Aardvark-2024-Photography.safetensors"
+# ckpt_name="ProteusV0.4-RunDiffusionPhoto.safetensors"
 ckpt_name="RealVisXL_V4.0.safetensors"
 
 # lora_name_1 = "All-in-one-Clothing-Bundle-SFW.SafeTensors"
