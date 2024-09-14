@@ -18,12 +18,13 @@ g_template = 'gold (glasses:1)'
 # prrompt_template = "lolita girl"
 # folder_save = "/content/drive/MyDrive/outputs/"
 folder_save = "/content/drive/MyDrive/outputs/"
-folder_name = "i2i-master-tcd"
+folder_name = "random-art-tcd"
 output_path=f"{folder_save}{folder_name}-[time(%Y-%m-%d-%H)]"
 folder_ref = "/content/pulid-colab-1/"
 wm_folder = "/content/colab/wildcard"
 reppeat_num = 1 #
-num_images = 500 #number of prompt
+reppeat_num_in = 10000
+num_images = 1 #number of prompt
 meg_weight = 0
 
 # ckpt_name="RealVisXL_V4.0.safetensors"
@@ -31,9 +32,9 @@ meg_weight = 0
 # ckpt_name="Juggernaut-X-RunDiffusion-NSFW.safetensors"
 # ckpt_name="ProteusV0.4-RunDiffusionPhoto.safetensors"
 # ckpt_name="samaritan.safetensors"
-ckpt_name="Realistic_Stock_Photo_v2.safetensors"
+# ckpt_name="Realistic_Stock_Photo_v2.safetensors"
 # ckpt_name="Colossus_Project_X_Midgard.SafeTensors"
-# ckpt_name="Juggernaut-XI.safetensors"
+ckpt_name="Juggernaut-XI.safetensors"
 
 def clean(text):
     text = text.lower() # Convert to lowercase
@@ -169,7 +170,7 @@ def main():
 
         emptylatentimage = EmptyLatentImage()
         emptylatentimage_5 = emptylatentimage.generate(
-            width=576, height=1024, batch_size=1
+            width=1024, height=756, batch_size=1
         )
 
         loraloader = LoraLoader()
@@ -202,15 +203,15 @@ def main():
 
         cliptextencode = CLIPTextEncode()
         imagebatchmultiple = NODE_CLASS_MAPPINGS["ImageBatchMultiple+"]()
-        applypulidadvanced = NODE_CLASS_MAPPINGS["ApplyPulidAdvanced"]()
         tcdmodelsamplingdiscrete = NODE_CLASS_MAPPINGS["TCDModelSamplingDiscrete"]()
         conditioningconcat = ConditioningConcat()
         samplercustom = NODE_CLASS_MAPPINGS["SamplerCustom"]()
         vaedecode = VAEDecode()
         image_save = NODE_CLASS_MAPPINGS["Image Save"]()
+        onebuttonprompt = NODE_CLASS_MAPPINGS["OneButtonPrompt"]()
 
         tcdmodelsamplingdiscrete_12 = tcdmodelsamplingdiscrete.patch(
-            steps=8,
+            steps=10,
             scheduler="sgm_uniform",
             denoise=1,
             eta=0.1,
@@ -225,10 +226,27 @@ def main():
             generator = RandomPromptGenerator(wildcard_manager=wm)
             prompts = list(generator.generate(line, num_images=num_images))
             
-            for prompt in prompts:
+            for r in range(reppeat_num_in):
+
+
+                onebuttonprompt_10 = onebuttonprompt.Comfy_OBP(
+                    insanitylevel=7,
+                    artist="none",
+                    imagetype="all",
+                    imagemodechance=20,
+                    subject="all",
+                    custom_subject="",
+                    custom_outfit="",
+                    subject_subtype_objects="all",
+                    subject_subtypes_humanoids="all",
+                    humanoids_gender="all",
+                    subject_subtypes_concepts="all",
+                    emojis=False,
+                    seed=random.randint(1, 2**64),
+                )
 
                 cliptextencode_6 = cliptextencode.encode(
-                    text=prompt,
+                    text=get_value_at_index(onebuttonprompt_10, 0),
                     clip=get_value_at_index(loraloader_38, 1),
                 )
                 
@@ -271,7 +289,7 @@ def main():
                 image_save_14 = image_save.was_save_images(
                     output_path=output_path,
                     # output_path="pulid-meg",
-                    filename_prefix=f"{clean(textwrap.shorten(prompt, width=180))}-{ckpt_name}",
+                    filename_prefix=f"{clean(textwrap.shorten(get_value_at_index(onebuttonprompt_10, 0), width=180))}-{ckpt_name}",
                     # filename_prefix="pulid-meg",
                     filename_delimiter="_",
                     filename_number_padding=4,

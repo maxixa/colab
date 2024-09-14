@@ -9,8 +9,8 @@ from dynamicprompts.generators import RandomPromptGenerator
 from dynamicprompts.wildcards.wildcard_manager import WildcardManager
 import textwrap
 
-g_template = "{red|pink|white|gold|silver} round glasses"
-prrompt_template = "{full body|midshot|full body, high hells|close-up}, {candid photography|elegance|fashion|fashion photography|stylish|casual style|cinematic} photo of woman, round glasses, {||twintails}, {standing pose|dynamic pose|sitting pose|naughty pose|flirting pose}, {blonde|}, {bow hair|cat ears|Bows|Hair Clips|Headbands|Hair Ties|Barrettes|Hair Slides|Ponytail Holders|Hair Pins|Flower Crowns|Bobby Pins|Hair Sticks|Hair Combs|Scrunchies|Hair Tassels|Crown Headbands|Hair Charms|Braided Headbands|Hair Wraps|Ponytail Streamers|Glitter Hair Ties}, (sexy:1.3|){|pink|red|peach|maroon|light-blue|Navy|Scarlet|Royal-blue|Turquoise|Olive|Emerald|Sage|Gold|Cream|Purple|Lavender|Violet|Brown|Tan|Blush|Rose|Fuchsia|Magenta|pink||} {lolita dress|fairy dress, wings|princess dress|ballgown|wedding dress| BUTTERFLY DRESS, wings|BURLESQUE DRESS|CUTE mini DRESS|FLOWER DRESS|SAILOR SENSHI UNIFORM| VICTORIAN DRESS| VICTORIAN mini DRESS} ,{||white thighhighs||white stockings|}, {Sashes|Ruffles|Bows|Ribbons|Lace Trims|Petticoats|Tutus|Belts|Buckles|Brooches|Flower Pins|Appliques|Embroidery|Patches|Ribbon Bows|Dress Clips|Waist Belts|Dress Pins|Dress Brooches|Dress Sashes}, {(tutu:0.7)|(tutu:0.5)|||}, {depth of field|kitchen|garden|blurred|indoor|white|bokeh} background, {elegance|model photoshot}, {fashion|fashion photography},  dynamic pose, {high-resolution image-|high-resolution}"
+g_template = "{red|pink|white|gold|silver} {round|} glasses"
+prrompt_template = "{full body|midshot|full body, high hells|close-up}, {candid photography|elegance|fashion|fashion photography|stylish|casual style|cinematic} photo of woman, {||twintails}, {standing pose|dynamic pose|sitting pose|naughty pose|flirting pose}, {blonde|}, {bow hair|cat ears|Bows|Hair Clips|Headbands|Hair Ties|Barrettes|Hair Slides|Ponytail Holders|Hair Pins|Flower Crowns|Bobby Pins|Hair Sticks|Hair Combs|Scrunchies|Hair Tassels|Crown Headbands|Hair Charms|Braided Headbands|Hair Wraps|Ponytail Streamers|Glitter Hair Ties}, (sexy:1.3|){|pink|red|peach|maroon|light-blue|Navy|Scarlet|Royal-blue|Turquoise|Olive|Emerald|Sage|Gold|Cream|Purple|Lavender|Violet|Brown|Tan|Blush|Rose|Fuchsia|Magenta|pink||} {lolita dress|fairy dress, wings|princess dress|ballgown|wedding dress| BUTTERFLY DRESS, wings|BURLESQUE DRESS|CUTE mini DRESS|FLOWER DRESS|SAILOR SENSHI UNIFORM| VICTORIAN DRESS| VICTORIAN mini DRESS} ,{||white thighhighs||white stockings|}, {Sashes|Ruffles|Bows|Ribbons|Lace Trims|Petticoats|Tutus|Belts|Buckles|Brooches|Flower Pins|Appliques|Embroidery|Patches|Ribbon Bows|Dress Clips|Waist Belts|Dress Pins|Dress Brooches|Dress Sashes}, {(tutu:0.7)|(tutu:0.5)|||}, {depth of field|kitchen|garden|blurred|indoor|white|bokeh} background, {elegance|model photoshot}, {fashion|fashion photography},  dynamic pose, {high-resolution image-|high-resolution}"
 # g_template = 'gold (glasses:1.4)'
 # prrompt_template = "lolita girl"
 folder_save = "/content/drive/MyDrive/outputs/"
@@ -25,21 +25,23 @@ lora_name_1="Hyper-SDXL-8steps-lora.safetensors"
 strength_model_1=0.9
 
 # lora_name_2="sdxl_meg-240628-000020.safetensors"
-lora_name_2="sdxl_meg-metal-240831.safetensors"
+# lora_name_2="sdxl_meg-metal-240831.safetensors"
+lora_name_2="sdxl_meg-metal-240831-000020.safetensors"
 strength_model_2=0.75
 
 lora_name_3="photomaker-v2.bin"
-strength_model_3=0.85
+strength_model_3=0.9
 
 # ckpt_name="RealVisXL_V4.0.safetensors"
-ckpt_name="Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors"
+# ckpt_name="Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors"
 # ckpt_name="Juggernaut-X-RunDiffusion-NSFW.safetensors"
 # ckpt_name="ProteusV0.4-RunDiffusionPhoto.safetensors"
 # ckpt_name="samaritan.safetensors"
-# ckpt_name="Realistic_Stock_Photo_v2.safetensors"
+ckpt_name="Realistic_Stock_Photo_v2.safetensors"
 # ckpt_name="ponyDiffusionV6XL_v6StartWithThisOne.safetensors"
+# ckpt_name="Colossus_Project_X_Midgard.SafeTensors"
 # ckpt_name="Colossus_Project_XL_NEO_10B.SafeTensors"
-# ckpt_name=""
+# ckpt_name="Colossus_Project_XL_12C.SafeTensors"
 # ckpt_name=""
 # ckpt_name=""
 # ckpt_name=""
@@ -263,15 +265,22 @@ def main():
             model=get_value_at_index(loraloadermodelonly_80, 0),
         )
 
-        loraloadermodelonly_53 = loraloadermodelonly.load_lora_model_only(
-            lora_name=lora_name_3,
-            strength_model=strength_model_3,
-            model=get_value_at_index(loraloadermodelonly_89, 0),
-        )
+        # loraloadermodelonly_53 = loraloadermodelonly.load_lora_model_only(
+        #     lora_name=lora_name_3,
+        #     strength_model=strength_model_3,
+        #     model=get_value_at_index(loraloadermodelonly_89, 0),
+        # )
 
         photomakerloaderplus = NODE_CLASS_MAPPINGS["PhotoMakerLoaderPlus"]()
         photomakerloaderplus_74 = photomakerloaderplus.load_photomaker_model(
             photomaker_model_name="photomaker-v2.bin"
+        )
+
+        photomakerloraloaderplus = NODE_CLASS_MAPPINGS["PhotoMakerLoraLoaderPlus"]()
+        photomakerloraloaderplus_11 = photomakerloraloaderplus.load_photomaker_lora(
+            lora_strength=strength_model_3,
+            model=get_value_at_index(loraloadermodelonly_89, 0),
+            photomaker=get_value_at_index(photomakerloaderplus_74, 0),
         )
 
         photomakerinsightfaceloader = NODE_CLASS_MAPPINGS[
@@ -319,7 +328,7 @@ def main():
             scheduler="sgm_uniform",
             denoise=1,
             eta=0.1,
-            model=get_value_at_index(loraloadermodelonly_53, 0),
+            model=get_value_at_index(photomakerloraloaderplus_11, 0),
         )
 
         for p1,p2,p3,p4 in img_ref_folder:

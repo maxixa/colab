@@ -9,31 +9,26 @@ from dynamicprompts.generators import RandomPromptGenerator
 from dynamicprompts.wildcards.wildcard_manager import WildcardManager
 import textwrap
 
-line = "{full body|midshot|full body, high hells|close-up}, {candid photography|elegance|fashion|fashion photography|stylish|casual style|cinematic} photo of woman, Skin Textures, {overcast sky|sunlit|night|natural light|natural lighting|daylight|low key|dramatic lighting|dusk}, Hasselblad, {||twintails}, {standing pose|dynamic pose|sitting pose|naughty pose|flirting pose}, {blonde|}, {bow hair|cat ears|Bows|Hair Clips|Headbands|Hair Ties|Barrettes|Hair Slides|Ponytail Holders|Hair Pins|Flower Crowns|Bobby Pins|Hair Sticks|Hair Combs|Scrunchies|Hair Tassels|Crown Headbands|Hair Charms|Braided Headbands|Hair Wraps|Ponytail Streamers|Glitter Hair Ties}, (sexy:1.3|){|pink|red|peach|maroon|light-blue|Navy|Scarlet|Royal-blue|Turquoise|Olive|Emerald|Sage|Gold|Cream|Purple|Lavender|Violet|Brown|Tan|Blush|Rose|Fuchsia|Magenta|pink||} {lolita dress|fairy dress, wings|princess dress|ballgown|wedding dress| BUTTERFLY DRESS, wings|BURLESQUE DRESS|CUTE mini DRESS|FLOWER DRESS|SAILOR SENSHI UNIFORM| VICTORIAN DRESS| VICTORIAN mini DRESS} ,{||white thighhighs||white stockings|}, {Sashes|Ruffles|Bows|Ribbons|Lace Trims|Petticoats|Tutus|Belts|Buckles|Brooches|Flower Pins|Appliques|Embroidery|Patches|Ribbon Bows|Dress Clips|Waist Belts|Dress Pins|Dress Brooches|Dress Sashes}, {(tutu:0.7)|(tutu:0.5)|||}, {depth of field|kitchen|garden|blurred|indoor|white|bokeh} background, {elegance|model photoshot}, {fashion|fashion photography},  dynamic pose, {high-resolution image-|high-resolution}"
-
-
 # g_template = "{red|pink|white|gold|silver} (glasses:1.4)"
 prrompt_template = "{full body||close up}, cinematic, glamour photo of woman, {||twintails}, {blonde|}, {bow hair|cat ears|Bows|Hair Clips|Headbands|Hair Ties|Barrettes|Hair Slides|Ponytail Holders|Hair Pins|Flower Crowns|Bobby Pins|Hair Sticks|Hair Combs|Scrunchies|Hair Tassels|Crown Headbands|Hair Charms|Braided Headbands|Hair Wraps|Ponytail Streamers|Glitter Hair Ties}, (sexy:1.3|){|pink|red|peach|maroon|light-blue|Navy|Scarlet|Royal-blue|Turquoise|Olive|Emerald|Sage|Gold|Cream|Purple|Lavender|Violet|Brown|Tan|Blush|Rose|Fuchsia|Magenta|pink||} {lolita dress|fairy dress, wings|princess dress|ballgown|wedding dress| BUTTERFLY DRESS, wings|BURLESQUE DRESS|CUTE mini DRESS|FLOWER DRESS|SAILOR SENSHI UNIFORM| VICTORIAN DRESS| VICTORIAN mini DRESS} ,{||white thighhighs||white stockings|}, {Sashes|Ruffles|Bows|Ribbons|Lace Trims|Petticoats|Tutus|Belts|Buckles|Brooches|Flower Pins|Appliques|Embroidery|Patches|Ribbon Bows|Dress Clips|Waist Belts|Dress Pins|Dress Brooches|Dress Sashes}, {(tutu:0.7)|(tutu:0.5)|||}, {|kitchen|bed room|garden|cosmic dust|cyber punk city|white|simple} background, model photoshot, fashion photoshot, highly detailed, 4k, high resolution"
 g_template = 'gold (glasses:1)'
 # prrompt_template = "lolita girl"
 # folder_save = "/content/drive/MyDrive/outputs/"
 folder_save = "/content/drive/MyDrive/outputs/"
-folder_name = "i2i-master-tcd"
+folder_name = "art-tcd"
 output_path=f"{folder_save}{folder_name}-[time(%Y-%m-%d-%H)]"
 folder_ref = "/content/pulid-colab-1/"
 wm_folder = "/content/colab/wildcard"
 reppeat_num = 1 #
-num_images = 500 #number of prompt
+# num_images = 20 #number of prompt
 meg_weight = 0
+prompt_file = "/content/1.txt"
 
 # ckpt_name="RealVisXL_V4.0.safetensors"
-# ckpt_name="Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors"
-# ckpt_name="Juggernaut-X-RunDiffusion-NSFW.safetensors"
-# ckpt_name="ProteusV0.4-RunDiffusionPhoto.safetensors"
-# ckpt_name="samaritan.safetensors"
-ckpt_name="Realistic_Stock_Photo_v2.safetensors"
-# ckpt_name="Colossus_Project_X_Midgard.SafeTensors"
-# ckpt_name="Juggernaut-XI.safetensors"
+# ckpt_name="RealVisV4-meg-out-all.safetensors"
+ckpt_name="ColorfulXL_v70.safetensors"
+
+
 
 def clean(text):
     text = text.lower() # Convert to lowercase
@@ -169,14 +164,14 @@ def main():
 
         emptylatentimage = EmptyLatentImage()
         emptylatentimage_5 = emptylatentimage.generate(
-            width=576, height=1024, batch_size=1
+            width=1024, height=640, batch_size=1
         )
 
         loraloader = LoraLoader()
         loraloader_40 = loraloader.load_lora(
             # lora_name="sdxl_meg-000008.safetensors",
             # lora_name="sdxl_meg-240628-000020.safetensors",
-            lora_name="sdxl_meg-metal-240831-000020.safetensors",
+            lora_name="Hyper-SDXL-8steps-lora.safetensors",
             strength_model=meg_weight,
             strength_clip=meg_weight,
             model=get_value_at_index(checkpointloadersimple_4, 0),
@@ -185,7 +180,8 @@ def main():
 
         loraloader_39 = loraloader.load_lora(
             # lora_name="DetailTweakerXL.safetensors",
-            lora_name="extreamly-detailed.safetensors",
+            # lora_name="extreamly-detailed.safetensors",
+            lora_name="Hyper-SDXL-8steps-lora.safetensors",
             strength_model=0,
             strength_clip=0,
             model=get_value_at_index(loraloader_40, 0),
@@ -194,8 +190,8 @@ def main():
 
         loraloader_38 = loraloader.load_lora(
             lora_name="Hyper-SDXL-8steps-lora.safetensors",
-            strength_model=0.9500000000000001,
-            strength_clip=0.9500000000000001,
+            strength_model=0.9,
+            strength_clip=0.9,
             model=get_value_at_index(loraloader_39, 0),
             clip=get_value_at_index(loraloader_39, 1),
         )
@@ -219,16 +215,15 @@ def main():
 
         for q in range(reppeat_num):
 
+            with open(prompt_file, 'r') as file:
+                lines = file.readlines()
+            lines = [line.strip() for line in lines]
 
+            for line in lines:
 
-            wm = WildcardManager(Path(wm_folder))
-            generator = RandomPromptGenerator(wildcard_manager=wm)
-            prompts = list(generator.generate(line, num_images=num_images))
-            
-            for prompt in prompts:
 
                 cliptextencode_6 = cliptextencode.encode(
-                    text=prompt,
+                    text=line,
                     clip=get_value_at_index(loraloader_38, 1),
                 )
                 
@@ -271,7 +266,7 @@ def main():
                 image_save_14 = image_save.was_save_images(
                     output_path=output_path,
                     # output_path="pulid-meg",
-                    filename_prefix=f"{clean(textwrap.shorten(prompt, width=180))}-{ckpt_name}",
+                    filename_prefix=f"{clean(textwrap.shorten(line, width=180))}-{ckpt_name}",
                     # filename_prefix="pulid-meg",
                     filename_delimiter="_",
                     filename_number_padding=4,
