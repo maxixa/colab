@@ -9,7 +9,7 @@ from dynamicprompts.generators import RandomPromptGenerator
 from dynamicprompts.wildcards.wildcard_manager import WildcardManager
 import textwrap
 
-line = "{full body|midshot|full body, high hells|close-up}, {candid photography|elegance|fashion|fashion photography|stylish|casual style|cinematic} photo of woman, Skin Textures, {overcast sky|sunlit|night|natural light|natural lighting|daylight|low key|dramatic lighting|dusk}, Hasselblad, {||twintails}, {standing pose|dynamic pose|sitting pose|naughty pose|flirting pose}, {blonde|}, {bow hair|cat ears|Bows|Hair Clips|Headbands|Hair Ties|Barrettes|Hair Slides|Ponytail Holders|Hair Pins|Flower Crowns|Bobby Pins|Hair Sticks|Hair Combs|Scrunchies|Hair Tassels|Crown Headbands|Hair Charms|Braided Headbands|Hair Wraps|Ponytail Streamers|Glitter Hair Ties}, (sexy:1.3|){|pink|red|peach|maroon|light-blue|Navy|Scarlet|Royal-blue|Turquoise|Olive|Emerald|Sage|Gold|Cream|Purple|Lavender|Violet|Brown|Tan|Blush|Rose|Fuchsia|Magenta|pink||} {lolita dress|fairy dress, wings|princess dress|ballgown|wedding dress| BUTTERFLY DRESS, wings|BURLESQUE DRESS|CUTE mini DRESS|FLOWER DRESS|SAILOR SENSHI UNIFORM| VICTORIAN DRESS| VICTORIAN mini DRESS} ,{||white thighhighs||white stockings|}, {Sashes|Ruffles|Bows|Ribbons|Lace Trims|Petticoats|Tutus|Belts|Buckles|Brooches|Flower Pins|Appliques|Embroidery|Patches|Ribbon Bows|Dress Clips|Waist Belts|Dress Pins|Dress Brooches|Dress Sashes}, {(tutu:0.7)|(tutu:0.5)|||}, {depth of field|kitchen|garden|blurred|indoor|white|bokeh} background, {elegance|model photoshot}, {fashion|fashion photography},  dynamic pose, {high-resolution image-|high-resolution}"
+line = "{full body|midshot|full body, high hells|close-up}, {candid photography|elegance|fashion|fashion photography|stylish|casual style|cinematic} photo of two woman, Skin Textures, {overcast sky|sunlit|night|natural light|natural lighting|daylight|low key|dramatic lighting|dusk}, Hasselblad, {||twintails}, {standing pose|dynamic pose|sitting pose|naughty pose|flirting pose}, {blonde|}, {bow hair|cat ears|Bows|Hair Clips|Headbands|Hair Ties|Barrettes|Hair Slides|Ponytail Holders|Hair Pins|Flower Crowns|Bobby Pins|Hair Sticks|Hair Combs|Scrunchies|Hair Tassels|Crown Headbands|Hair Charms|Braided Headbands|Hair Wraps|Ponytail Streamers|Glitter Hair Ties}, (sexy:1.3|){|pink|red|peach|maroon|light-blue|Navy|Scarlet|Royal-blue|Turquoise|Olive|Emerald|Sage|Gold|Cream|Purple|Lavender|Violet|Brown|Tan|Blush|Rose|Fuchsia|Magenta|pink||} {lolita dress|fairy dress, wings|princess dress|ballgown|wedding dress| BUTTERFLY DRESS, wings|BURLESQUE DRESS|CUTE mini DRESS|FLOWER DRESS|SAILOR SENSHI UNIFORM| VICTORIAN DRESS| VICTORIAN mini DRESS} ,{||white thighhighs||white stockings|}, {Sashes|Ruffles|Bows|Ribbons|Lace Trims|Petticoats|Tutus|Belts|Buckles|Brooches|Flower Pins|Appliques|Embroidery|Patches|Ribbon Bows|Dress Clips|Waist Belts|Dress Pins|Dress Brooches|Dress Sashes}, {(tutu:0.7)|(tutu:0.5)|||}, {depth of field|kitchen|garden|blurred|indoor|white|bokeh} background, {elegance|model photoshot}, {fashion|fashion photography},  dynamic pose, {high-resolution image-|high-resolution}"
 
 
 # g_template = "{red|pink|white|gold|silver} (glasses:1.4)"
@@ -18,7 +18,8 @@ g_template = 'gold (glasses:1)'
 # prrompt_template = "lolita girl"
 # folder_save = "/content/drive/MyDrive/outputs/"
 folder_save = "/content/drive/MyDrive/outputs/"
-folder_name = "i2i-master-tcd"
+# folder_name = "i2i-master-tcd"
+folder_name = "meg-tcd"
 output_path=f"{folder_save}{folder_name}-[time(%Y-%m-%d-%H)]"
 folder_ref = "/content/pulid-colab-1/"
 wm_folder = "/content/colab/wildcard"
@@ -26,12 +27,13 @@ reppeat_num = 1 #
 num_images = 500 #number of prompt
 meg_weight = 0
 
+ckpt_name="RealVisXL_V5.0_fp16.safetensors"
 # ckpt_name="RealVisXL_V4.0.safetensors"
 # ckpt_name="Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors"
 # ckpt_name="Juggernaut-X-RunDiffusion-NSFW.safetensors"
 # ckpt_name="ProteusV0.4-RunDiffusionPhoto.safetensors"
 # ckpt_name="samaritan.safetensors"
-ckpt_name="Realistic_Stock_Photo_v2.safetensors"
+# ckpt_name="Realistic_Stock_Photo_v2.safetensors"
 # ckpt_name="Colossus_Project_X_Midgard.SafeTensors"
 # ckpt_name="Juggernaut-XI.safetensors"
 
@@ -153,6 +155,7 @@ from nodes import (
     EmptyLatentImage,
     NODE_CLASS_MAPPINGS,
     VAELoader,
+    CLIPSetLastLayer,
 )
 
 
@@ -162,6 +165,11 @@ def main():
         checkpointloadersimple = CheckpointLoaderSimple()
         checkpointloadersimple_4 = checkpointloadersimple.load_checkpoint(
             ckpt_name=ckpt_name
+        )
+
+        clipsetlastlayer = CLIPSetLastLayer()
+        clipsetlastlayer_10 = clipsetlastlayer.set_last_layer(
+            stop_at_clip_layer=-2, clip=get_value_at_index(checkpointloadersimple_4, 1)
         )
 
         vaeloader = VAELoader()
@@ -176,11 +184,12 @@ def main():
         loraloader_40 = loraloader.load_lora(
             # lora_name="sdxl_meg-000008.safetensors",
             # lora_name="sdxl_meg-240628-000020.safetensors",
-            lora_name="sdxl_meg-metal-240831-000020.safetensors",
+            # lora_name="sdxl_meg-metal-240831-000020.safetensors",
+            lora_name="sdxl_meg-metal-240831-000004.safetensors",
             strength_model=meg_weight,
             strength_clip=meg_weight,
             model=get_value_at_index(checkpointloadersimple_4, 0),
-            clip=get_value_at_index(checkpointloadersimple_4, 1),
+            clip=get_value_at_index(clipsetlastlayer_10, 0),
         )
 
         loraloader_39 = loraloader.load_lora(
@@ -202,7 +211,7 @@ def main():
 
         cliptextencode = CLIPTextEncode()
         imagebatchmultiple = NODE_CLASS_MAPPINGS["ImageBatchMultiple+"]()
-        applypulidadvanced = NODE_CLASS_MAPPINGS["ApplyPulidAdvanced"]()
+        # applypulidadvanced = NODE_CLASS_MAPPINGS["ApplyPulidAdvanced"]()
         tcdmodelsamplingdiscrete = NODE_CLASS_MAPPINGS["TCDModelSamplingDiscrete"]()
         conditioningconcat = ConditioningConcat()
         samplercustom = NODE_CLASS_MAPPINGS["SamplerCustom"]()

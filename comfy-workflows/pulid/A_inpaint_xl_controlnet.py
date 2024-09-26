@@ -251,6 +251,7 @@ from nodes import (
     ControlNetLoader,
     ControlNetApplyAdvanced,
     LoraLoader,
+    CLIPSetLastLayer,
 )
 
 
@@ -265,13 +266,18 @@ def main():
             ckpt_name=ckpt_name
         )
 
+        clipsetlastlayer = CLIPSetLastLayer()
+        clipsetlastlayer_10 = clipsetlastlayer.set_last_layer(
+            stop_at_clip_layer=-2, clip=get_value_at_index(checkpointloadersimple_2, 1)
+        )
+
         loraloader = LoraLoader()
         loraloader_24 = loraloader.load_lora(
             lora_name=lora_name_1,
             strength_model=strength_model_1,
             strength_clip=strength_model_1,
             model=get_value_at_index(checkpointloadersimple_2, 0),
-            clip=get_value_at_index(checkpointloadersimple_2, 1),
+            clip=get_value_at_index(clipsetlastlayer_10, 1),
         )
 
 

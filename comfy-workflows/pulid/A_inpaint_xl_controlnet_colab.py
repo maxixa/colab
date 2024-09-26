@@ -19,19 +19,16 @@ wm_folder = "/content/colab/wildcard"
 num_images = 1 #number of prompt generated
 num_que = 2 #number of general repeat
 
-width=576
-height=1024
+width=768
+height=1344
 
-# ckpt_name="Deliberate_v6.safetensors"
-# ckpt_name="RealVisV4-meg-out-all.safetensors"
+# ckpt_name="RealVisXL_V5.0_fp16.safetensors"
 # ckpt_name="Realistic_Stock_Photo_v2.safetensors"
-# ckpt_name="RealisticVisionV51.safetensors"
-# ckpt_name="Aardvark-2024-Photography.safetensors"
-# ckpt_name="Reliberate.safetensors"
-# ckpt_name="majicMIXrealistic.safetensors"
-# ckpt_name="epiCRealism.safetensors"
+# ckpt_name="Colossus_Project_X_Midgard.SafeTensors"
+# ckpt_name="Colossus_Project_XL_NEO_10B.SafeTensors"
+ckpt_name="Colossus_Project_XL_12C.SafeTensors"
 # ckpt_name="ProteusV0.4-RunDiffusionPhoto.safetensors"
-ckpt_name="RealVisXL_V4.0.safetensors"
+# ckpt_name="RealVisXL_V4.0.safetensors"
 
 # lora_name_1 = "All-in-one-Clothing-Bundle-SFW.SafeTensors"
 # lora_name_1 = "CopaxDress.safetensors"
@@ -51,24 +48,24 @@ control_net_name="controlnet_plus_promax.safetensors"
 
 img_mask_folder = (
 
-  # ('/content/Masking/content/89/300/img','/content/Masking/content/89/300/mask','png'),
-  # ('/content/Masking/content/89/350/img','/content/Masking/content/89/350/mask','png'),
+  ('/content/Masking/content/89/300/img','/content/Masking/content/89/300/mask','png'),
+  ('/content/Masking/content/89/350/img','/content/Masking/content/89/350/mask','png'),
   # ('/content/Masking/content/89/400/img','/content/Masking/content/89/400/mask','png'),
   # ('/content/Masking/content/89/450/img','/content/Masking/content/89/450/mask','png'),
   # ('/content/Masking/content/89/500/img','/content/Masking/content/89/500/mask','png'),
   # ('/content/Masking/content/89/550/img','/content/Masking/content/89/550/mask','png'),
   # ('/content/Masking/content/89/600/img','/content/Masking/content/89/600/mask','png'),
 
-  # ('/content/Masking/content/93-mask/300/img','/content/Masking/content/93-mask/300/mask','png'),
-  # ('/content/Masking/content/93-mask/350/img','/content/Masking/content/93-mask/350/mask','png'),
+  ('/content/Masking/content/93-mask/300/img','/content/Masking/content/93-mask/300/mask','png'),
+  ('/content/Masking/content/93-mask/350/img','/content/Masking/content/93-mask/350/mask','png'),
   # ('/content/Masking/content/93-mask/400/img','/content/Masking/content/93-mask/400/mask','png'),
   # ('/content/Masking/content/93-mask/450/img','/content/Masking/content/93-mask/450/mask','png'),
   # ('/content/Masking/content/93-mask/500/img','/content/Masking/content/93-mask/500/mask','png'),
   # ('/content/Masking/content/93-mask/550/img','/content/Masking/content/93-mask/550/mask','png'),
   # ('/content/Masking/content/93-mask/600/img','/content/Masking/content/93-mask/600/mask','png'),
 
-  # ('/content/Masking/content/94-mask/300/img','/content/Masking/content/94-mask/300/mask','png'),
-  # ('/content/Masking/content/94-mask/350/img','/content/Masking/content/94-mask/350/mask','png'),
+  ('/content/Masking/content/94-mask/300/img','/content/Masking/content/94-mask/300/mask','png'),
+  ('/content/Masking/content/94-mask/350/img','/content/Masking/content/94-mask/350/mask','png'),
   # ('/content/Masking/content/94-mask/400/img','/content/Masking/content/94-mask/400/mask','png'),
   # ('/content/Masking/content/94-mask/450/img','/content/Masking/content/94-mask/450/mask','png'),
   # ('/content/Masking/content/94-mask/500/img','/content/Masking/content/94-mask/500/mask','png'),
@@ -77,14 +74,14 @@ img_mask_folder = (
 
 )
 
-img_mask_folder = (
-  ('/content/Masking/content/94-mask/250/img','/content/Masking/content/94-mask/250/mask','png'),
-  ('/content/Masking/content/94-mask/250/img-fliped','/content/Masking/content/94-mask/250/mask-fliped','png'),
-  ('/content/Masking/content/93-mask/250/img','/content/Masking/content/93-mask/250/mask','png'),
-  ('/content/Masking/content/93-mask/250/img-fliped','/content/Masking/content/93-mask/250/mask-fliped','png'),
-  ('/content/Masking/content/89/250/img','/content/Masking/content/89/250/mask','png'),
-  ('/content/Masking/content/89/250/img-fliped','/content/Masking/content/89/250/mask-fliped','png'),
-)
+# img_mask_folder = (
+#   ('/content/Masking/content/94-mask/250/img','/content/Masking/content/94-mask/250/mask','png'),
+#   ('/content/Masking/content/94-mask/250/img-fliped','/content/Masking/content/94-mask/250/mask-fliped','png'),
+#   ('/content/Masking/content/93-mask/250/img','/content/Masking/content/93-mask/250/mask','png'),
+#   ('/content/Masking/content/93-mask/250/img-fliped','/content/Masking/content/93-mask/250/mask-fliped','png'),
+#   ('/content/Masking/content/89/250/img','/content/Masking/content/89/250/mask','png'),
+#   ('/content/Masking/content/89/250/img-fliped','/content/Masking/content/89/250/mask-fliped','png'),
+# )
 
 
 
@@ -230,6 +227,7 @@ from nodes import (
     ControlNetLoader,
     ControlNetApplyAdvanced,
     LoraLoader,
+    CLIPSetLastLayer,
 )
 
 
@@ -244,13 +242,18 @@ def main():
             ckpt_name=ckpt_name
         )
 
+        clipsetlastlayer = CLIPSetLastLayer()
+        clipsetlastlayer_10 = clipsetlastlayer.set_last_layer(
+            stop_at_clip_layer=-2, clip=get_value_at_index(checkpointloadersimple_2, 1)
+        )
+
         loraloader = LoraLoader()
         loraloader_24 = loraloader.load_lora(
             lora_name=lora_name_1,
             strength_model=strength_model_1,
             strength_clip=strength_model_1,
             model=get_value_at_index(checkpointloadersimple_2, 0),
-            clip=get_value_at_index(checkpointloadersimple_2, 1),
+            clip=get_value_at_index(clipsetlastlayer_10, 0),
         )
 
 

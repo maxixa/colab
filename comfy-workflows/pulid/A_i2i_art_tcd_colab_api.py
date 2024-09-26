@@ -15,18 +15,32 @@ g_template = 'gold (glasses:1)'
 # prrompt_template = "lolita girl"
 # folder_save = "/content/drive/MyDrive/outputs/"
 folder_save = "/content/drive/MyDrive/outputs/"
-folder_name = "art-tcd"
+folder_name = "i2i-art-tcd"
 output_path=f"{folder_save}{folder_name}-[time(%Y-%m-%d-%H)]"
 folder_ref = "/content/pulid-colab-1/"
 wm_folder = "/content/colab/wildcard"
-reppeat_num = 20 #
-num_images = 20 #number of prompt
+reppeat_num = 200 #
+num_images = 5 #number of prompt
 meg_weight = 0
-text_prompt = "prompt.txt"
+text_prompt = "/content/prompt.txt"
+path_i2i = "/content/drive/MyDrive/outputs/art-tcd-2024-09-23-06"
+
+
+width=1024
+height=576
+denoise=0.72
 
 # ckpt_name="RealVisXL_V4.0.safetensors"
-# ckpt_name="RealVisV4-meg-out-all.safetensors"
-ckpt_name="ColorfulXL_v70.safetensors"
+# ckpt_name="ColorfulXL_v70.safetensors"
+# ckpt_name="RealVisXL_V4.0.safetensors"
+# ckpt_name="Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors"
+# ckpt_name="Juggernaut-X-RunDiffusion-NSFW.safetensors"
+# ckpt_name="ProteusV0.4-RunDiffusionPhoto.safetensors"
+# ckpt_name="samaritan.safetensors"
+# ckpt_name="Realistic_Stock_Photo_v2.safetensors"
+# ckpt_name="Juggernaut-XI.safetensors"
+# ckpt_name="RealVisXL_V5.0_fp16.safetensors"
+ckpt_name="Colossus_Project_XL_12C.SafeTensors"
 
 
 
@@ -145,6 +159,7 @@ from nodes import (
     ConditioningConcat,
     LoraLoader,
     VAEDecode,
+    VAEEncode,
     EmptyLatentImage,
     NODE_CLASS_MAPPINGS,
     VAELoader,
@@ -168,10 +183,10 @@ def main():
         vaeloader = VAELoader()
         vaeloader_10 = vaeloader.load_vae(vae_name="sdxl_vae.safetensors")
 
-        emptylatentimage = EmptyLatentImage()
-        emptylatentimage_5 = emptylatentimage.generate(
-            width=1024, height=640, batch_size=1
-        )
+        # emptylatentimage = EmptyLatentImage()
+        # emptylatentimage_5 = emptylatentimage.generate(
+        #     width=1024, height=640, batch_size=1
+        # )
 
         loraloader = LoraLoader()
         loraloader_40 = loraloader.load_lora(
@@ -204,12 +219,15 @@ def main():
 
         cliptextencode = CLIPTextEncode()
         imagebatchmultiple = NODE_CLASS_MAPPINGS["ImageBatchMultiple+"]()
-        applypulidadvanced = NODE_CLASS_MAPPINGS["ApplyPulidAdvanced"]()
+        # applypulidadvanced = NODE_CLASS_MAPPINGS["ApplyPulidAdvanced"]()
         tcdmodelsamplingdiscrete = NODE_CLASS_MAPPINGS["TCDModelSamplingDiscrete"]()
         conditioningconcat = ConditioningConcat()
         samplercustom = NODE_CLASS_MAPPINGS["SamplerCustom"]()
         vaedecode = VAEDecode()
         image_save = NODE_CLASS_MAPPINGS["Image Save"]()
+        vaeencode = VAEEncode()
+        load_image_batch = NODE_CLASS_MAPPINGS["Load Image Batch"]()
+        imageresize = NODE_CLASS_MAPPINGS["ImageResize+"]()
 
         tcdmodelsamplingdiscrete_12 = tcdmodelsamplingdiscrete.patch(
             steps=8,
@@ -232,6 +250,32 @@ def main():
                 prompts = list(generator.generate(line, num_images=num_images))
                 
                 for prompt in prompts:
+
+                    load_image_batch_88 = load_image_batch.load_batch_images(
+                        # mode="incremental_image",
+                        mode="random",
+                        index=0,
+                        label="Batch 001",
+                        path=path_i2i,
+                        pattern="*",
+                        allow_RGBA_output="false",
+                        filename_text_extension="true",
+                    )
+
+                    imageresize_71 = imageresize.execute(
+                        width=width,
+                        height=height,
+                        interpolation="nearest",
+                        method="keep proportion",
+                        condition="always",
+                        multiple_of=0,
+                        image=get_value_at_index(load_image_batch_88, 0),
+                    )
+                    
+                    vaeencode_85 = vaeencode.encode(
+                        pixels=get_value_at_index(imageresize_71, 0),
+                        vae=get_value_at_index(vaeloader_10, 0),
+                    )
 
                     cliptextencode_6 = cliptextencode.encode(
                         text=prompt,
@@ -266,7 +310,7 @@ def main():
                         negative=get_value_at_index(cliptextencode_7, 0),
                         sampler=get_value_at_index(tcdmodelsamplingdiscrete_12, 1),
                         sigmas=get_value_at_index(tcdmodelsamplingdiscrete_12, 2),
-                        latent_image=get_value_at_index(emptylatentimage_5, 0),
+                        latent_image=get_value_at_index(vaeencode_85, 0),
                     )
 
                     vaedecode_8 = vaedecode.decode(
@@ -277,7 +321,7 @@ def main():
                     image_save_14 = image_save.was_save_images(
                         output_path=output_path,
                         # output_path="pulid-meg",
-                        filename_prefix=f"{clean(textwrap.shorten(prompt, width=180))}",
+                        filename_prefix=f"{clean(textwrap.shorten(prompt, width=180))}-{ckpt_name}",
                         # filename_prefix="pulid-meg",
                         filename_delimiter="_",
                         filename_number_padding=4,

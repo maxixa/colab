@@ -148,6 +148,7 @@ from nodes import (
     EmptyLatentImage,
     NODE_CLASS_MAPPINGS,
     VAELoader,
+    CLIPSetLastLayer,
 )
 
 
@@ -157,6 +158,11 @@ def main():
         checkpointloadersimple = CheckpointLoaderSimple()
         checkpointloadersimple_4 = checkpointloadersimple.load_checkpoint(
             ckpt_name=ckpt_name
+        )
+
+        clipsetlastlayer = CLIPSetLastLayer()
+        clipsetlastlayer_10 = clipsetlastlayer.set_last_layer(
+            stop_at_clip_layer=-2, clip=get_value_at_index(checkpointloadersimple_4, 1)
         )
 
         vaeloader = VAELoader()
@@ -175,7 +181,7 @@ def main():
             strength_model=meg_weight,
             strength_clip=meg_weight,
             model=get_value_at_index(checkpointloadersimple_4, 0),
-            clip=get_value_at_index(checkpointloadersimple_4, 1),
+            clip=get_value_at_index(clipsetlastlayer_10, 0),
         )
 
         loraloader_39 = loraloader.load_lora(
@@ -198,7 +204,7 @@ def main():
 
         cliptextencode = CLIPTextEncode()
         imagebatchmultiple = NODE_CLASS_MAPPINGS["ImageBatchMultiple+"]()
-        applypulidadvanced = NODE_CLASS_MAPPINGS["ApplyPulidAdvanced"]()
+        # applypulidadvanced = NODE_CLASS_MAPPINGS["ApplyPulidAdvanced"]()
         tcdmodelsamplingdiscrete = NODE_CLASS_MAPPINGS["TCDModelSamplingDiscrete"]()
         conditioningconcat = ConditioningConcat()
         samplercustom = NODE_CLASS_MAPPINGS["SamplerCustom"]()
@@ -218,6 +224,7 @@ def main():
             with open(prompt_file, 'r') as file:
                 lines = file.readlines()
             lines = [line.strip() for line in lines]
+            random.shuffle(lines)
 
             for line in lines:
 

@@ -48,6 +48,8 @@ ckpt_name="RealVisXL_V4.0.safetensors"
 # ckpt_name="samaritan.safetensors"
 # ckpt_name="Realistic_Stock_Photo_v2.safetensors"
 # ckpt_name="Juggernaut-XI.safetensors"
+# ckpt_name="RealVisXL_V5.0_fp16.safetensors"
+
 
 img_ref_folder = (
   (
@@ -233,6 +235,7 @@ from nodes import (
     CheckpointLoaderSimple,
     VAEDecode,
     EmptyLatentImage,
+    CLIPSetLastLayer,
 )
 
 
@@ -242,6 +245,11 @@ def main():
         checkpointloadersimple = CheckpointLoaderSimple()
         checkpointloadersimple_4 = checkpointloadersimple.load_checkpoint(
             ckpt_name=ckpt_name
+        )
+
+        clipsetlastlayer = CLIPSetLastLayer()
+        clipsetlastlayer_10 = clipsetlastlayer.set_last_layer(
+            stop_at_clip_layer=-2, clip=get_value_at_index(checkpointloadersimple_4, 1)
         )
 
         # emptylatentimage = EmptyLatentImage()
@@ -350,7 +358,7 @@ def main():
             photomakerencodeplus_73 = photomakerencodeplus.apply_photomaker(
                 trigger_word="img",
                 text="a woman img ,  ",
-                clip=get_value_at_index(checkpointloadersimple_4, 1),
+                clip=get_value_at_index(clipsetlastlayer_10, 0),
                 photomaker=get_value_at_index(photomakerloaderplus_74, 0),
                 image=get_value_at_index(imagebatchmultiple_78, 0),
                 insightface_opt=get_value_at_index(photomakerinsightfaceloader_76, 0),
