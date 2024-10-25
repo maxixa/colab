@@ -14,12 +14,18 @@ prrompt_template = "{full body|midshot|full body, high hells}, {candid photograp
 # g_template = 'gold (glasses:1.4)'
 # prrompt_template = "lolita girl"
 folder_save = "/content/drive/MyDrive/outputs/"
-folder_name = "dwrt-photomaker-tcd"
+folder_name = "dwrt-photomaker-control-openose-tcd"
 output_path=f"{folder_save}{folder_name}-[time(%Y-%m-%d-%H)]"
 ref_path = "/content/pulid-colab-1/"
 wm_folder = "/content/colab/wildcard"
 num_images = 50
 meg_weight = 0.8
+
+control_net_name="controlnet_plus_promax.safetensors"
+control_type="openpose"
+control_image_path=""
+width=576
+height=1024
 
 lora_name_1="Hyper-SDXL-8steps-lora.safetensors"
 strength_model_1=0.9
@@ -232,6 +238,8 @@ from nodes import (
     VAEDecode,
     EmptyLatentImage,
     CLIPSetLastLayer,
+    ControlNetLoader,
+    ControlNetApplyAdvanced,
 )
 
 
@@ -250,7 +258,7 @@ def main():
 
         emptylatentimage = EmptyLatentImage()
         emptylatentimage_5 = emptylatentimage.generate(
-            width=576, height=1024, batch_size=1
+            width=width, height=height, batch_size=1
         )
 
         cliptextencode = CLIPTextEncode()
@@ -297,6 +305,16 @@ def main():
             provider="CPU"
         )
 
+        controlnetloader = ControlNetLoader()
+        controlnetloader_9 = controlnetloader.load_controlnet(
+            control_net_name=control_net_name
+        )
+
+        setunioncontrolnettype = NODE_CLASS_MAPPINGS["SetUnionControlNetType"]()
+        setunioncontrolnettype_30 = setunioncontrolnettype.set_controlnet_type(
+            type="control_type", control_net=get_value_at_index(controlnetloader_9, 0)
+        )
+
         vaeloader = VAELoader()
         vaeloader_77 = vaeloader.load_vae(vae_name="sdxl_vae.safetensors")
 
@@ -329,9 +347,12 @@ def main():
         samplercustom = NODE_CLASS_MAPPINGS["SamplerCustom"]()
         vaedecode = VAEDecode()
         image_save = NODE_CLASS_MAPPINGS["Image Save"]()
+        image_load = NODE_CLASS_MAPPINGS["Image Load"]()
+        load_image_batch = NODE_CLASS_MAPPINGS["Load Image Batch"]()
+        imageresize = NODE_CLASS_MAPPINGS["ImageResize+"]()
 
         tcdmodelsamplingdiscrete_82 = tcdmodelsamplingdiscrete.patch(
-            steps=10,
+            steps=8,
             scheduler="sgm_uniform",
             denoise=1,
             eta=0.1,
@@ -400,13 +421,44 @@ def main():
                     conditioning_from=get_value_at_index(conditioningconcat_102, 0),
                 )
 
+                load_image_batch_88 = load_image_batch.load_batch_images(
+                    # mode="incremental_image",
+                    mode="random",
+                    index=0,
+                    label="Batch 001",
+                    path=control_image_path,
+                    pattern="*",
+                    allow_RGBA_output="false",
+                    filename_text_extension="true",
+                )
+
+                imageresize_71 = imageresize.execute(
+                    width=width,
+                    height=height,
+                    interpolation="nearest",
+                    method="keep proportion",
+                    condition="always",
+                    multiple_of=0,
+                    image=get_value_at_index(load_image_batch_88, 0),
+                )
+
+                controlnetapplyadvanced_10 = controlnetapplyadvanced.apply_controlnet(
+                    strength=0.7,
+                    start_percent=0,
+                    end_percent=1,
+                    positive=get_value_at_index(conditioningconcat_98, 0),
+                    negative=get_value_at_index(cliptextencode_7, 0),
+                    control_net=get_value_at_index(setunioncontrolnettype_30, 0),
+                    image=get_value_at_index(imageresize_71, 0),
+                )
+
                 samplercustom_81 = samplercustom.sample(
                     add_noise=True,
                     noise_seed=random.randint(1, 2**64),
                     cfg=1,
                     model=get_value_at_index(tcdmodelsamplingdiscrete_82, 0),
-                    positive=get_value_at_index(conditioningconcat_98, 0),
-                    negative=get_value_at_index(cliptextencode_7, 0),
+                    positive=get_value_at_index(controlnetapplyadvanced_10, 0),
+                    negative=get_value_at_index(controlnetapplyadvanced_10, 1),
                     sampler=get_value_at_index(tcdmodelsamplingdiscrete_82, 1),
                     sigmas=get_value_at_index(tcdmodelsamplingdiscrete_82, 2),
                     latent_image=get_value_at_index(emptylatentimage_5, 0),

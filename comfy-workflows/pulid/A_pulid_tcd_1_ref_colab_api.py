@@ -7,20 +7,23 @@ import torch
 from pathlib import Path
 from dynamicprompts.generators import RandomPromptGenerator
 from dynamicprompts.wildcards.wildcard_manager import WildcardManager
+import textwrap
 
-# g_template = "{red|pink|white|gold|silver} (glasses:1.4)"
-prrompt_template = "{(full body:1.4)|midshot|}, cinematic, glamour photo of woman, {||twintails}, {blonde|}, {bow hair|cat ears|Bows|Hair Clips|Headbands|Hair Ties|Barrettes|Hair Slides|Ponytail Holders|Hair Pins|Flower Crowns|Bobby Pins|Hair Sticks|Hair Combs|Scrunchies|Hair Tassels|Crown Headbands|Hair Charms|Braided Headbands|Hair Wraps|Ponytail Streamers|Glitter Hair Ties}, (sexy:1.3|){|pink|red|peach|maroon|light-blue|Navy|Scarlet|Royal-blue|Turquoise|Olive|Emerald|Sage|Gold|Cream|Purple|Lavender|Violet|Brown|Tan|Blush|Rose|Fuchsia|Magenta|pink||} {lolita dress|fairy dress, wings|princess dress|ballgown|wedding dress| BUTTERFLY DRESS, wings|BURLESQUE DRESS|CUTE mini DRESS|FLOWER DRESS|SAILOR SENSHI UNIFORM| VICTORIAN DRESS| VICTORIAN mini DRESS} ,{||white thighhighs||white stockings|}, {Sashes|Ruffles|Bows|Ribbons|Lace Trims|Petticoats|Tutus|Belts|Buckles|Brooches|Flower Pins|Appliques|Embroidery|Patches|Ribbon Bows|Dress Clips|Waist Belts|Dress Pins|Dress Brooches|Dress Sashes}, {(tutu:0.7)|(tutu:0.5)|||}, {depth of field|kitchen|garden|blurred|indoor|white|bokeh} background, {elegance|model photoshot}, {fashion|fashion photography},  dynamic pose, {high-resolution image-|high-resolution}"
+# g_template = "{red|pink|white|gold|blue|black} {round|} glasses"
+prrompt_template = "{full body|midshot|full body, high hells]close-up|half body}, {candid photography|elegance|fashion|fashion photography|stylish|casual style|cinematic} photo of woman, {Over-the-Shoulder Look| Leaning Against a Wall| Sitting on the Ground| Walking Toward the Camera| Arms Crossed| Hands on Hips| Lean Forward| One Hand on Chin| Twirling Hair| Jumping in the Air| Hand in Hair| Crossed Legs, Standing| Hands Behind Back| Laying on Stomach| Sitting | Touching Face Lightly| Stretching Arms Upward| Holding a Prop| Leaning Forward with Elbows on Knees| Hands Clasped Together| Kicking One Leg Up| One Foot Forward| Hugging Self| Resting Head on Hand| Hands Resting on Lap| Mid-Spin with Dress|sitting pose|laying pose|kneeling pose|sitting pose|laying pose|kneeling pose}, {||twintails}, {standing pose|dynamic pose|sitting pose|kneeling pose|dancing pose}, {blonde|}, {bow hair|cat ears|Bows|Hair Clips|Headbands|Hair Ties|Barrettes|Hair Slides|Ponytail Holders|Hair Pins|Flower Crowns|Bobby Pins|Hair Sticks|Hair Combs|Scrunchies|Hair Tassels|Crown Headbands|Hair Charms|Braided Headbands|Hair Wraps|Ponytail Streamers|Glitter Hair Ties}, (sexy:1.3|){|pink|red|peach|maroon|light-blue|Navy|Scarlet|Royal-blue|Turquoise|Olive|Emerald|Sage|Gold|Cream|Purple|Lavender|Violet|Brown|Tan|Blush|Rose|Fuchsia|Magenta|pink||} {lolita dress|fairy dress, wings|princess dress|ballgown|wedding dress| BUTTERFLY DRESS, wings|BURLESQUE DRESS|CUTE mini DRESS|FLOWER DRESS|SAILOR SENSHI UNIFORM| VICTORIAN DRESS| VICTORIAN mini DRESS} ,{||white thighhighs||white stockings|}, {Sashes|Ruffles|Bows|Ribbons|Lace Trims|Petticoats|Tutus|Belts|Buckles|Brooches|Flower Pins|Appliques|Embroidery|Patches|Ribbon Bows|Dress Clips|Waist Belts|Dress Pins|Dress Brooches|Dress Sashes}, {(tutu:0.7)|(tutu:0.5)|||}, {depth of field|kitchen|garden|blurred|indoor|white|bokeh} background, {elegance|model photoshot}, {fashion|fashion photography},  dynamic pose, {high-resolution image-|high-resolution}"
 g_template = 'gold (glasses:1)'
 # prrompt_template = "lolita girl"
 # folder_save = "/content/drive/MyDrive/outputs/"
 folder_save = "/content/drive/MyDrive/outputs/"
 folder_name = "dwrt-pulid-1ref-tcd"
 output_path=f"{folder_save}{folder_name}-[time(%Y-%m-%d-%H)]"
-folder_ref = "/content/pulid-colab-1/"
+folder_ref = "/content/ref/pulid-colab-1/"
 wm_folder = "/content/colab/wildcard"
-reppeat_num = 40 # overall rpeat
+reppeat_num = 1 # overall rpeat
 num_images = 10 # number of prompt for img
-meg_weight = 0.65
+meg_weight = 0
+
+stop_at_clip_layer=-2
 
 # ckpt_name="RealVisXL_V4.0.safetensors"
 # ckpt_name="RealVisV4-meg-out-all.safetensors"
@@ -28,6 +31,17 @@ meg_weight = 0.65
 # ckpt_name="Juggernaut-X-RunDiffusion-NSFW.safetensors"
 # ckpt_name="samaritan.safetensors"
 ckpt_name="Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors"
+
+lora_name_2="Hyper-SDXL-8steps-lora.safetensors"
+strength_model_2=0.95
+
+# lora_name="DetailTweakerXL.safetensors",
+# lora_name="extreamly-detailed.safetensors",
+lora_name_1="extreamly-detailed.safetensors"
+strength_model_1=0
+
+lora_name_3="photomaker-v2.bin"
+strength_model_3=0.85
 
 def clean(text):
     text = text.lower() # Convert to lowercase
@@ -147,6 +161,7 @@ from nodes import (
     EmptyLatentImage,
     NODE_CLASS_MAPPINGS,
     VAELoader,
+    CLIPSetLastLayer,
 )
 
 
@@ -158,12 +173,17 @@ def main():
             ckpt_name=ckpt_name
         )
 
+        clipsetlastlayer = CLIPSetLastLayer()
+        clipsetlastlayer_10 = clipsetlastlayer.set_last_layer(
+            stop_at_clip_layer=stop_at_clip_layer, clip=get_value_at_index(checkpointloadersimple_4, 1)
+        )
+
         vaeloader = VAELoader()
         vaeloader_10 = vaeloader.load_vae(vae_name="sdxl_vae.safetensors")
 
         emptylatentimage = EmptyLatentImage()
         emptylatentimage_5 = emptylatentimage.generate(
-            width=640, height=1024, batch_size=1
+            width=576, height=1024, batch_size=1
         )
 
         loraloader = LoraLoader()
@@ -173,22 +193,23 @@ def main():
             strength_model=meg_weight,
             strength_clip=meg_weight,
             model=get_value_at_index(checkpointloadersimple_4, 0),
-            clip=get_value_at_index(checkpointloadersimple_4, 1),
+            clip=get_value_at_index(clipsetlastlayer_10, 0),
         )
 
         loraloader_39 = loraloader.load_lora(
-            # lora_name="DetailTweakerXL.safetensors",
-            lora_name="extreamly-detailed.safetensors",
-            strength_model=0.5,
-            strength_clip=0.5,
+
+            lora_name=lora_name_1,
+            strength_model=strength_model_1,
+            strength_clip=strength_model_1,
             model=get_value_at_index(loraloader_40, 0),
             clip=get_value_at_index(loraloader_40, 1),
         )
 
         loraloader_38 = loraloader.load_lora(
-            lora_name="Hyper-SDXL-8steps-lora.safetensors",
-            strength_model=0.9500000000000001,
-            strength_clip=0.9500000000000001,
+            # lora_name="Hyper-SDXL-8steps-lora.safetensors",
+            lora_name=lora_name_2,
+            strength_model=strength_model_2,
+            strength_clip=strength_model_2,
             model=get_value_at_index(loraloader_39, 0),
             clip=get_value_at_index(loraloader_39, 1),
         )
@@ -219,6 +240,7 @@ def main():
         image_save = NODE_CLASS_MAPPINGS["Image Save"]()
         image_load = NODE_CLASS_MAPPINGS["Image Load"]()
         perturbedattentionguidance = NODE_CLASS_MAPPINGS["PerturbedAttentionGuidance"]()
+        repeatimagebatch = NODE_CLASS_MAPPINGS["RepeatImageBatch"]()
 
         for q in range(reppeat_num):
 
@@ -233,6 +255,10 @@ def main():
                     filename_text_extension="true",
                 )
 
+                repeatimagebatch_10 = repeatimagebatch.repeat(
+                    amount=2, image=get_value_at_index(image_load_57, 0)
+                )
+
                 applypulidadvanced_22 = applypulidadvanced.apply_pulid(
                     weight=0.75,
                     projection="ortho_v2",
@@ -244,7 +270,7 @@ def main():
                     pulid=get_value_at_index(pulidmodelloader_16, 0),
                     eva_clip=get_value_at_index(pulidevacliploader_17, 0),
                     face_analysis=get_value_at_index(pulidinsightfaceloader_18, 0),
-                    image=get_value_at_index(image_load_57, 0),
+                    image=get_value_at_index(repeatimagebatch_10, 0),
                 )
 
                 # perturbedattentionguidance_10 = perturbedattentionguidance.patch(
@@ -256,7 +282,7 @@ def main():
                     steps=8,
                     scheduler="sgm_uniform",
                     denoise=1,
-                    eta=0.2,
+                    eta=0.1,
                     model=get_value_at_index(applypulidadvanced_22, 0),
                 )
 
@@ -306,9 +332,9 @@ def main():
                     )
 
                     image_save_14 = image_save.was_save_images(
-                        output_path=output_path,
+                        output_path=f"{output_path}/{ckpt_name}-{meg_weight}",
                         # output_path="pulid-meg",
-                        filename_prefix=f"{clean(prompt)}-{clean(g_template)}",
+                        filename_prefix=f"{clean(textwrap.shorten(prompt, width=180))}-{img_ref}",
                         # filename_prefix="pulid-meg",
                         filename_delimiter="_",
                         filename_number_padding=4,
