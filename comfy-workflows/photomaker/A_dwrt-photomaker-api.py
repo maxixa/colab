@@ -19,7 +19,7 @@ folder_name = "dwrt-photomaker-tcd"
 output_path=f"{folder_save}{folder_name}-[time(%Y-%m-%d-%H)]"
 ref_path = "/content/pulid-colab-1/"
 wm_folder = "/content/colab/wildcard"
-num_images = 50
+num_images = 1000
 meg_weight = 0.8
 
 lora_name_1="Hyper-SDXL-8steps-lora.safetensors"
@@ -49,6 +49,12 @@ ckpt_name="NightVisionXL-9.safetensors"
 # ckpt_name=""
 
 img_ref_folder = (
+  (
+    f'{ref_path}01.jpg',
+    f'{ref_path}02.jpg',
+    f'{ref_path}03.jpg',
+    f'{ref_path}04.jpg',
+  ),
   (
     f'{ref_path}02.jpg',
     f'{ref_path}01.jpg',
@@ -97,6 +103,13 @@ img_ref_folder = (
     f'{ref_path}01.jpg',
     f'{ref_path}02.jpg',
   ),
+  (
+    f'{ref_path}01.jpg',
+    f'{ref_path}02.jpg',
+    f'{ref_path}03.jpg',
+    f'{ref_path}04.jpg',
+  ),
+
   #   (
   #   f'{ref_path}22-04.jpg',
   #   f'{ref_path}22-02.jpg',
