@@ -24,10 +24,10 @@ meg_weight = 0.8
 lora_name_1="Hyper-SDXL-8steps-lora.safetensors"
 strength_model_1=0.9
 
-# lora_name_2="sdxl_meg-240628-000020.safetensors"
+lora_name_2="sdxl_meg-240628-000020.safetensors"
 # lora_name_2="sdxl_meg-metal-240831.safetensors"
-lora_name_2="sdxl_meg-metal-240831-000020.safetensors"
-strength_model_2=0.6
+# lora_name_2="sdxl_meg-metal-240831-000020.safetensors"
+strength_model_2=0.82
 
 lora_name_3="photomaker-v2.bin"
 strength_model_3=0.85
@@ -43,7 +43,7 @@ strength_model_3=0.85
 # ckpt_name="Colossus_Project_X_Midgard.SafeTensors"
 # ckpt_name="Colossus_Project_XL_NEO_10B.SafeTensors"
 # ckpt_name="Colossus_Project_XL_12C.SafeTensors"
-# ckpt_name=""
+ckpt_name="NightVisionXL-9.safetensors"
 # ckpt_name=""
 # ckpt_name=""
 
