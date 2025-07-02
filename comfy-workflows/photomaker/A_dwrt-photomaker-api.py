@@ -44,8 +44,8 @@ strength_model_3=0.85
 # ckpt_name="Colossus_Project_X_Midgard.SafeTensors"
 # ckpt_name="Colossus_Project_XL_NEO_10B.SafeTensors"
 # ckpt_name="Colossus_Project_XL_12C.SafeTensors"
-ckpt_name="NightVisionXL-9.safetensors"
-# ckpt_name=""
+# ckpt_name="NightVisionXL-9.safetensors"
+ckpt_name="Realism_Engine_SDXL_3.safetensors"
 # ckpt_name=""
 
 img_ref_folder = (
