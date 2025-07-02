@@ -25,9 +25,9 @@ meg_weight = 0.8
 lora_name_1="Hyper-SDXL-8steps-lora.safetensors"
 strength_model_1=0.9
 
-lora_name_2="sdxl_meg-240628-000020.safetensors"
+# lora_name_2="sdxl_meg-240628-000020.safetensors"
 # lora_name_2="sdxl_meg-metal-240831.safetensors"
-# lora_name_2="sdxl_meg-metal-240831-000020.safetensors"
+lora_name_2="sdxl_meg-metal-240831-000020.safetensors"
 strength_model_2=0.82
 
 lora_name_3="photomaker-v2.bin"
