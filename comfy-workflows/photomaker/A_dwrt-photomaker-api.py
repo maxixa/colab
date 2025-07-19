@@ -264,7 +264,7 @@ def main():
 
         emptylatentimage = EmptyLatentImage()
         emptylatentimage_5 = emptylatentimage.generate(
-            width=576, height=1024, batch_size=1
+            width=768, height=1336, batch_size=1
         )
 
         cliptextencode = CLIPTextEncode()
