@@ -23,7 +23,7 @@ num_images = 1000
 meg_weight = 0.8
 
 lora_name_1="Hyper-SDXL-8steps-lora.safetensors"
-strength_model_1=0.9
+strength_model_1=0.85
 
 lora_name_2="sdxl_meg-240628-000020.safetensors"
 # lora_name_2="sdxl_meg-metal-240831.safetensors"
@@ -264,7 +264,7 @@ def main():
 
         emptylatentimage = EmptyLatentImage()
         emptylatentimage_5 = emptylatentimage.generate(
-            width=768, height=1336, batch_size=1
+            width=640, height=1136, batch_size=1
         )
 
         cliptextencode = CLIPTextEncode()
