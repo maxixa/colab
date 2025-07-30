@@ -432,7 +432,7 @@ def main():
                 )
 
                 image_save_79 = image_save.was_save_images(
-                    output_path=f"{output_path}/{ckpt_name}-{strength_model_3}",
+                    output_path=f"{output_path}/{ckpt_name}-pm{strength_model_3}-m{strength_model_2}",
                     filename_prefix=f"{clean(textwrap.shorten(prompt, width=180))}-{ckpt_name}",
                     filename_delimiter="_",
                     filename_number_padding=4,
