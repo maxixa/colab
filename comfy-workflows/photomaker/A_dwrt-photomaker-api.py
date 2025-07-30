@@ -23,7 +23,7 @@ num_images = 1000
 meg_weight = 0.8
 
 lora_name_1="Hyper-SDXL-8steps-lora.safetensors"
-strength_model_1=0.85
+strength_model_1=0.8
 
 lora_name_2="sdxl_meg-240628-000020.safetensors"
 # lora_name_2="sdxl_meg-metal-240831.safetensors"
