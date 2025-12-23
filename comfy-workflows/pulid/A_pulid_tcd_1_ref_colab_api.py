@@ -21,7 +21,7 @@ folder_ref = "/content/ref/pulid-colab-1/"
 wm_folder = "/content/colab/wildcard"
 reppeat_num = 1 # overall rpeat
 num_images = 10 # number of prompt for img
-meg_weight = 0
+meg_weight = 0.7
 
 stop_at_clip_layer=-2
 
@@ -34,7 +34,7 @@ stop_at_clip_layer=-2
 ckpt_name="NightVisionXL-9.safetensors"
 
 lora_name_2="Hyper-SDXL-8steps-lora.safetensors"
-strength_model_2=0.95
+strength_model_2=0.83
 
 # lora_name="DetailTweakerXL.safetensors",
 # lora_name="extreamly-detailed.safetensors",
