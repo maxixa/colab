@@ -30,7 +30,8 @@ stop_at_clip_layer=-2
 # ckpt_name="Realistic_Stock_Photo_v2.safetensors"
 # ckpt_name="Juggernaut-X-RunDiffusion-NSFW.safetensors"
 # ckpt_name="samaritan.safetensors"
-ckpt_name="Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors"
+# ckpt_name="Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors"
+ckpt_name="NightVisionXL-9.safetensors"
 
 lora_name_2="Hyper-SDXL-8steps-lora.safetensors"
 strength_model_2=0.95
