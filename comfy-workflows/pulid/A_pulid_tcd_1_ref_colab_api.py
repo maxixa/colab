@@ -190,7 +190,8 @@ def main():
         loraloader = LoraLoader()
         loraloader_40 = loraloader.load_lora(
             # lora_name="sdxl_meg-000008.safetensors",
-            lora_name="sdxl_meg-240628-000020.safetensors",
+            #lora_name="sdxl_meg-240628-000020.safetensors",
+            lora_name="sdxl_meg-metal-240831-000020.safetensors",
             strength_model=meg_weight,
             strength_clip=meg_weight,
             model=get_value_at_index(checkpointloadersimple_4, 0),
