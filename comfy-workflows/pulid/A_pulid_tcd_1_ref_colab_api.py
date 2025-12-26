@@ -191,7 +191,7 @@ def main():
         loraloader = LoraLoader()
         loraloader_40 = loraloader.load_lora(
             # lora_name="sdxl_meg-000008.safetensors",
-            lora_name="lora_name_3,
+            lora_name=lora_name_3,
             #lora_name="sdxl_meg-metal-240831-000020.safetensors",
             strength_model=strength_model_3,
             strength_clip=strength_model_3,
