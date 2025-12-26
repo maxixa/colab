@@ -193,8 +193,8 @@ def main():
             # lora_name="sdxl_meg-000008.safetensors",
             lora_name="lora_name_3,
             #lora_name="sdxl_meg-metal-240831-000020.safetensors",
-            strength_model=meg_weight,
-            strength_clip=meg_weight,
+            strength_model=strength_model_3,
+            strength_clip=strength_model_3,
             model=get_value_at_index(checkpointloadersimple_4, 0),
             clip=get_value_at_index(clipsetlastlayer_10, 0),
         )
