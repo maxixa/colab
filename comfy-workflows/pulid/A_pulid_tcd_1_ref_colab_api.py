@@ -21,7 +21,7 @@ folder_ref = "/content/ref/pulid-colab-1/"
 wm_folder = "/content/colab/wildcard"
 reppeat_num = 100 # overall rpeat
 num_images = 10 # number of prompt for img
-meg_weight = 1
+meg_weight = 1.1
 
 stop_at_clip_layer=-2
 
