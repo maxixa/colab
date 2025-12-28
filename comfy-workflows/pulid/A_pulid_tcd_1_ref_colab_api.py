@@ -140,7 +140,7 @@ def import_custom_nodes() -> None:
     This function sets up a new asyncio event loop, initializes the PromptServer,
     creates a PromptQueue, and initializes the custom nodes.
     """
-    import asyncio
+    import async/io
     import execution
     from nodes import init_external_custom_nodes, init_builtin_extra_nodes, init_extra_nodes
     import server
@@ -268,9 +268,9 @@ def main():
                 )
 
                 applypulidadvanced_22 = applypulidadvanced.apply_pulid(
-                    weight=0.75,
-                    projection="ortho_v2",
-                    fidelity=2,
+                    weight=weight,
+                    projection="projection",
+                    fidelity=projection,
                     noise=0.7000000000000001,
                     start_at=0,
                     end_at=1,
