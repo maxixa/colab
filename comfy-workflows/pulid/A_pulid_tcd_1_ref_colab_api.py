@@ -45,6 +45,11 @@ strength_model_1=0
 lora_name_3="sdxl_meg-240628-000020.safetensors"
 strength_model_3=0.75
 
+weight=0.75
+projection="ortho_v2"
+fidelity=2
+
+
 def clean(text):
     text = text.lower() # Convert to lowercase
     text = re.sub(r'\s+', '_', text)
