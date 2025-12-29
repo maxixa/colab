@@ -140,7 +140,7 @@ def import_custom_nodes() -> None:
     This function sets up a new asyncio event loop, initializes the PromptServer,
     creates a PromptQueue, and initializes the custom nodes.
     """
-    import async/io
+    import asyncio
     import execution
     from nodes import init_external_custom_nodes, init_builtin_extra_nodes, init_extra_nodes
     import server
