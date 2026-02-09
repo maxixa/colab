@@ -340,7 +340,7 @@ def main():
                     )
 
                     image_save_14 = image_save.was_save_images(
-                        output_path=f"{output_path}/{ckpt_name}-{meg_weight}",
+                        output_path=f"{output_path}/{ckpt_name}-meg-{strength_model_3}-fid-{fidelity}",
                         # output_path="pulid-meg",
                         filename_prefix=f"{clean(textwrap.shorten(prompt, width=180))}-{img_ref}",
                         # filename_prefix="pulid-meg",
