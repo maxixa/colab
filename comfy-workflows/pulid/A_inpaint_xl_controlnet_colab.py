@@ -20,8 +20,8 @@ wm_folder = "/content/colab/wildcard"
 num_images = 1 #number of prompt generated
 num_que = 2 #number of general repeat
 
-width=576
-height=1024
+width=640
+height=1280
 
 ckpt_name="RealVisXL_V5.0_fp16.safetensors"
 # ckpt_name="Realistic_Stock_Photo_v2.safetensors"
