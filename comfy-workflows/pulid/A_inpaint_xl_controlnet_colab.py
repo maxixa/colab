@@ -49,8 +49,8 @@ control_net_name="controlnet_plus_promax.safetensors"
 
 img_mask_folder = (
 
-  ('/content/Masking/content/89/300/img','/content/Masking/content/89/300/mask','png'),
-  ('/content/Masking/content/89/350/img','/content/Masking/content/89/350/mask','png'),
+  #('/content/Masking/content/89/300/img','/content/Masking/content/89/300/mask','png'),
+  ('/content/Masking/content/89/250/img','/content/Masking/content/89/250/mask','png'),
   # ('/content/Masking/content/89/400/img','/content/Masking/content/89/400/mask','png'),
   # ('/content/Masking/content/89/450/img','/content/Masking/content/89/450/mask','png'),
   # ('/content/Masking/content/89/500/img','/content/Masking/content/89/500/mask','png'),
