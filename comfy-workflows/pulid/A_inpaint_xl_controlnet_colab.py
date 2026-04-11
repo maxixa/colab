@@ -38,7 +38,7 @@ lora_name_1 = "Hyper-SDXL-8steps-lora.safetensors"
 strength_model_1 = 0
 
 lora_name_2 = "Hyper-SDXL-8steps-lora.safetensors"
-strength_model_2 = 0.9
+strength_model_2 = 0.82
 
 lora_name_3 = "Hyper-SDXL-8steps-lora.safetensors"
 strength_model_3 = 0
