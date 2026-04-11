@@ -347,6 +347,7 @@ def main():
               mask_ext = ext
               parts = image_folder.split('/')
               num = parts[-2]
+              num_ful = parts[-3]
 
               image_files = os.listdir(image_folder)
               mask_files = os.listdir(mask_folder)
@@ -459,7 +460,7 @@ def main():
                   )
 
                   image_save_29 = image_save.was_save_images(
-                      output_path=f"{output_path}/{ckpt_name}/{num}-{name}",
+                      output_path=f"{output_path}/{ckpt_name}/{num}_{num_ful}",
                       filename_prefix=f"{clean(textwrap.shorten(prompts[0], width=180))}-{num}-{name}-{ckpt_name}",
                       filename_delimiter="_",
                       filename_number_padding=4,
