@@ -23,14 +23,14 @@ num_que = 2 #number of general repeat
 width=640
 height=1140
 
-ckpt_name="RealVisXL_V5.0_fp16.safetensors"
+#ckpt_name="RealVisXL_V5.0_fp16.safetensors"
 # ckpt_name="Realistic_Stock_Photo_v2.safetensors"
 # ckpt_name="Colossus_Project_X_Midgard.SafeTensors"
 # ckpt_name="Colossus_Project_XL_NEO_10B.SafeTensors"
 # ckpt_name="Colossus_Project_XL_12C.SafeTensors"
 # ckpt_name="ProteusV0.4-RunDiffusionPhoto.safetensors"
 # ckpt_name="RealVisXL_V4.0.safetensors"
-#ckpt_name="NightVisionXL-9.safetensors"
+ckpt_name="NightVisionXL-9.safetensors"
 
 # lora_name_1 = "All-in-one-Clothing-Bundle-SFW.SafeTensors"
 # lora_name_1 = "CopaxDress.safetensors"
