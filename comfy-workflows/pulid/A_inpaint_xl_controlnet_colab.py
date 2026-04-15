@@ -31,6 +31,12 @@ height=1140
 # ckpt_name="ProteusV0.4-RunDiffusionPhoto.safetensors"
 # ckpt_name="RealVisXL_V4.0.safetensors"
 ckpt_name="NightVisionXL-9.safetensors"
+#ckpt_name=""
+#ckpt_name=""
+#ckpt_name=""
+#ckpt_name=""
+
+
 
 # lora_name_1 = "All-in-one-Clothing-Bundle-SFW.SafeTensors"
 # lora_name_1 = "CopaxDress.safetensors"
