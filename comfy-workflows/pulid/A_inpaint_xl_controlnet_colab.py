@@ -18,7 +18,7 @@ output_path=f"{folder_save}{folder_name}-[time(%Y-%m-%d-%H)]"
 ref_path = "/content/pulid-colab-1/"
 wm_folder = "/content/colab/wildcard"
 num_images = 1 #number of prompt generated
-num_que = 2 #number of general repeat
+num_que = 5 #number of general repeat
 
 width=640
 height=1140
