@@ -31,9 +31,9 @@ height=1140
 # ckpt_name="ProteusV0.4-RunDiffusionPhoto.safetensors"
 # ckpt_name="RealVisXL_V4.0.safetensors"
 #ckpt_name="NightVisionXL-9.safetensors"
-ckpt_name="LEOSAM-s-HelloWorld-XL.safetensors"
+#ckpt_name="LEOSAM-s-HelloWorld-XL.safetensors"
 #ckpt_name="Realism_Engine_SDXL_3.safetensors"
-#ckpt_name=""
+ckpt_name="Realistic_Stock_Photo_v2.safetensors"
 #ckpt_name=""
 
 
