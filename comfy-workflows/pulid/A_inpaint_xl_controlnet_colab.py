@@ -11,7 +11,7 @@ import textwrap
 
 g_template = "{red|pink|white|gold|silver} (glasses:1)"
 # prrompt_template = "cinematic, glamour (full body:1) photo of woman, {||twintails}, {blonde|}, glasses, {bow hair|cat ears|Bows|Hair Clips|Headbands|Hair Ties|Barrettes|Hair Slides|Ponytail Holders|Hair Pins|Flower Crowns|Bobby Pins|Hair Sticks|Hair Combs|Scrunchies|Hair Tassels|Crown Headbands|Hair Charms|Braided Headbands|Hair Wraps|Ponytail Streamers|Glitter Hair Ties}, {|pink|red|peach|maroon|light-blue|Navy|Scarlet|Royal-blue|Turquoise|Olive|Emerald|Sage|Gold|Cream|Purple|Lavender|Violet|Brown|Tan|Blush|Rose|Fuchsia|Magenta|pink||} {lolita dress|fairy dress, wings|princess dress|ballgown|wedding dress| BUTTERFLY DRESS, wings|BURLESQUE DRESS|CUTE mini DRESS|FLOWER DRESS|SAILOR SENSHI UNIFORM| VICTORIAN DRESS| VICTORIAN mini DRESS} ,{||white thighhighs||white stockings|}, {Sashes|Ruffles|Bows|Ribbons|Lace Trims|Petticoats|Tutus|Belts|Buckles|Brooches|Flower Pins|Appliques|Embroidery|Patches|Ribbon Bows|Dress Clips|Waist Belts|Dress Pins|Dress Brooches|Dress Sashes}, {(tutu:0.7)|(tutu:0.5)|||}, {|kitchen|bed room|garden|cosmic dust|cyber punk city|white|simple} background, model photoshot, fashion photoshot, highly detailed, 4k, high resolution"
-prrompt_template = "cinematic, glamour photo of woman, glasses, {||twintails}, sexy,  dynamic pose, {blonde|},high-heels. {bow hair|cat ears|Bows|Hair Clips|Headbands|Hair Ties|Barrettes|Hair Slides|Ponytail Holders|Hair Pins|Bobby Pins|Hair Sticks|Hair Combs|Scrunchies|Hair Tassels|Hair Charms|Braided Headbands|Hair Wraps|Ponytail Streamers|Glitter Hair Ties}, {pink|red|peach|pink|light-blue|white|Cream} {lolita mini dress|fairy dress, wings|BURLESQUE DRESS| mini dress|pleated skirt, mini wedding dress} ,{white thighhighs|white stockings}, {mini flared skirt|}, {depth of field|kitchen|garden|blurred|indoor|white|bokeh} background, {elegance|model photoshot}, {fashion|fashion photography},  {high-resolution image-|high-resolution}"
+prrompt_template = "cinematic, glamour photo of woman, glasses, {||twintails}, sexy,  dynamic pose, {blonde|}. {bow hair|cat ears|Bows|Hair Clips|Headbands|Hair Ties|Barrettes|Hair Slides|Ponytail Holders|Hair Pins|Bobby Pins|Hair Sticks|Hair Combs|Scrunchies|Hair Tassels|Hair Charms|Braided Headbands|Hair Wraps|Ponytail Streamers|Glitter Hair Ties}, {pink|red|peach|pink|light-blue|white|Cream} {lolita mini dress|fairy dress, wings|BURLESQUE DRESS| mini dress|pleated skirt, mini wedding dress} ,{white thighhighs|white stockings}, {mini flared skirt|}, {depth of field|kitchen|garden|blurred|indoor|white|bokeh} background, {elegance|model photoshot}, {fashion|fashion photography},  {high-resolution image-|high-resolution}"
 folder_save = "/content/drive/MyDrive/outputs/"
 folder_name = "dwrt-inpaint-tcd-SDXL"
 output_path=f"{folder_save}{folder_name}-[time(%Y-%m-%d-%H)]"
@@ -20,8 +20,8 @@ wm_folder = "/content/colab/wildcard"
 num_images = 1 #number of prompt generated
 num_que = 5 #number of general repeat
 
-width=640
-height=1140
+width=576
+height=1024
 
 #ckpt_name="RealVisXL_V5.0_fp16.safetensors"
 # ckpt_name="Realistic_Stock_Photo_v2.safetensors"
@@ -31,9 +31,9 @@ height=1140
 # ckpt_name="ProteusV0.4-RunDiffusionPhoto.safetensors"
 # ckpt_name="RealVisXL_V4.0.safetensors"
 #ckpt_name="NightVisionXL-9.safetensors"
-#ckpt_name="LEOSAM-s-HelloWorld-XL.safetensors"
+ckpt_name="LEOSAM-s-HelloWorld-XL.safetensors"
 #ckpt_name="Realism_Engine_SDXL_3.safetensors"
-ckpt_name="Realistic_Stock_Photo_v2.safetensors"
+#ckpt_name="Realistic_Stock_Photo_v2.safetensors"
 #ckpt_name=""
 
 
@@ -56,25 +56,25 @@ control_net_name="controlnet_plus_promax.safetensors"
 
 img_mask_folder = (
 
-  #('/content/Masking/content/89/300/img','/content/Masking/content/89/300/mask','png'),
-  ('/content/Masking/content/89/250/img','/content/Masking/content/89/250/mask','png'),
-  # ('/content/Masking/content/89/400/img','/content/Masking/content/89/400/mask','png'),
+  ('/content/Masking/content/89/300/img','/content/Masking/content/89/300/mask','png'),
+  #('/content/Masking/content/89/250/img','/content/Masking/content/89/250/mask','png'),
+  ('/content/Masking/content/89/400/img','/content/Masking/content/89/400/mask','png'),
   # ('/content/Masking/content/89/450/img','/content/Masking/content/89/450/mask','png'),
   # ('/content/Masking/content/89/500/img','/content/Masking/content/89/500/mask','png'),
   # ('/content/Masking/content/89/550/img','/content/Masking/content/89/550/mask','png'),
   # ('/content/Masking/content/89/600/img','/content/Masking/content/89/600/mask','png'),
 
-  ('/content/Masking/content/93-mask/250/img','/content/Masking/content/93-mask/250/mask','png'),
-  # ('/content/Masking/content/93-mask/350/img','/content/Masking/content/93-mask/350/mask','png'),
-  # ('/content/Masking/content/93-mask/400/img','/content/Masking/content/93-mask/400/mask','png'),
+  #('/content/Masking/content/93-mask/250/img','/content/Masking/content/93-mask/250/mask','png'),
+  ('/content/Masking/content/93-mask/350/img','/content/Masking/content/93-mask/350/mask','png'),
+  ('/content/Masking/content/93-mask/400/img','/content/Masking/content/93-mask/400/mask','png'),
   # ('/content/Masking/content/93-mask/450/img','/content/Masking/content/93-mask/450/mask','png'),
   # ('/content/Masking/content/93-mask/500/img','/content/Masking/content/93-mask/500/mask','png'),
   # ('/content/Masking/content/93-mask/550/img','/content/Masking/content/93-mask/550/mask','png'),
   # ('/content/Masking/content/93-mask/600/img','/content/Masking/content/93-mask/600/mask','png'),
 
-  ('/content/Masking/content/94-mask/250/img','/content/Masking/content/94-mask/250/mask','png'),
-  # ('/content/Masking/content/94-mask/350/img','/content/Masking/content/94-mask/350/mask','png'),
-  # ('/content/Masking/content/94-mask/400/img','/content/Masking/content/94-mask/400/mask','png'),
+  #('/content/Masking/content/94-mask/250/img','/content/Masking/content/94-mask/250/mask','png'),
+  ('/content/Masking/content/94-mask/350/img','/content/Masking/content/94-mask/350/mask','png'),
+  ('/content/Masking/content/94-mask/400/img','/content/Masking/content/94-mask/400/mask','png'),
   # ('/content/Masking/content/94-mask/450/img','/content/Masking/content/94-mask/450/mask','png'),
   # ('/content/Masking/content/94-mask/500/img','/content/Masking/content/94-mask/500/mask','png'),
   # ('/content/Masking/content/94-mask/550/img','/content/Masking/content/94-mask/550/mask','png'),
