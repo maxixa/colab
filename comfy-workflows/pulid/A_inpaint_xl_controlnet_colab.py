@@ -78,7 +78,7 @@ img_mask_folder = (
   # ('/content/Masking/content/93-mask/550/img','/content/Masking/content/93-mask/550/mask','png'),
   # ('/content/Masking/content/93-mask/600/img','/content/Masking/content/93-mask/600/mask','png'),
 
-  ('/content/Masking/content/94-mask/250/img','/content/Masking/content/94-mask/250/mask','png'),
+  #('/content/Masking/content/94-mask/250/img','/content/Masking/content/94-mask/250/mask','png'),
   #('/content/Masking/content/94-mask/350/img','/content/Masking/content/94-mask/350/mask','png'),
   #('/content/Masking/content/94-mask/400/img','/content/Masking/content/94-mask/400/mask','png'),
   # ('/content/Masking/content/94-mask/450/img','/content/Masking/content/94-mask/450/mask','png'),
